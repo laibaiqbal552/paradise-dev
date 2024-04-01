@@ -7,12 +7,14 @@ import { cn } from "@/lib/utils";
 const buttonVariants = cva("rounded-full text-xl transition-all duration-300", {
   variants: {
     variant: {
-      primary: "py-4 px-12 bg-white font-medium text-black",
+      white: "bg-white font-medium text-black",
+      primary: "bg-primary font-medium",
       ghost: "",
     },
     padding: {
       "5": "p-5",
       "4_12": "py-4 px-12",
+      "16_32": "py-4 px-8",
     },
     shape: {
       button: "",
@@ -20,7 +22,7 @@ const buttonVariants = cva("rounded-full text-xl transition-all duration-300", {
     },
   },
   defaultVariants: {
-    variant: "primary",
+    variant: "white",
     padding: "4_12",
     shape: "button",
   },

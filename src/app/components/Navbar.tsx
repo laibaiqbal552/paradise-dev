@@ -9,7 +9,7 @@ function Navbar() {
       <Container asChild>
         <div className="flex items-center justify-between space-x-5 py-1">
           <Link href="/" className="relative top-1.5">
-            <Image src="/images/logo.png" width={275} height={72} alt="logo" />
+            <Image src="/images/logo.png" width={275} height={70} alt="logo" />
           </Link>
 
           <ul className="flex items-center">
