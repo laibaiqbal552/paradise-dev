@@ -8,6 +8,8 @@ import WeHandle from "./sections/WeHandle";
 import About from "./sections/About";
 import Features from "./sections/Features";
 import Hero from "./sections/Hero";
+import ServicesWeProvide from "./sections/ServicesWeProvide";
+import PreviousProjects from "./sections/PreviousProjects";
 
 export default function Home() {
   return (
@@ -22,8 +24,12 @@ export default function Home() {
         <Features />
       </div>
 
-      <div className="mb-40">
+      <div className="mb-20">
         <About />
+      </div>
+
+      <div className="mb-20">
+        <ServicesWeProvide />
       </div>
 
       <div className="mb-40">
@@ -36,6 +42,10 @@ export default function Home() {
 
       <div className="mb-20">
         <ProvideQuality />
+      </div>
+
+      <div className="mb-20">
+        <PreviousProjects />
       </div>
 
       <div className="mb-60">

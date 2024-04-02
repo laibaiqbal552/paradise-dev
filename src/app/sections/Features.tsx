@@ -4,6 +4,38 @@ import StrokedText from "@/components/StrokedText";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
+const FeatureCard = ({
+  imgSrc,
+  title,
+  desc,
+  className,
+}: {
+  imgSrc: string;
+  title: string;
+  desc: any;
+  className?: string;
+}) => {
+  return (
+    <div
+      className={cn(
+        "border border-primary bg-body p-[30px] rounded-xl",
+        className
+      )}
+    >
+      <Image
+        src={imgSrc}
+        alt="feature-icon"
+        width={75}
+        height={75}
+        className="mb-5"
+      />
+      <p className="text-5xl font-medium">{title}</p>
+
+      <p className="mt-[6.5rem] text-xl lh-1_2 font-medium">{desc}</p>
+    </div>
+  );
+};
+
 const Card = ({
   reverse,
   title,
@@ -18,7 +50,7 @@ const Card = ({
   return (
     <div
       className={cn(
-        "grid gap-8 auto-cols-[1fr]",
+        "grid gap-5 auto-cols-[1fr]",
         reverse ? "grid-cols-[1fr_.7fr]" : "grid-cols-[.7fr_1fr]"
       )}
     >
@@ -51,6 +83,33 @@ function Features() {
           <StrokedText className="text-[104px] font-bold mb-20 text-center uppercase">
             Features
           </StrokedText>
+
+          <div className="grid grid-cols-4 gap-8 mb-16">
+            <FeatureCard
+              imgSrc="/images/feature-icons/stars.svg"
+              title="Trajectory"
+              desc="Our 5 years of experience in the field support us."
+              className="rotate-[-14deg] z-20"
+            />
+            <FeatureCard
+              imgSrc="/images/feature-icons/tick.png"
+              title="Quality"
+              desc="We take care of polishing every last detail of your project"
+              className="rotate-[-14deg] z-40"
+            />
+            <FeatureCard
+              imgSrc="/images/feature-icons/location.svg"
+              title="Attention"
+              desc="24/7 support and office with customer service unlimited."
+              className="rotate-[14deg] z-30"
+            />
+            <FeatureCard
+              imgSrc="/images/feature-icons/price.svg"
+              title="Price"
+              desc="We guarantee the best quality at the best price for you."
+              className="rotate-[14deg] z-50"
+            />
+          </div>
 
           <p className="text-[64px] text-center font-bold lh-1_2">
             <span className="text-primary">FEATURES</span> MAKE <br /> US

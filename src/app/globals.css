@@ -40,6 +40,19 @@
 
   html,
   body {
-    @apply bg-body text-white;
+    @apply bg-body text-white overflow-x-hidden;
+  }
+}
+
+#fade-in-animation {
+  animation: fad-in 1s linear forwards;
+}
+
+@keyframes fad-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
