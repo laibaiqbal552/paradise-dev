@@ -173,7 +173,7 @@ const TabButton = ({
       className={cn(
         "flex items-center justify-center w-full text-2xl font-medium p-4 transition-all duration-300",
         className,
-        isActive ? "bg-primary" : null
+        isActive ? "bg-primary text-white" : null
       )}
     >
       <span className="rotate-180 block">{children}</span>

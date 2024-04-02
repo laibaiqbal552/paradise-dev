@@ -9,10 +9,11 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 function Footer() {
   return (
-    <footer className="bg-body-light pb-28 pt-28">
+    <footer className="bg-primary dark:bg-body-light pb-28 pt-28">
       <Container asChild className="max-w-[1209px] px-0">
         <div>
           <header className="flex items-center justify-between space-x-5 mb-8">
@@ -20,41 +21,41 @@ function Footer() {
 
             <ul className="flex items-center space-x-6">
               <li>
-                <Button shape="icon" className="text-2xl text-stone-800">
+                <Button shape="icon" className="text-2xl text-primary bg-white">
                   <FaTiktok />
                 </Button>
               </li>
               <li>
-                <Button shape="icon" className="text-2xl text-stone-800">
+                <Button shape="icon" className="text-2xl text-primary bg-white">
                   <FaTelegramPlane />
                 </Button>
               </li>
               <li>
-                <Button shape="icon" className="text-2xl text-stone-800">
+                <Button shape="icon" className="text-2xl text-primary bg-white">
                   <FaFacebookF />
                 </Button>
               </li>
               <li>
-                <Button shape="icon" className="text-2xl text-stone-800">
+                <Button shape="icon" className="text-2xl text-primary bg-white">
                   <FaInstagram />
                 </Button>
               </li>
               <li>
-                <Button shape="icon" className="text-2xl text-stone-800">
+                <Button shape="icon" className="text-2xl text-primary bg-white">
                   <FaXTwitter />
                 </Button>
               </li>
               <li>
-                <Button shape="icon" className="text-2xl text-stone-800">
+                <Button shape="icon" className="text-2xl text-primary bg-white">
                   <FaLinkedinIn />
                 </Button>
               </li>
             </ul>
           </header>
 
-          <main className="border-t border-b-2 border-white/5 py-10 pb-20 grid grid-cols-[2fr_1fr_1fr_1fr] gap-8">
+          <main className="border-t border-b-2 border-white/50 dark:border-white/5 py-10 pb-20 grid grid-cols-[2fr_1fr_1fr_1fr] gap-8 text-white">
             <aside>
-              <p className="opacity-60">
+              <p className="dark:opacity-60">
                 ParadiseDev® is a subdivision of Paradise <br /> Host S.A. and a
                 registered trademark
               </p>
@@ -124,7 +125,7 @@ function Footer() {
               Paradise Host®
             </p>
 
-            <span></span>
+            <ThemeSwitcher />
           </div>
         </div>
       </Container>

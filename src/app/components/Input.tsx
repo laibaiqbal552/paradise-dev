@@ -12,7 +12,7 @@ const Input = ({ className, ...props }: InputProps) => {
     <input
       {...props}
       className={cn(
-        "border-b h-[38px] block w-full border-white/60 text-sm bg-transparent outline-none",
+        "border-b h-[38px] block w-full border-black/30 dark:border-white/60 text-sm bg-transparent outline-none",
         className
       )}
     />

@@ -1,27 +1,56 @@
+"use client";
+
 import Container from "@/components/Container";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 const skills = [
-  { img: "/images/skills/angular.png" },
-  { img: "/images/skills/react.png" },
-  { img: "/images/skills/nextjs.svg" },
-  { img: "/images/skills/mysql.png" },
-  { img: "/images/skills/swift.png" },
-  { img: "/images/skills/astro.png" },
-  { img: "/images/skills/meta.png" },
-  { img: "/images/skills/m.png" },
-  { img: "/images/skills/shopify.png" },
-  { img: "/images/skills/html.png" },
-  { img: "/images/skills/css.png" },
-  { img: "/images/skills/js.png" },
-  { img: "/images/skills/jquery.png" },
-  { img: "/images/skills/php.svg" },
-  { img: "/images/skills/node.png" },
-  { img: "/images/skills/python.png" },
+  {
+    img: "/images/skills/angular.png",
+    imgLight: "/images/skills-light/angular.svg",
+  },
+  {
+    img: "/images/skills/react.png",
+    imgLight: "/images/skills-light/react.png",
+  },
+  {
+    img: "/images/skills/nextjs.svg",
+    imgLight: "/images/skills-light/nextjs.svg",
+  },
+  {
+    img: "/images/skills/mysql.png",
+    imgLight: "/images/skills-light/mysql.png",
+  },
+  {
+    img: "/images/skills/swift.png",
+    imgLight: "/images/skills-light/swift.png",
+  },
+  {
+    img: "/images/skills/astro.png",
+    imgLight: "/images/skills-light/astro.png",
+  },
+  { img: "/images/skills/meta.png", imgLight: "/images/skills-light/meta.png" },
+  { img: "/images/skills/m.png", imgLight: "/images/skills-light/m.svg" },
+  {
+    img: "/images/skills/shopify.png",
+    imgLight: "/images/skills-light/shopify.png",
+  },
+  { img: "/images/skills/html.png", imgLight: "/images/skills-light/html.png" },
+  { img: "/images/skills/css.png", imgLight: "/images/skills-light/css.svg" },
+  { img: "/images/skills/js.png", imgLight: "/images/skills-light/js.png" },
+  {
+    img: "/images/skills/jquery.png",
+    imgLight: "/images/skills-light/jquery.svg",
+  },
+  { img: "/images/skills/php.svg", imgLight: "/images/skills-light/php.png" },
+  { img: "/images/skills/node.png", imgLight: "/images/skills-light/node.png" },
+  { img: "/images/skills/python.png", imgLight: null },
 ];
 
 function WeHandle() {
+  const { theme } = useTheme();
+
   return (
     <section>
       <Container className="mb-10">
@@ -35,16 +64,18 @@ function WeHandle() {
         className="flex items-center justify-between"
         autoFill
       >
-        {skills.map((item, i) => (
-          <Image
-            src={item.img}
-            key={i}
-            alt="skill"
-            width={112}
-            height={112}
-            className="mx-5"
-          />
-        ))}
+        {skills.map((item, i) =>
+          item.imgLight ? (
+            <Image
+              src={theme === "dark" ? item.img : item.imgLight}
+              key={i}
+              alt="skill"
+              width={112}
+              height={112}
+              className="mx-5"
+            />
+          ) : null
+        )}
       </Marquee>
     </section>
   );

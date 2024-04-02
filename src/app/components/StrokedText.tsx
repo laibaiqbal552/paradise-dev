@@ -1,4 +1,7 @@
+"use client";
+
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 import React from "react";
 
 interface Props
@@ -10,13 +13,16 @@ interface Props
   strokeWidth?: number | string;
 }
 
-function StrokedText({
-  strokeWidth = "1px",
-  color = "rgba(255,255,255,.7)",
-  children,
-  className,
-  ...props
-}: Props) {
+function StrokedText(props: Props) {
+  const { theme } = useTheme();
+  const {
+    strokeWidth = "1px",
+    color = theme == "dark" ? "rgba(255,255,255,.7)" : "black",
+    children,
+    className,
+    ..._props
+  } = props;
+
   return (
     <p
       className={cn("text-transparent", className)}
@@ -24,7 +30,7 @@ function StrokedText({
         WebkitTextStrokeWidth: strokeWidth,
         WebkitTextStrokeColor: color,
       }}
-      {...props}
+      {..._props}
     >
       {children}
     </p>

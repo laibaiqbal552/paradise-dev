@@ -45,22 +45,22 @@ function Hero() {
 
       <ul className="flex items-center flex-col space-y-6 absolute top-1/2 -translate-y-1/2 right-8">
         <li>
-          <Button shape="icon" className="text-2xl text-stone-800">
+          <Button shape="icon" className="text-2xl">
             <FaXTwitter />
           </Button>
         </li>
         <li>
-          <Button shape="icon" className="text-2xl text-stone-800">
+          <Button shape="icon" className="text-2xl">
             <FaFacebookF />
           </Button>
         </li>
         <li>
-          <Button shape="icon" className="text-2xl text-stone-800">
+          <Button shape="icon" className="text-2xl">
             <FaInstagram />
           </Button>
         </li>
         <li>
-          <Button shape="icon" className="text-2xl text-stone-800">
+          <Button shape="icon" className="text-2xl">
             <FaLinkedinIn />
           </Button>
         </li>

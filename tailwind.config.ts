@@ -6,6 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     fontFamily: {
       montserrat: "var(--montserrat)",
@@ -13,6 +14,7 @@ const config: Config = {
     extend: {
       colors: {
         "body-light": "rgb(29, 29, 27)",
+        "body-dark": "rgb(23, 23, 23)",
         body: "rgb(28, 28, 26)",
         primary: "#6c4796",
       },

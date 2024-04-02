@@ -3,7 +3,7 @@ import Container from "@/components/Container";
 
 function ProvideQuality() {
   return (
-    <section className="py-20 bg-[url('/images/gradient-bg.png')] bg-cover">
+    <section className="py-20 bg-[url('/images/gradient-bg-light.png')] dark:bg-[url('/images/gradient-bg.png')] bg-cover bg-[#f9f7fb] dark:bg-transparent">
       <Container>
         <h1 className="text-center text-5xl font-medium mb-7">
           We provide quality

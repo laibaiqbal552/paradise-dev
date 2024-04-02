@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "./components/theme-provider";
 
 const montserrat = Montserrat({
   variable: "--montserrat",
@@ -20,7 +21,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${montserrat.variable}`}>
-      <body>{children}</body>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+          enableColorScheme
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

@@ -1,11 +1,13 @@
 import Container from "@/components/Container";
+import GearsImage from "@/components/GearsImage";
 import StrokedText from "@/components/StrokedText";
 import Typography from "@/components/Typography";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 
 const Card = ({ text, num }: { text: string; num: number | string }) => {
   return (
-    <div className="border border-primary rounded-xl p-6 bg-body relative z-40 transition-all duration-700 hover:bg-primary/20">
+    <div className="border border-primary rounded-xl p-6 bg-white dark:bg-body relative z-40 transition-all duration-700 hover:bg-primary/20">
       <StrokedText color="#bd9fe0" className="text-[104px] font-bold lh-1 mb-3">
         {num}
       </StrokedText>
@@ -72,11 +74,7 @@ function Process() {
               alt=""
             />
 
-            <img
-              src="/images/gears.png"
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48"
-              alt=""
-            />
+            <GearsImage />
 
             <img
               src="/images/connector-lines.png"

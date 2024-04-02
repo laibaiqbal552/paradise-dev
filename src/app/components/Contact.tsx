@@ -30,7 +30,7 @@ const Card = ({
 
 function Contact() {
   return (
-    <Container className="max-w-[1209px] border-t border-white/60 pt-12 px-0">
+    <Container className="max-w-[1209px] border-t border-black/30 dark:border-white/60 pt-12 px-0">
       <div className="grid grid-cols-3 gap-6 mb-12">
         <Card
           title="Mail"

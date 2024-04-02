@@ -18,7 +18,7 @@ const FeatureCard = ({
   return (
     <div
       className={cn(
-        "border border-primary bg-body p-[30px] rounded-xl",
+        "border bg-white border-black/40 dark:border-primary dark:bg-body p-[30px] rounded-xl",
         className
       )}
     >
@@ -65,7 +65,9 @@ const Card = ({
       </div>
 
       <div className="border border-primary flex flex-col justify-center py-4 px-12 rounded-2xl items-start">
-        <h2 className="text-[32px] font-semibold mb-3">{title}</h2>
+        <h2 className="text-[32px] font-semibold mb-3 text-primary dark:text-white">
+          {title}
+        </h2>
 
         <p className="opacity-70 mb-7">{desc}</p>
 
