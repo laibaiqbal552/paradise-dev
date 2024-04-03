@@ -1,10 +1,19 @@
+"use client";
+
 import Container from "@/components/Container";
 import GearsImage from "@/components/GearsImage";
 import Heading from "@/components/Heading";
+import RevealTextEffect from "@/components/RevealTextEffect";
 import StrokedText from "@/components/StrokedText";
 import Typography from "@/components/Typography";
-import { useTheme } from "next-themes";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import dynamic from "next/dynamic";
 import Image from "next/image";
+import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Card = ({ text, num }: { text: string; num: number | string }) => {
   return (
@@ -21,6 +30,28 @@ const Card = ({ text, num }: { text: string; num: number | string }) => {
 };
 
 function Process() {
+  const container = useRef(null);
+
+  useGSAP(
+    () => {
+      const sections = gsap.utils.toArray("#cards") as HTMLElement[];
+
+      sections.forEach((section: HTMLElement) => {
+        gsap.set(`#${section.id} > *`, { opacity: 0, y: 20 });
+
+        gsap.to(`#${section.id} > *`, {
+          y: 0,
+          opacity: 1,
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: section,
+          },
+        });
+      });
+    },
+    { scope: container }
+  );
+
   return (
     <section>
       <Container className="max-w-[1209px]">
@@ -28,9 +59,11 @@ function Process() {
           variant="super-heading"
           className="max-lg:text-center lh-1_3 mb-20 lg:mb-40 max-lg:!leading-[2]"
         >
-          This is our procedure once the work is accepted from us and the budget
+          <RevealTextEffect
+            text="This is our procedure once the work is accepted from us and the budget
           from the client. We will include you in each stage of the process for
-          the best result!
+          the best result!"
+          />
         </Typography>
       </Container>
 
@@ -60,8 +93,14 @@ function Process() {
           </p>
         </header>
 
-        <main className="max-w-[66rem] mx-auto z-20 max-lg:grid max-lg:gap-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
+        <main
+          ref={container}
+          className="max-w-[66rem] mx-auto z-20 max-lg:grid max-lg:gap-6"
+        >
+          <div
+            id="cards"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10"
+          >
             <Card
               num={"01"}
               text="The presentation will be made to the client detailing each point about how the project will be worked on, including the estimated time and budget for the work."
@@ -92,7 +131,10 @@ function Process() {
             />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
+          <div
+            id="cards"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10"
+          >
             <Card
               num={"04"}
               text="There will be constant communication with the client as development progresses. There will be rounds of adjustments until the client is satisfied."
@@ -112,4 +154,6 @@ function Process() {
   );
 }
 
-export default Process;
+export default dynamic(() => Promise.resolve(Process), {
+  ssr: false,
+});

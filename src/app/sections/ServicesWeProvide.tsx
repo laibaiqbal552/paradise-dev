@@ -1,5 +1,11 @@
+"use client";
+
 import Container from "@/components/Container";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import dynamic from "next/dynamic";
 import Image from "next/image";
+import { useRef } from "react";
 
 const data = [
   {
@@ -62,7 +68,10 @@ const Card = ({
   desc: any;
 }) => {
   return (
-    <div className="border border-primary rounded-xl p-7">
+    <div
+      id="card"
+      className="border border-primary rounded-xl p-7 z-10 lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 bg-body lg:w-[20rem]"
+    >
       <header className="flex max-lg:flex-col-reverse items-center lg:space-x-4 justify-between">
         <p className="text-lg sm:text-xl font-medium max-lg:mt-4">{title}</p>
         <Image
@@ -82,14 +91,50 @@ const Card = ({
 };
 
 function ServicesWeProvide() {
+  const containerRef = useRef(null);
+
+  useGSAP(
+    () => {
+      let mm = gsap.matchMedia();
+
+      mm.add("(min-width: 1024px)", () => {
+        gsap.to("#card", {
+          rotate: (index) => {
+            if (index % 2 === 0) {
+              return 14;
+            }
+            return -14;
+          },
+          x: (index) => {
+            if (index % 2 === 0) {
+              return Number(40 * (index + 1)) + "%";
+            }
+
+            return Number(-1 * 40 * (index + 1)) + "%";
+          },
+          scrollTrigger: {
+            trigger: "#main",
+            scrub: 0.2,
+            start: "top 60%",
+            end: "50% center",
+          },
+        });
+      });
+    },
+    { scope: containerRef }
+  );
+
   return (
-    <section>
+    <section ref={containerRef}>
       <Container>
         <h1 className="text-center uppercase font-bold text-3xl sm:text-[64px] lh-1_2 mb-10 lg:mb-20">
           <span className="text-primary">Services</span> We <br /> Provide
         </h1>
 
-        <main className="max-lg:grid max-sm:grid-cols-1 max-lg:grid-cols-2 max-lg:gap-5 lg:flex lg:space-x-4 lg:[&>*]:min-w-[20rem] lg:justify-center">
+        <main
+          id="main"
+          className="max-lg:grid max-sm:grid-cols-1 max-lg:grid-cols-2 max-lg:gap-5 lg:flex lg:[&>*]:min-w-[20rem] lg:justify-center lg:h-[25rem] relative"
+        >
           {data.map((item, i) => (
             <Card
               key={i}
@@ -104,4 +149,8 @@ function ServicesWeProvide() {
   );
 }
 
-export default ServicesWeProvide;
+// export default ServicesWeProvide;
+
+export default dynamic(() => Promise.resolve(ServicesWeProvide), {
+  ssr: false,
+});

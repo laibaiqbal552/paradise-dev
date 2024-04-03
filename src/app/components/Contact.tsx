@@ -4,6 +4,7 @@ import Typography from "./Typography";
 import Input from "./Input";
 import Textarea from "./Textarea";
 import Image from "next/image";
+import RevealTextEffect from "./RevealTextEffect";
 
 const Card = ({
   title,
@@ -67,8 +68,10 @@ function Contact() {
         className="font-medium lh-1_3"
       >
         <h1>
-          Any questions, comments or general inquiries? We really appreciate
-          your suggestions, contact us!
+          <RevealTextEffect
+            text="Any questions, comments or general inquiries? We really appreciate
+            your suggestions, contact us!"
+          />
         </h1>
       </Typography>
     </Container>

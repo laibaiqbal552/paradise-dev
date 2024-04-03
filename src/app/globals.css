@@ -56,3 +56,14 @@
     opacity: 1;
   }
 }
+
+::-webkit-scrollbar {
+  width: auto;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(108, 71, 150);
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 0, 0, 0.5);
+}

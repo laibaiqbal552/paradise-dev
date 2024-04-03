@@ -1,9 +1,14 @@
+"use client";
+
 import { Button } from "@/components/Button";
 import Container from "@/components/Container";
 import Heading from "@/components/Heading";
 import StrokedText from "@/components/StrokedText";
 import { cn } from "@/lib/utils";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import Image from "next/image";
+import { useRef } from "react";
 
 const FeatureCard = ({
   imgSrc,
@@ -18,8 +23,9 @@ const FeatureCard = ({
 }) => {
   return (
     <div
+      id="feature-card"
       className={cn(
-        "lg:w-[19.688rem] flex-shrink-0 border max-lg:!bg-primary/5 bg-white border-black/40 dark:border-primary dark:bg-body p-[30px] rounded-xl max-lg:text-center",
+        "lg:w-[19.688rem] flex-shrink-0 border max-lg:!bg-primary/5 bg-white border-black/40 dark:border-primary dark:bg-body p-[30px] rounded-xl max-lg:text-center lg:absolute lg:top-1/2 lg:-translate-y-1/2 z-10 max-lg:transform-none lg:left-1/2 lg:-translate-x-1/2",
         className
       )}
     >
@@ -83,6 +89,39 @@ const Card = ({
 };
 
 function Features() {
+  const featureCardContainer = useRef(null);
+
+  useGSAP(
+    () => {
+      let mm = gsap.matchMedia();
+
+      mm.add("(min-width: 1024px)", () => {
+        gsap.to("#feature-card", {
+          rotateZ: (index) => {
+            if (index % 2 === 0) {
+              return -14;
+            }
+            return 14;
+          },
+          x: (index) => {
+            if (index === 0) return "-142%";
+            if (index === 1) return "57%";
+            if (index === 2) return "-46%";
+            return "153%";
+          },
+
+          scrollTrigger: {
+            trigger: featureCardContainer.current,
+            scrub: 1,
+            end: "center 50%",
+            start: "center 80%",
+          },
+        });
+      });
+    },
+    { scope: featureCardContainer }
+  );
+
   return (
     <section>
       <Container asChild className="mb-10 lg:mb-28">
@@ -93,30 +132,32 @@ function Features() {
             </StrokedText>
           </Heading>
 
-          <div className="mx-auto grid max-lg:gap-6 lg:flex lg:space-x-8 mb-16">
+          <div
+            ref={featureCardContainer}
+            className="mx-auto grid max-lg:gap-6 lg:flex mb-16 lg:h-[26rem] relative"
+          >
             <FeatureCard
               imgSrc="/images/feature-icons/stars.svg"
               title="Trajectory"
               desc="Our 5 years of experience in the field support us."
-              className="lg:rotate-[-14deg] z-20"
             />
-            <FeatureCard
-              imgSrc="/images/feature-icons/tick.png"
-              title="Quality"
-              desc="We take care of polishing every last detail of your project"
-              className="lg:rotate-[-14deg] z-40"
-            />
+
             <FeatureCard
               imgSrc="/images/feature-icons/location.svg"
               title="Attention"
               desc="24/7 support and office with customer service unlimited."
-              className="lg:rotate-[14deg] z-30"
             />
+
+            <FeatureCard
+              imgSrc="/images/feature-icons/tick.png"
+              title="Quality"
+              desc="We take care of polishing every last detail of your project"
+            />
+
             <FeatureCard
               imgSrc="/images/feature-icons/price.svg"
               title="Price"
               desc="We guarantee the best quality at the best price for you."
-              className="lg:rotate-[14deg] z-50"
             />
           </div>
 
