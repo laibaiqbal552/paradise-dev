@@ -34,19 +34,30 @@ function Process() {
 
   useGSAP(
     () => {
-      const sections = gsap.utils.toArray("#cards") as HTMLElement[];
+      // const sections = gsap.utils.toArray("#cards") as HTMLElement[];
 
-      sections.forEach((section: HTMLElement) => {
-        gsap.set(`#${section.id} > *`, { opacity: 0, y: 20 });
+      // sections.forEach((section: HTMLElement) => {
+      //   gsap.set(`#${section.id} > *`, { opacity: 0, y: 20 });
 
-        gsap.to(`#${section.id} > *`, {
-          y: 0,
-          opacity: 1,
-          stagger: 0.2,
-          scrollTrigger: {
-            trigger: section,
-          },
-        });
+      //   gsap.to(`#${section.id} > *`, {
+      //     y: 0,
+      //     opacity: 1,
+      //     stagger: 0.2,
+      //     scrollTrigger: {
+      //       trigger: section,
+      //     },
+      //   });
+      // });
+
+      gsap.set(`#cards > *`, { opacity: 0, y: 20 });
+
+      gsap.to(`#cards > *`, {
+        y: 0,
+        opacity: 1,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: "#cards",
+        },
       });
     },
     { scope: container }
