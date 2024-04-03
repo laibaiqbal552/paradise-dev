@@ -7,8 +7,10 @@ import { cn } from "@/lib/utils";
 const buttonVariants = cva("rounded-full text-xl transition-all duration-300", {
   variants: {
     variant: {
-      white: "bg-primary dark:bg-white font-medium text-white dark:text-black",
-      primary: "text-white bg-primary font-medium",
+      white:
+        "bg-primary dark:bg-white font-medium text-white dark:text-black dark:hover:bg-primary dark:hover:text-white hover:bg-transparent hover:text-black border border-transparent hover:border-primary",
+      primary:
+        "text-white hover:text-black dark:hover:text-white bg-primary font-medium border border-transparent hover:border-primary hover:bg-transparent",
       ghost: "",
     },
     padding: {

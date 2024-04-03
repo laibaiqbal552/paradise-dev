@@ -12,7 +12,7 @@ const Textarea = ({ className, ...props }: TextareaProps) => {
     <textarea
       {...props}
       className={cn(
-        "border block w-full border-black/30 dark:border-white/60 text-sm bg-transparent outline-none p-2 rounded-2xl",
+        "border block w-full border-black/30 dark:border-white/60 text-sm bg-transparent outline-none p-2 rounded-2xl focus:border-primary dark:focus:border-primary",
         className
       )}
     />

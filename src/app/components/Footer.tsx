@@ -73,7 +73,7 @@ function Footer() {
             </div>
           </header>
 
-          <main className="border-t border-b-2 border-white/50 dark:border-white/5 py-10 pb-20 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-y-14 gap-x-8 text-white">
+          <main className="border-t border-b-2 border-white/50 dark:border-white/5 py-10 pb-20 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-y-14 gap-x-8 text-white [&_a]:text-white/60 [&_a:hover]:text-white">
             <aside className="max-lg:col-span-full">
               <p className="dark:opacity-60">
                 ParadiseDev® is a subdivision of Paradise{" "}
@@ -84,7 +84,7 @@ function Footer() {
 
             <div className="space-y-4">
               <p>About</p>
-              <ul className="space-y-3 text-white/60">
+              <ul className="space-y-3">
                 <li>
                   <a href="#">Us</a>
                 </li>
@@ -104,7 +104,7 @@ function Footer() {
             </div>
             <div className="space-y-4">
               <p>Browse</p>
-              <ul className="space-y-3 text-white/60">
+              <ul className="space-y-3">
                 <li>
                   <a href="#">Home</a>
                 </li>
@@ -124,7 +124,7 @@ function Footer() {
             </div>
             <div className="space-y-4">
               <p>Our Services</p>
-              <ul className="space-y-3 text-white/60">
+              <ul className="space-y-3">
                 <li>
                   <a href="#">Web Development</a>
                 </li>
@@ -138,7 +138,7 @@ function Footer() {
             </div>
           </main>
 
-          <div className="mt-14 flex max-sm:flex-col-reverse items-start sm:items-center justify-between sm:space-x-6 text-sm text-white/60">
+          <div className="mt-14 flex max-sm:flex-col-reverse items-start sm:items-center justify-between sm:space-x-6 text-sm">
             <p>Copyright 2024© | All rights reserved</p>
 
             <p>
