@@ -70,7 +70,7 @@ const Card = ({
   return (
     <div
       id="card"
-      className="border border-primary rounded-xl p-7 z-10 lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 bg-body lg:w-[20rem]"
+      className="border border-primary rounded-xl p-7 z-10 lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 bg-white dark:bg-body lg:w-[20rem]"
     >
       <header className="flex max-lg:flex-col-reverse items-center lg:space-x-4 justify-between">
         <p className="text-lg sm:text-xl font-medium max-lg:mt-4">{title}</p>
