@@ -13,51 +13,72 @@ import ThemeSwitcher from "./ThemeSwitcher";
 
 function Footer() {
   return (
-    <footer className="bg-primary dark:bg-body-light pb-28 pt-28">
-      <Container asChild className="max-w-[1209px] px-0">
+    <footer className="bg-primary dark:bg-body-light pb-16 sm:pb-28 pt-12 sm:pt-28">
+      <Container asChild className="max-w-[1209px]">
         <div>
-          <header className="flex items-center justify-between space-x-5 mb-8">
+          <header className="flex max-lg:flex-col items-center justify-between max-lg:space-y-7 lg:space-x-5 mb-8">
             <Image src="/images/logo.png" width={275} height={72} alt="logo" />
 
-            <ul className="flex items-center space-x-6">
-              <li>
-                <Button shape="icon" className="text-2xl text-primary bg-white">
-                  <FaTiktok />
-                </Button>
-              </li>
-              <li>
-                <Button shape="icon" className="text-2xl text-primary bg-white">
-                  <FaTelegramPlane />
-                </Button>
-              </li>
-              <li>
-                <Button shape="icon" className="text-2xl text-primary bg-white">
-                  <FaFacebookF />
-                </Button>
-              </li>
-              <li>
-                <Button shape="icon" className="text-2xl text-primary bg-white">
-                  <FaInstagram />
-                </Button>
-              </li>
-              <li>
-                <Button shape="icon" className="text-2xl text-primary bg-white">
-                  <FaXTwitter />
-                </Button>
-              </li>
-              <li>
-                <Button shape="icon" className="text-2xl text-primary bg-white">
-                  <FaLinkedinIn />
-                </Button>
-              </li>
-            </ul>
+            <div className="overflow-hidden">
+              <ul className="flex items-center flex-wrap justify-center [&>*]:m-3 -m-3">
+                <li>
+                  <Button
+                    shape="icon"
+                    className="text-2xl text-primary bg-white"
+                  >
+                    <FaTiktok />
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    shape="icon"
+                    className="text-2xl text-primary bg-white"
+                  >
+                    <FaTelegramPlane />
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    shape="icon"
+                    className="text-2xl text-primary bg-white"
+                  >
+                    <FaFacebookF />
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    shape="icon"
+                    className="text-2xl text-primary bg-white"
+                  >
+                    <FaInstagram />
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    shape="icon"
+                    className="text-2xl text-primary bg-white"
+                  >
+                    <FaXTwitter />
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    shape="icon"
+                    className="text-2xl text-primary bg-white"
+                  >
+                    <FaLinkedinIn />
+                  </Button>
+                </li>
+              </ul>
+            </div>
           </header>
 
-          <main className="border-t border-b-2 border-white/50 dark:border-white/5 py-10 pb-20 grid grid-cols-[2fr_1fr_1fr_1fr] gap-8 text-white">
-            <aside>
+          <main className="border-t border-b-2 border-white/50 dark:border-white/5 py-10 pb-20 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-y-14 gap-x-8 text-white">
+            <aside className="max-lg:col-span-full">
               <p className="dark:opacity-60">
-                ParadiseDev® is a subdivision of Paradise <br /> Host S.A. and a
-                registered trademark
+                ParadiseDev® is a subdivision of Paradise{" "}
+                <br className="max-lg:hidden" /> Host S.A. and a registered
+                trademark
               </p>
             </aside>
 
@@ -117,7 +138,7 @@ function Footer() {
             </div>
           </main>
 
-          <div className="mt-14 flex items-center justify-between space-x-6 text-sm text-white/60">
+          <div className="mt-14 flex max-sm:flex-col-reverse items-start sm:items-center justify-between sm:space-x-6 text-sm text-white/60">
             <p>Copyright 2024© | All rights reserved</p>
 
             <p>
@@ -125,7 +146,9 @@ function Footer() {
               Paradise Host®
             </p>
 
-            <ThemeSwitcher />
+            <div className="max-sm:mb-4">
+              <ThemeSwitcher />
+            </div>
           </div>
         </div>
       </Container>

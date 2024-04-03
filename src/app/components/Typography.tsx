@@ -6,7 +6,7 @@ import React, { HTMLAttributes } from "react";
 const typographyVariants = cva("", {
   variants: {
     variant: {
-      "super-heading": "text-[56px]",
+      "super-heading": "text-base sm:text-2xl lg:text-[56px]",
       base: "text-base",
     },
   },

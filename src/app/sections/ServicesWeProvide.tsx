@@ -63,19 +63,19 @@ const Card = ({
 }) => {
   return (
     <div className="border border-primary rounded-xl p-7">
-      <header className="flex items-center space-x-4 justify-between">
-        <p className="text-xl font-medium">{title}</p>
+      <header className="flex max-lg:flex-col-reverse items-center lg:space-x-4 justify-between">
+        <p className="text-lg sm:text-xl font-medium max-lg:mt-4">{title}</p>
         <Image
           src={imgSrc}
           alt="icon"
-          className="size-[90px] flex-shrink-0"
+          className="size-16 lg:size-[90px] flex-shrink-0"
           width={90}
           height={90}
         />
       </header>
 
-      <main className="mt-24">
-        <p className="font-medium text-xl">{desc}</p>
+      <main className="mt-4 lg:mt-24 max-lg:text-center">
+        <p className="font-medium text-base lg:text-xl">{desc}</p>
       </main>
     </div>
   );
@@ -85,11 +85,11 @@ function ServicesWeProvide() {
   return (
     <section>
       <Container>
-        <h1 className="text-center uppercase font-bold text-[64px] lh-1_2 mb-20">
+        <h1 className="text-center uppercase font-bold text-3xl sm:text-[64px] lh-1_2 mb-10 lg:mb-20">
           <span className="text-primary">Services</span> We <br /> Provide
         </h1>
 
-        <main className="flex space-x-4 [&>*]:min-w-[20rem] justify-center">
+        <main className="max-lg:grid max-sm:grid-cols-1 max-lg:grid-cols-2 max-lg:gap-5 lg:flex lg:space-x-4 lg:[&>*]:min-w-[20rem] lg:justify-center">
           {data.map((item, i) => (
             <Card
               key={i}

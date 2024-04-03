@@ -1,5 +1,6 @@
 import Container from "@/components/Container";
 import GearsImage from "@/components/GearsImage";
+import Heading from "@/components/Heading";
 import StrokedText from "@/components/StrokedText";
 import Typography from "@/components/Typography";
 import { useTheme } from "next-themes";
@@ -8,10 +9,13 @@ import Image from "next/image";
 const Card = ({ text, num }: { text: string; num: number | string }) => {
   return (
     <div className="border border-primary rounded-xl p-6 bg-white dark:bg-body relative z-40 transition-all duration-700 hover:bg-primary/20">
-      <StrokedText color="#bd9fe0" className="text-[104px] font-bold lh-1 mb-3">
+      <StrokedText
+        color="#bd9fe0"
+        className="text-[52px] md:text-[104px] font-bold lh-1 mb-3"
+      >
         {num}
       </StrokedText>
-      <p className="text-xl lh-1_6">{text}</p>
+      <p className="text-base md:text-xl lh-1_6">{text}</p>
     </div>
   );
 };
@@ -20,7 +24,10 @@ function Process() {
   return (
     <section>
       <Container className="max-w-[1209px]">
-        <Typography variant="super-heading" className="lh-1_3 mb-40">
+        <Typography
+          variant="super-heading"
+          className="max-lg:text-center lh-1_3 mb-20 lg:mb-40 max-lg:!leading-[2]"
+        >
           This is our procedure once the work is accepted from us and the budget
           from the client. We will include you in each stage of the process for
           the best result!
@@ -33,13 +40,15 @@ function Process() {
           alt=""
           width={100}
           height={100}
-          className="absolute top-[60%] right-0 -translate-y-1/2"
+          className="absolute top-[60%] right-0 -translate-y-1/2 max-lg:hidden"
         />
 
-        <header className="mb-20">
-          <StrokedText className="uppercase text-center text-[6.5rem] font-bold lh-1_4">
-            Process
-          </StrokedText>
+        <header className="mb-12 sm:mb-20">
+          <Heading>
+            <StrokedText className="uppercase text-center font-bold lh-1_4">
+              Process
+            </StrokedText>
+          </Heading>
 
           <h4 className="text-center text-5xl text-primary font-bold mb-7">
             Our work process
@@ -51,8 +60,8 @@ function Process() {
           </p>
         </header>
 
-        <main className="max-w-[66rem] mx-auto z-20">
-          <div className="grid grid-cols-3 gap-10">
+        <main className="max-w-[66rem] mx-auto z-20 max-lg:grid max-lg:gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
             <Card
               num={"01"}
               text="The presentation will be made to the client detailing each point about how the project will be worked on, including the estimated time and budget for the work."
@@ -67,7 +76,7 @@ function Process() {
             />
           </div>
 
-          <div className="relative">
+          <div className="relative max-lg:hidden">
             <img
               src="/images/connector-lines.png"
               className="mx-auto w-[79%] relative -top-3 z-10 relative -mb-8"
@@ -83,7 +92,7 @@ function Process() {
             />
           </div>
 
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
             <Card
               num={"04"}
               text="There will be constant communication with the client as development progresses. There will be rounds of adjustments until the client is satisfied."

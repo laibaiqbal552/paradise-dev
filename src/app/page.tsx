@@ -16,11 +16,11 @@ export default function Home() {
     <main>
       <Navbar />
 
-      <div className="mt-[96px] mb-40">
+      <div className="mt-10 sm:mt-[96px] mb-14 lg:mb-40">
         <Hero />
       </div>
 
-      <div className="mb-40">
+      <div className="mb-20 lg:mb-40">
         <Features />
       </div>
 
@@ -32,7 +32,7 @@ export default function Home() {
         <ServicesWeProvide />
       </div>
 
-      <div className="mb-40">
+      <div className="mb-20 lg:mb-40">
         <WeHandle />
       </div>
 
@@ -48,11 +48,11 @@ export default function Home() {
         <PreviousProjects />
       </div>
 
-      <div className="mb-60">
+      <div className="mb-20 lg:mb-60">
         <TrustedClients />
       </div>
 
-      <div className="mb-20">
+      <div className="mb-10 sm:mb-20">
         <Contact />
       </div>
 

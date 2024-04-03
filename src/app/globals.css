@@ -40,7 +40,7 @@
 
   html,
   body {
-    @apply bg-white dark:bg-body text-black overflow-x-hidden dark:text-white;
+    @apply bg-white dark:bg-body text-black overflow-x-hidden dark:text-white min-h-screen;
   }
 }
 

@@ -18,7 +18,7 @@ const buttonVariants = cva("rounded-full text-xl transition-all duration-300", {
     },
     shape: {
       button: "",
-      icon: "w-[46px] h-[46px] p-0 flex items-center justify-center",
+      icon: "size-[36px] sm:size-[46px] p-0 flex items-center justify-center",
     },
   },
   defaultVariants: {

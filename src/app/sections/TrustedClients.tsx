@@ -37,7 +37,7 @@ function TrustedClients() {
   return (
     <section>
       <Container className="max-w-[80rem] w-full mb-10">
-        <p className="text-[3.5rem] font-semibold mb-5 text-center">
+        <p className="text-3xl sm:text-4xl lg:text-[3.5rem] font-semibold mb-5 text-center">
           Our Trusted Clients
         </p>
       </Container>
@@ -51,7 +51,7 @@ function TrustedClients() {
           <img
             src={theme === "dark" ? item.src : item.lightSrc}
             key={i}
-            className="h-[80px] w-auto mx-6"
+            className="h-9 sm:h-14 xl:h-[80px] w-auto mx-1.5 sm:mx-3 xl:mx-6"
           />
         ))}
       </Marquee>

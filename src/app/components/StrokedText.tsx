@@ -1,5 +1,6 @@
 "use client";
 
+import useThemeSwitcher from "@/hooks/useThemeSwitcher";
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import React from "react";
@@ -14,10 +15,11 @@ interface Props
 }
 
 function StrokedText(props: Props) {
-  const { theme } = useTheme();
+  const [theme] = useThemeSwitcher();
+
   const {
     strokeWidth = "1px",
-    color = theme == "dark" ? "rgba(255,255,255,.7)" : "black",
+    color = theme == "light" ? "black" : "rgba(255,255,255,.7)",
     children,
     className,
     ..._props

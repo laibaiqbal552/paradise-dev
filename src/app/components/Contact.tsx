@@ -17,12 +17,18 @@ const Card = ({
   return (
     <div className="flex items-start space-x-6">
       <aside className="flex-shrink-0">
-        <Image width={50} height={50} src={imgSrc} alt="" />
+        <Image
+          width={50}
+          height={50}
+          src={imgSrc}
+          alt=""
+          className="max-sm:size-10"
+        />
       </aside>
 
       <main>
-        <p className="text-xl font-bold mb-1">{title}</p>
-        <p className="text-lg">{subtitle}</p>
+        <p className="text-base sm:text-xl font-bold mb-1">{title}</p>
+        <p className="text-sm sm:text-lg">{subtitle}</p>
       </main>
     </div>
   );
@@ -30,8 +36,8 @@ const Card = ({
 
 function Contact() {
   return (
-    <Container className="max-w-[1209px] border-t border-black/30 dark:border-white/60 pt-12 px-0">
-      <div className="grid grid-cols-3 gap-6 mb-12">
+    <Container className="max-w-[1209px] border-t border-black/30 dark:border-white/60 pt-12">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8 mb-12">
         <Card
           title="Mail"
           subtitle="contact@paradisedev.net"

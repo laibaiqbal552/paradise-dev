@@ -171,7 +171,7 @@ const TabButton = ({
       {...props}
       style={{ writingMode: "vertical-rl" }}
       className={cn(
-        "flex items-center justify-center w-full text-2xl font-medium p-4 transition-all duration-300",
+        "flex items-center justify-center w-full text-base sm:text-2xl font-medium p-4 transition-all duration-300",
         className,
         isActive ? "bg-primary text-white" : null
       )}
@@ -192,8 +192,10 @@ const Card = ({
 }) => {
   return (
     <div>
-      <h2 className="text-[2rem] mb-5 font-bold">{title}</h2>
-      <p className="text-xl h-[60px]">{subtitle}</p>
+      <h2 className="text-base sm:text-[2rem] mb-3 sm:mb-5 font-bold">
+        {title}
+      </h2>
+      <p className="text-sm sm:text-xl sm:h-[60px] max-sm:mb-6">{subtitle}</p>
 
       <div className="relative">
         <img src={imgSrc} className="w-full" alt="img" />
@@ -214,11 +216,11 @@ function PreviousProjects() {
   return (
     <div>
       <Container className="max-w-[1920px]">
-        <h1 className="text-center font-bold mb-16 text-[3.5rem]">
+        <h1 className="text-center font-bold mb-12 sm:mb-16 text-3xl sm:text-4xl lg:text-[3.5rem]">
           Previous Projects
         </h1>
 
-        <div className="grid grid-cols-[72px_1fr] gap-10 items-start">
+        <div className="grid grid-cols-[50px_1fr] sm:grid-cols-[72px_1fr] gap-6 sm:gap-10 items-start">
           <aside className="border rounded-r-2xl divide-y-2 overflow-hidden">
             {tabs.map((item) => (
               <TabButton
@@ -240,7 +242,7 @@ function PreviousProjects() {
               .map((items: any, _i: any) => (
                 <div
                   key={_i}
-                  className="grid grid-cols-3 gap-5 border rounded-lg p-4"
+                  className="grid lg:grid-cols-3 gap-5 border rounded-lg p-4"
                 >
                   {items.map((item: any, a: any) => (
                     <Card

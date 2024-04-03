@@ -1,5 +1,6 @@
 import { Button } from "@/components/Button";
 import Container from "@/components/Container";
+import Heading from "@/components/Heading";
 import StrokedText from "@/components/StrokedText";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -18,7 +19,7 @@ const FeatureCard = ({
   return (
     <div
       className={cn(
-        "border bg-white border-black/40 dark:border-primary dark:bg-body p-[30px] rounded-xl",
+        "lg:w-[19.688rem] flex-shrink-0 border max-lg:!bg-primary/5 bg-white border-black/40 dark:border-primary dark:bg-body p-[30px] rounded-xl max-lg:text-center",
         className
       )}
     >
@@ -27,11 +28,15 @@ const FeatureCard = ({
         alt="feature-icon"
         width={75}
         height={75}
-        className="mb-5"
+        className="mb-5 max-lg:mx-auto max-sm:size-12"
       />
-      <p className="text-5xl font-medium">{title}</p>
+      <p className="text-xl sm:text-5xl font-medium max-sm:mb-3 max-lg:mb-6">
+        {title}
+      </p>
 
-      <p className="mt-[6.5rem] text-xl lh-1_2 font-medium">{desc}</p>
+      <p className="lg:mt-[6.5rem] text-base sm:text-xl lh-1_2 font-medium">
+        {desc}
+      </p>
     </div>
   );
 };
@@ -51,21 +56,21 @@ const Card = ({
     <div
       className={cn(
         "grid gap-5 auto-cols-[1fr]",
-        reverse ? "grid-cols-[1fr_.7fr]" : "grid-cols-[.7fr_1fr]"
+        reverse ? "lg:grid-cols-[1fr_.7fr]" : "lg:grid-cols-[.7fr_1fr]"
       )}
     >
-      <div className={cn("", reverse ? "order-2 flex-shrink-0" : "")}>
+      <div className={cn("", reverse ? "lg:order-2 flex-shrink-0" : "")}>
         <Image
           src="/images/work-with-us.png"
-          className="rounded-3xl"
+          className="rounded-3xl max-lg:w-full"
           alt="work-with-us"
           width={555}
           height={496}
         />
       </div>
 
-      <div className="border border-primary flex flex-col justify-center py-4 px-12 rounded-2xl items-start">
-        <h2 className="text-[32px] font-semibold mb-3 text-primary dark:text-white">
+      <div className="border border-primary flex flex-col justify-center py-6 px-8 lg:py-4 lg:px-12 rounded-2xl items-start">
+        <h2 className="text-xl sm:text-[32px] font-semibold mb-6 lg:mb-3 text-primary dark:text-white">
           {title}
         </h2>
 
@@ -80,40 +85,42 @@ const Card = ({
 function Features() {
   return (
     <section>
-      <Container asChild className="mb-28">
+      <Container asChild className="mb-10 lg:mb-28">
         <header>
-          <StrokedText className="text-[104px] font-bold mb-20 text-center uppercase">
-            Features
-          </StrokedText>
+          <Heading>
+            <StrokedText className="font-bold mb-10 sm:mb-20 text-center uppercase">
+              Features
+            </StrokedText>
+          </Heading>
 
-          <div className="grid grid-cols-4 gap-8 mb-16">
+          <div className="mx-auto grid max-lg:gap-6 lg:flex lg:space-x-8 mb-16">
             <FeatureCard
               imgSrc="/images/feature-icons/stars.svg"
               title="Trajectory"
               desc="Our 5 years of experience in the field support us."
-              className="rotate-[-14deg] z-20"
+              className="lg:rotate-[-14deg] z-20"
             />
             <FeatureCard
               imgSrc="/images/feature-icons/tick.png"
               title="Quality"
               desc="We take care of polishing every last detail of your project"
-              className="rotate-[-14deg] z-40"
+              className="lg:rotate-[-14deg] z-40"
             />
             <FeatureCard
               imgSrc="/images/feature-icons/location.svg"
               title="Attention"
               desc="24/7 support and office with customer service unlimited."
-              className="rotate-[14deg] z-30"
+              className="lg:rotate-[14deg] z-30"
             />
             <FeatureCard
               imgSrc="/images/feature-icons/price.svg"
               title="Price"
               desc="We guarantee the best quality at the best price for you."
-              className="rotate-[14deg] z-50"
+              className="lg:rotate-[14deg] z-50"
             />
           </div>
 
-          <p className="text-[64px] text-center font-bold lh-1_2">
+          <p className="text-3xl sm:text-[64px] text-center font-bold lh-1_2">
             <span className="text-primary">FEATURES</span> MAKE <br /> US
             DIFFERENT
           </p>
@@ -121,7 +128,7 @@ function Features() {
       </Container>
 
       <Container asChild className="max-w-[1396px]">
-        <main className="space-y-10">
+        <main className="space-y-14 lg:space-y-10">
           <Card
             btnTitle="Send Sv"
             title="Work with us"

@@ -54,7 +54,7 @@ function WeHandle() {
   return (
     <section>
       <Container className="mb-10">
-        <h1 className="text-[56px] text-center font-semibold">
+        <h1 className="text-3xl md:text-[56px] text-center font-semibold">
           Tech’s & Platforms We Handle
         </h1>
       </Container>
@@ -72,7 +72,7 @@ function WeHandle() {
               alt="skill"
               width={112}
               height={112}
-              className="mx-5"
+              className="mx-5 max-sm:size-12 max-xl:size-16"
             />
           ) : null
         )}

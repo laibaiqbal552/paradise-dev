@@ -23,11 +23,9 @@ export default function RootLayout({
     <html lang="en" className={`${montserrat.variable}`}>
       <body>
         <ThemeProvider
-          attribute="class"
           defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-          enableColorScheme
+          attribute="class"
+          enableSystem={false}
         >
           {children}
         </ThemeProvider>

@@ -3,16 +3,12 @@
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
-
-interface BtnProps
-  extends DetailedHTMLProps<
-    ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  > {
-  imgSrc: string;
-  isActive: boolean;
-}
+import {
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+  useEffect,
+  useState,
+} from "react";
 
 const Btn = ({ imgSrc, className, isActive, ...props }: any) => {
   return (
@@ -42,24 +38,36 @@ const Btn = ({ imgSrc, className, isActive, ...props }: any) => {
 
 function ThemeSwitcher() {
   const { setTheme, theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // useEffect only runs on the client, so now we can safely show the UI
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
-    <div className="h-[48px] bg-white dark:bg-body-dark rounded-full flex items-center justify-center px-1.5 space-x-1.5">
-      <Btn
-        isActive={theme == "light"}
-        onClick={() => {
-          setTheme("light");
-        }}
-        type="button"
-        imgSrc="/images/sun.svg"
-      />
-      <Btn
-        isActive={theme == "dark"}
-        onClick={() => setTheme("dark")}
-        type="button"
-        imgSrc="/images/moon.svg"
-      />
-    </div>
+    <>
+      <div className="h-[48px] bg-white dark:bg-body-dark rounded-full flex items-center justify-center px-1.5 space-x-1.5">
+        <Btn
+          isActive={theme === "light"}
+          onClick={() => {
+            setTheme("light");
+          }}
+          type="button"
+          imgSrc="/images/sun.svg"
+        />
+        <Btn
+          isActive={theme == "dark"}
+          onClick={() => setTheme("dark")}
+          type="button"
+          imgSrc="/images/moon.svg"
+        />
+      </div>
+    </>
   );
 }
 

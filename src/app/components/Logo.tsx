@@ -1,6 +1,6 @@
 "use client";
 
-import { useTheme } from "next-themes";
+import useThemeSwitcher from "@/hooks/useThemeSwitcher";
 import Image, { ImageProps } from "next/image";
 
 function Logo({
@@ -9,8 +9,8 @@ function Logo({
   alt = "logo",
   ...props
 }: ImageProps) {
-  const { theme } = useTheme();
-  const src = theme === "dark" ? "/images/logo.png" : "/images/logo-black.svg";
+  const [theme] = useThemeSwitcher();
+  const src = theme === "light" ? "/images/logo-black.svg" : "/images/logo.png";
 
   return <Image {...props} src={src} width={width} height={height} alt={alt} />;
 }
