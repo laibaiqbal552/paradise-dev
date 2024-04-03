@@ -21,6 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${montserrat.variable}`}>
+      <head>
+        <title>Paradise Dev</title>
+      </head>
+
       <body id="luxy">
         <ThemeProvider
           defaultTheme="dark"
