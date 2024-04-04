@@ -8,6 +8,7 @@ import { MdOutlineMenu } from "react-icons/md";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import OutsideClickDetector from "@/hooks/OutsideClickDetector";
+import { Link as ScrollLink } from "react-scroll";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -36,40 +37,60 @@ function Navbar() {
               <Button
                 padding="5"
                 variant="ghost"
-                className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center"
+                className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center block"
+                asChild
+                onClick={() => setIsMenuOpen(false)}
               >
-                <a href="#">Home</a>
+                <Link href="/">Home</Link>
               </Button>
             </li>
             <li>
               <Button
                 padding="5"
                 variant="ghost"
-                className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center"
+                className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center cursor-pointer block"
+                asChild
+                onClick={() => setIsMenuOpen(false)}
               >
-                <a href="#">Service</a>
+                <ScrollLink offset={-100} to="service">
+                  Service
+                </ScrollLink>
               </Button>
             </li>
             <li>
               <Button
                 padding="5"
                 variant="ghost"
-                className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center"
+                className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center cursor-pointer block"
+                asChild
+                onClick={() => setIsMenuOpen(false)}
               >
-                <a href="#">About Us</a>
+                <ScrollLink offset={-100} to="about">
+                  About Us
+                </ScrollLink>
               </Button>
             </li>
             <li>
               <Button
+                asChild
+                onClick={() => setIsMenuOpen(false)}
                 padding="5"
                 variant="ghost"
-                className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center"
+                className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center cursor-pointer block"
               >
-                <a href="#">Portfolio</a>
+                <ScrollLink offset={-100} to="portfolio">
+                  Portfolio
+                </ScrollLink>
               </Button>
             </li>
             <li className="max-lg:w-fit max-lg:mx-auto">
-              <Button className="uppercase">Begin</Button>
+              <Button
+                asChild
+                onClick={() => setIsMenuOpen(false)}
+                className="uppercase cursor-pointer block"
+              >
+                <ScrollLink to="contact">Begin</ScrollLink>
+              </Button>
             </li>
           </ul>
 

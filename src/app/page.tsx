@@ -24,11 +24,11 @@ export default function Home() {
         <Features />
       </div>
 
-      <div className="mb-20">
+      <div className="mb-20" id="about">
         <About />
       </div>
 
-      <div className="mb-20">
+      <div className="mb-20" id="service">
         <ServicesWeProvide />
       </div>
 
@@ -44,7 +44,7 @@ export default function Home() {
         <ProvideQuality />
       </div>
 
-      <div className="mb-20">
+      <div id="portfolio" className="mb-20">
         <PreviousProjects />
       </div>
 
@@ -52,7 +52,7 @@ export default function Home() {
         <TrustedClients />
       </div>
 
-      <div className="mb-10 sm:mb-20">
+      <div id="contact" className="mb-10 sm:mb-20">
         <Contact />
       </div>
 

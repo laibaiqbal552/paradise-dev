@@ -41,6 +41,7 @@
   html,
   body {
     @apply bg-white dark:bg-body text-black overflow-x-hidden dark:text-white min-h-screen;
+    scroll-behavior: smooth;
   }
 }
 

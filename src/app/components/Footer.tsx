@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import ThemeSwitcher from "./ThemeSwitcher";
+import { socialLinks } from "@/lib/constants";
 
 function Footer() {
   return (
@@ -21,54 +22,19 @@ function Footer() {
 
             <div className="overflow-hidden">
               <ul className="flex items-center flex-wrap justify-center [&>*]:m-3 -m-3">
-                <li>
-                  <Button
-                    shape="icon"
-                    className="text-2xl text-primary bg-white"
-                  >
-                    <FaTiktok />
-                  </Button>
-                </li>
-                <li>
-                  <Button
-                    shape="icon"
-                    className="text-2xl text-primary bg-white"
-                  >
-                    <FaTelegramPlane />
-                  </Button>
-                </li>
-                <li>
-                  <Button
-                    shape="icon"
-                    className="text-2xl text-primary bg-white"
-                  >
-                    <FaFacebookF />
-                  </Button>
-                </li>
-                <li>
-                  <Button
-                    shape="icon"
-                    className="text-2xl text-primary bg-white"
-                  >
-                    <FaInstagram />
-                  </Button>
-                </li>
-                <li>
-                  <Button
-                    shape="icon"
-                    className="text-2xl text-primary bg-white"
-                  >
-                    <FaXTwitter />
-                  </Button>
-                </li>
-                <li>
-                  <Button
-                    shape="icon"
-                    className="text-2xl text-primary bg-white"
-                  >
-                    <FaLinkedinIn />
-                  </Button>
-                </li>
+                {socialLinks.map((item, i) => (
+                  <li key={i}>
+                    <Button
+                      shape="icon"
+                      className="text-2xl text-primary bg-white"
+                      asChild
+                    >
+                      <a href={item.link} target="_blank">
+                        <item.Icon />
+                      </a>
+                    </Button>
+                  </li>
+                ))}
               </ul>
             </div>
           </header>
@@ -138,7 +104,7 @@ function Footer() {
             </div>
           </main>
 
-          <div className="mt-14 flex max-sm:flex-col-reverse items-start sm:items-center justify-between sm:space-x-6 text-sm">
+          <div className="mt-14 flex max-sm:flex-col-reverse items-start sm:items-center justify-between sm:space-x-6 text-sm text-white/70">
             <p>Copyright 2024© | All rights reserved</p>
 
             <p>

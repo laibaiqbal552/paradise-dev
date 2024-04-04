@@ -60,7 +60,9 @@ function Contact() {
           <Textarea placeholder="Message" className="resize-none h-[20rem]" />
         </div>
       </div>
-      <Button className="mt-12 mb-5 px-14">SEND</Button>
+      <Button className="mt-12 mb-5 px-14 dark:hover:bg-transparent dark:hover:border-white dark:hover:text-white">
+        SEND
+      </Button>
 
       <Typography
         asChild

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "@/components/Button";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { socialLinks } from "@/lib/constants";
 
 function Hero() {
   return (
@@ -43,27 +44,20 @@ function Hero() {
         </h1>
       </Container>
 
-      <ul className="flex max-lg:flex-row items-center flex-col max-lg:space-x-4 lg:space-y-6 lg:absolute top-1/2 lg:-translate-y-1/2 lg:right-8 max-lg:justify-center max-lg:px-4 max-lg:mt-6">
-        <li>
-          <Button shape="icon" className="text-2xl">
-            <FaXTwitter />
-          </Button>
-        </li>
-        <li>
-          <Button shape="icon" className="text-2xl">
-            <FaFacebookF />
-          </Button>
-        </li>
-        <li>
-          <Button shape="icon" className="text-2xl">
-            <FaInstagram />
-          </Button>
-        </li>
-        <li>
-          <Button shape="icon" className="text-2xl">
-            <FaLinkedinIn />
-          </Button>
-        </li>
+      <ul className="flex max-lg:flex-row items-center flex-col max-lg:space-x-4 lg:space-y-6 lg:absolute top-1/2 lg:-translate-y-1/2 lg:right-8 max-lg:justify-center max-lg:px-4 max-lg:mt-6 z-50">
+        {socialLinks
+          .filter((item) =>
+            item.title === "tiktok" || item.title === "telegram" ? null : item
+          )
+          .map((item, i) => (
+            <li key={i}>
+              <Button asChild shape="icon" className="text-2xl">
+                <a href={item.link} target="_blank">
+                  <item.Icon />
+                </a>
+              </Button>
+            </li>
+          ))}
       </ul>
     </section>
   );

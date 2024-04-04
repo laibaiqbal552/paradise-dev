@@ -185,10 +185,12 @@ const Card = ({
   title,
   subtitle,
   imgSrc,
+  link,
 }: {
   title: string;
   subtitle: string;
   imgSrc: string;
+  link: string;
 }) => {
   return (
     <div>
@@ -200,11 +202,15 @@ const Card = ({
       <div className="relative">
         <img src={imgSrc} className="w-full" alt="img" />
 
-        <div className="absolute top-0 left-0 w-full h-full z-40 transition-all duration-500 bg-black/25 hover:bg-black/75 cursor-pointer flex items-center justify-center group">
-          <p className="text-[2rem] font-medium transition-all duration-500 opacity-0 group-hover:opacity-100">
+        <a
+          href={link}
+          target="_blank"
+          className="absolute top-0 left-0 w-full h-full z-40 transition-all duration-500 bg-black/25 hover:bg-black/75 cursor-pointer flex items-center justify-center group"
+        >
+          <span className="text-[2rem] font-medium transition-all duration-500 opacity-0 group-hover:opacity-100">
             Open Site
-          </p>
-        </div>
+          </span>
+        </a>
       </div>
     </div>
   );
@@ -250,6 +256,7 @@ function PreviousProjects() {
                       title={item.name}
                       subtitle={item.description}
                       imgSrc={item.image}
+                      link={item.url}
                     />
                   ))}
                 </div>

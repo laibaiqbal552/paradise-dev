@@ -53,14 +53,14 @@ function WeHandle() {
 
   return (
     <section>
-      <Container className="mb-10">
+      <Container className="mb-20">
         <h1 className="text-3xl md:text-[56px] text-center font-semibold">
           Tech’s & Platforms We Handle
         </h1>
       </Container>
 
       <Marquee
-        speed={120}
+        speed={100}
         className="flex items-center justify-between"
         autoFill
       >
@@ -70,8 +70,8 @@ function WeHandle() {
               src={theme === "dark" ? item.img : item.imgLight}
               key={i}
               alt="skill"
-              width={112}
-              height={112}
+              width={100}
+              height={100}
               className="mx-5 max-sm:size-12 max-xl:size-16"
             />
           ) : null

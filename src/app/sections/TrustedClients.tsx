@@ -36,14 +36,14 @@ function TrustedClients() {
 
   return (
     <section>
-      <Container className="max-w-[80rem] w-full mb-10">
-        <p className="text-3xl sm:text-4xl lg:text-[3.5rem] font-semibold mb-5 text-center">
+      <Container className="max-w-[80rem] w-full">
+        <p className="text-3xl sm:text-4xl lg:text-[3.5rem] font-semibold text-center mb-20">
           Our Trusted Clients
         </p>
       </Container>
 
       <Marquee
-        speed={140}
+        speed={100}
         autoFill
         className="flex items-center justify-between"
       >

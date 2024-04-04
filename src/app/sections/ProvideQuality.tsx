@@ -1,5 +1,8 @@
+"use client";
+
 import { Button } from "@/components/Button";
 import Container from "@/components/Container";
+import { Link as ScrollLink } from "react-scroll";
 
 function ProvideQuality() {
   return (
@@ -15,11 +18,12 @@ function ProvideQuality() {
         </p>
 
         <Button
-          className="uppercase mx-auto block"
+          className="uppercase mx-auto block cursor-pointer w-fit"
           variant="primary"
           padding="16_32"
+          asChild
         >
-          Get In Touch
+          <ScrollLink to="contact">Get In Touch</ScrollLink>
         </Button>
       </Container>
     </section>

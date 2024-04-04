@@ -8,7 +8,8 @@ import { cn } from "@/lib/utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
-import { useRef } from "react";
+import { ReactNode, useRef } from "react";
+import { Link as ScrollLink } from "react-scroll";
 
 const FeatureCard = ({
   imgSrc,
@@ -51,12 +52,12 @@ const Card = ({
   reverse,
   title,
   desc,
-  btnTitle,
+  children,
 }: {
   reverse?: boolean;
   title: string;
   desc: string;
-  btnTitle: string;
+  children?: ReactNode;
 }) => {
   return (
     <div
@@ -82,7 +83,7 @@ const Card = ({
 
         <p className="opacity-70 mb-7">{desc}</p>
 
-        <Button>{btnTitle}</Button>
+        {children}
       </div>
     </div>
   );
@@ -171,7 +172,6 @@ function Features() {
       <Container asChild className="max-w-[1396px]">
         <main className="space-y-14 lg:space-y-10">
           <Card
-            btnTitle="Send Sv"
             title="Work with us"
             desc="If you are a student or if you have advanced programming knowledge
           (Jr, Ssr, Sr) you can contact us to send your CV (Curriculum Vitae).
@@ -180,24 +180,37 @@ function Features() {
           with us regardless of your nationality, gender or orientation. We have
           an excellent work environment and we always add profiles to our
           projects."
-          />
+          >
+            <Button asChild className="cursor-pointer">
+              <ScrollLink to="contact">Send Cv</ScrollLink>
+            </Button>
+          </Card>
           <Card
-            btnTitle="Start Now"
             reverse
             title="Each project is worked in a different way"
             desc="We take the time to analyze each project meticulously to provide the best proposal according to the client's needs. No project is worked in the same way. We are in constant communication to do our work in the most efficient way possible."
-          />
+          >
+            <Button asChild className="cursor-pointer">
+              <ScrollLink to="contact">Start Now</ScrollLink>
+            </Button>
+          </Card>
           <Card
-            btnTitle="Report Problem"
             title="Report a veneer ability"
             desc="One of our main activities is computer security. If you found any vulnerability in any system, website or service provider, you can report it to us. We are in constant contact with companies reporting these incidents, offering our services. You may be compensated accordingly for reporting the problem or even joining us to solve it."
-          />
+          >
+            <Button asChild className="cursor-pointer">
+              <ScrollLink to="contact">Report Problem</ScrollLink>
+            </Button>
+          </Card>
           <Card
             reverse
-            btnTitle="Request support"
             title="Support 14/7"
             desc="Our dedicated support team is available 24/7 to address your needs promptly and efficiently, ensuring uninterrupted assistance whenever you require it. You can rely on us to provide round-the-clock support, delivering solutions whenever you reach out, day or night."
-          />
+          >
+            <Button asChild className="cursor-pointer">
+              <ScrollLink to="contact">Request support</ScrollLink>
+            </Button>
+          </Card>
         </main>
       </Container>
     </section>
