@@ -1,9 +1,10 @@
 "use client";
 
 import Container from "@/components/Container";
-import { useTheme } from "next-themes";
 import Image from "next/image";
-import Marquee from "react-fast-marquee";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import useThemeSwitcher from "@/hooks/useThemeSwitcher";
 
 const skills = [
   {
@@ -49,7 +50,7 @@ const skills = [
 ];
 
 function WeHandle() {
-  const { theme } = useTheme();
+  const [theme] = useThemeSwitcher();
 
   return (
     <section>
@@ -59,7 +60,7 @@ function WeHandle() {
         </h1>
       </Container>
 
-      <Marquee
+      {/* <Marquee
         speed={100}
         className="flex items-center justify-between"
         autoFill
@@ -76,7 +77,34 @@ function WeHandle() {
             />
           ) : null
         )}
-      </Marquee>
+      </Marquee> */}
+
+      <Swiper
+        slidesPerView={"auto"}
+        modules={[Autoplay]}
+        className="[&_.swiper-slide]:!w-fit [&_.swiper-slide]:h-auto"
+        loop={true}
+        autoplay={{
+          disableOnInteraction: false,
+          delay: 1000,
+        }}
+      >
+        {skills.map((item, i) =>
+          item.imgLight ? (
+            <SwiperSlide key={i}>
+              <div className="flex items-center justify-center h-full">
+                <Image
+                  src={theme === "dark" ? item.img : item.imgLight}
+                  alt="skill"
+                  width={100}
+                  height={100}
+                  className="mx-5 max-sm:size-12 max-xl:size-16"
+                />
+              </div>
+            </SwiperSlide>
+          ) : null
+        )}
+      </Swiper>
     </section>
   );
 }

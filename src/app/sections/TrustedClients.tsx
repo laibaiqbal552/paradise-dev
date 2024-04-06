@@ -1,9 +1,10 @@
 "use client";
 
 import Container from "@/components/Container";
-import { useTheme } from "next-themes";
 import React from "react";
-import Marquee from "react-fast-marquee";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import useThemeSwitcher from "@/hooks/useThemeSwitcher";
 
 const clients = [
   { src: "/images/trusted/hil.png", lightSrc: "/images/trusted-light/hil.png" },
@@ -32,7 +33,7 @@ const clients = [
 ];
 
 function TrustedClients() {
-  const { theme } = useTheme();
+  const [theme] = useThemeSwitcher();
 
   return (
     <section>
@@ -42,7 +43,7 @@ function TrustedClients() {
         </p>
       </Container>
 
-      <Marquee
+      {/* <Marquee
         speed={100}
         autoFill
         className="flex items-center justify-between"
@@ -54,7 +55,27 @@ function TrustedClients() {
             className="h-9 sm:h-14 xl:h-[80px] w-auto mx-1.5 sm:mx-3 xl:mx-6"
           />
         ))}
-      </Marquee>
+      </Marquee> */}
+
+      <Swiper
+        slidesPerView={"auto"}
+        modules={[Autoplay]}
+        className="[&_.swiper-slide]:!w-fit [&_.swiper-slide]:h-auto"
+        loop={true}
+        autoplay={{
+          disableOnInteraction: false,
+          delay: 1000,
+        }}
+      >
+        {clients.map((item, i) => (
+          <SwiperSlide key={i}>
+            <img
+              src={theme === "dark" ? item.src : item.lightSrc}
+              className="h-9 sm:h-14 xl:h-[80px] w-auto mx-1.5 sm:mx-3 xl:mx-6"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 }
