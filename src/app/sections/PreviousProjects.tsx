@@ -239,7 +239,11 @@ function PreviousProjects() {
             ))}
           </aside>
 
-          <main key={tab} id="fade-in-animation" className="space-y-6">
+          <main
+            key={tab}
+            id="fade-in-animation"
+            className="space-y-16 lg:space-y-6 max-lg:border max-lg:px-2 max-lg:py-4 max-lg:border-black/5 max-lg:dark:border-white/5"
+          >
             {projects[tab]
               .map((_: any, i: any) =>
                 i % 3 === 0 ? projects[tab].slice(i, i + 3) : null
@@ -248,7 +252,7 @@ function PreviousProjects() {
               .map((items: any, _i: any) => (
                 <div
                   key={_i}
-                  className="grid lg:grid-cols-3 gap-5 border rounded-lg p-4"
+                  className="grid lg:grid-cols-3 gap-16 lg:gap-5 lg:border lg:rounded-lg lg:p-4 dark:border-white/30"
                 >
                   {items.map((item: any, a: any) => (
                     <Card

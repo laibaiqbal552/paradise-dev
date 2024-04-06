@@ -105,10 +105,10 @@ function Features() {
             return 14;
           },
           x: (index) => {
-            if (index === 0) return "-142%";
-            if (index === 1) return "57%";
-            if (index === 2) return "-46%";
-            return "153%";
+            if (index === 0) return "-160%";
+            if (index === 1) return "67%";
+            if (index === 2) return "-50%";
+            return "176%";
           },
 
           scrollTrigger: {

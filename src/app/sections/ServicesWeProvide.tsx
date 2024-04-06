@@ -83,7 +83,7 @@ const Card = ({
         />
       </header>
 
-      <main className="mt-4 lg:mt-24 max-lg:text-center">
+      <main className="mt-4 lg:mt-32 max-lg:text-center">
         <p className="font-medium text-base lg:text-xl">{desc}</p>
       </main>
     </div>
@@ -105,12 +105,16 @@ function ServicesWeProvide() {
             }
             return -14;
           },
-          x: (index) => {
+          x: (index, elem: HTMLElement) => {
             if (index % 2 === 0) {
-              return Number(40 * (index + 1)) + "%";
+              return (elem.clientWidth / 2) * (index === 0 ? 1.2 : index + 1.2);
+              // return Number(1 * 40 * (index + 1)) + "%";
             }
 
-            return Number(-1 * 40 * (index + 1)) + "%";
+            // return Number(-1 * 40 * (index + 1.4)) + "%";
+            return (
+              -1 * ((elem.clientWidth / 2) * (index === 0.8 ? 1.8 : index))
+            );
           },
           scrollTrigger: {
             trigger: "#main",
