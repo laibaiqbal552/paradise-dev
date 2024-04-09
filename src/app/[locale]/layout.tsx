@@ -1,4 +1,4 @@
-import Navbar from "components/Navbar";
+import { ThemeProvider } from "components/theme-provider";
 
 export default function RootLayout({
   children,
@@ -11,8 +11,9 @@ export default function RootLayout({
     <html lang={locale}>
       <body className="className" suppressHydrationWarning={true}>
         <div className="max-w-6xl mx-auto">
-          <Navbar />
-          {children}
+          {/* <Navbar /> */}
+
+          <ThemeProvider attribute="class">{children}</ThemeProvider>
         </div>
       </body>
     </html>

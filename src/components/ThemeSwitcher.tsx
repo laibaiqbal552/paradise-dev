@@ -3,12 +3,7 @@
 import { cn } from "./../lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import {
-  ButtonHTMLAttributes,
-  DetailedHTMLProps,
-  useEffect,
-  useState,
-} from "react";
+import { useEffect, useState } from "react";
 
 const Btn = ({ imgSrc, className, isActive, ...props }: any) => {
   return (
