@@ -11,6 +11,9 @@ import { useTranslations } from "next-intl";
 
 function Hero() {
   const t = useTranslations("Home.Hero");
+
+  const words = t("TypeWriter").split(",");
+
   return (
     <section className="relative">
       <Container className="relative z-10">
@@ -36,13 +39,10 @@ function Hero() {
         </h3>
 
         <h1 className="text-[6.5rem] text-center font-semibold lh-1_2 max-xl:text-6xl max-sm:text-[36px]">
-          WE PROPOSE YOU TO <br className="max-lg:hidden" /> DEVELOP YOUR <br />
+          {t("Subtitle")}
+          <br />
           <span className="text-primary">
-            <Typewriter
-              cursor
-              loop
-              words={["App", "Website", "Project", "Business", "Store"]}
-            />
+            <Typewriter cursor loop words={words} />
           </span>
         </h1>
       </Container>

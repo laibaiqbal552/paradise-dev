@@ -10,6 +10,8 @@ import gsap from "gsap";
 import Image from "next/image";
 import { ReactNode, useRef } from "react";
 import { Link as ScrollLink } from "react-scroll";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 const FeatureCard = ({
   imgSrc,
@@ -92,6 +94,10 @@ const Card = ({
 function Features() {
   const featureCardContainer = useRef(null);
 
+  const locale = useParams().locale;
+
+  const t = useTranslations("Home.Features");
+
   useGSAP(
     () => {
       let mm = gsap.matchMedia();
@@ -129,7 +135,7 @@ function Features() {
         <header>
           <Heading>
             <StrokedText className="font-bold mb-10 sm:mb-20 text-center uppercase">
-              Features
+              {t("Title")}
             </StrokedText>
           </Heading>
 
@@ -137,80 +143,42 @@ function Features() {
             ref={featureCardContainer}
             className="mx-auto grid max-lg:gap-6 lg:flex mb-16 lg:h-[26rem] relative"
           >
-            <FeatureCard
-              imgSrc="/images/feature-icons/stars.svg"
-              title="Trajectory"
-              desc="Our 5 years of experience in the field support us."
-            />
-
-            <FeatureCard
-              imgSrc="/images/feature-icons/location.svg"
-              title="Attention"
-              desc="24/7 support and office with customer service unlimited."
-            />
-
-            <FeatureCard
-              imgSrc="/images/feature-icons/tick.png"
-              title="Quality"
-              desc="We take care of polishing every last detail of your project"
-            />
-
-            <FeatureCard
-              imgSrc="/images/feature-icons/price.svg"
-              title="Price"
-              desc="We guarantee the best quality at the best price for you."
-            />
+            {featureData?.map((item, index) => (
+              <FeatureCard
+                key={index}
+                imgSrc={item.imgSrc}
+                title={item.title[locale as keyof typeof item.title]}
+                desc={item.desc[locale as keyof typeof item.desc]}
+              />
+            ))}
           </div>
 
-          <p className="text-3xl sm:text-[64px] text-center font-bold lh-1_2">
-            <span className="text-primary">FEATURES</span> MAKE <br /> US
-            DIFFERENT
-          </p>
+          <h3 className="text-3xl sm:text-[64px] text-center font-bold lh-1_2 uppercase max-w-lg mx-auto">
+            {/* {t("SecondaryTitle").split(" ")[0]} */}
+            <span className="text-primary">
+              {" "}
+              {t("SecondaryTitle").split(" ")[0]}
+            </span>{" "}
+            {t("SecondaryTitle").split(" ").slice(1).join(" ")}
+            {/* MAKE <br /> US DIFFERENT */}
+          </h3>
         </header>
       </Container>
 
       <Container asChild className="max-w-[1396px]">
         <main className="space-y-14 lg:space-y-10">
-          <Card
-            title="Work with us"
-            desc="If you are a student or if you have advanced programming knowledge
-          (Jr, Ssr, Sr) you can contact us to send your CV (Curriculum Vitae).
-          it will be stored in our database for future searches for job
-          profiles, and you will be recommended in the world ITEM. You can work
-          with us regardless of your nationality, gender or orientation. We have
-          an excellent work environment and we always add profiles to our
-          projects."
-          >
-            <Button asChild className="cursor-pointer">
-              <ScrollLink to="contact">Send Cv</ScrollLink>
-            </Button>
-          </Card>
-          <Card
-            reverse
-            title="Each project is worked in a different way"
-            desc="We take the time to analyze each project meticulously to provide the best proposal according to the client's needs. No project is worked in the same way. We are in constant communication to do our work in the most efficient way possible."
-          >
-            <Button asChild className="cursor-pointer">
-              <ScrollLink to="contact">Start Now</ScrollLink>
-            </Button>
-          </Card>
-          <Card
-            title="Report a veneer ability"
-            desc="One of our main activities is computer security. If you found any vulnerability in any system, website or service provider, you can report it to us. We are in constant contact with companies reporting these incidents, offering our services. You may be compensated accordingly for reporting the problem or even joining us to solve it."
-          >
-            <Button asChild className="cursor-pointer">
-              <ScrollLink to="contact">Report Problem</ScrollLink>
-            </Button>
-          </Card>
-          <Card
-            reverse
-            title="Support 14/7"
-            desc="Our dedicated support team is available 24/7 to address your needs promptly and efficiently, ensuring uninterrupted assistance whenever you require it. You can rely on us to provide round-the-clock support, delivering solutions whenever you reach out, day or night."
-          >
-            <Button asChild className="cursor-pointer">
-              <ScrollLink to="contact">Request support</ScrollLink>
-            </Button>
-          </Card>
+          {cardData?.map((item, index) => (
+            <Card
+              reverse={index % 2 === 0}
+              key={index}
+              title={item.title[locale as keyof typeof item.title]}
+              desc={item.desc[locale as keyof typeof item.desc]}
+            >
+              <Button asChild className="cursor-pointer">
+                <ScrollLink to={item.link}>{item.button}</ScrollLink>
+              </Button>
+            </Card>
+          ))}
         </main>
       </Container>
     </section>
@@ -218,3 +186,101 @@ function Features() {
 }
 
 export default Features;
+
+const featureData = [
+  {
+    imgSrc: "/images/feature-icons/stars.svg",
+    title: {
+      en: "Trajectory",
+      fr: "Trajectoire",
+    },
+    desc: {
+      en: "Our 5 years of experience in the field support us.",
+      fr: "Nos 5 ans d'expérience dans le domaine nous soutiennent.",
+    },
+  },
+  {
+    imgSrc: "/images/feature-icons/location.svg",
+    title: {
+      en: "Attention",
+      fr: "Attention",
+    },
+    desc: {
+      en: "24/7 support and office with customer service unlimited.",
+      fr: "Support 24/7 et bureau avec service client illimité.",
+    },
+  },
+  {
+    imgSrc: "/images/feature-icons/tick.png",
+    title: {
+      en: "Quality",
+      fr: "Qualité",
+    },
+    desc: {
+      en: "We take care of polishing every last detail of your project.",
+      fr: "Nous prenons soin de peaufiner chaque dernier détail de votre projet.",
+    },
+  },
+  {
+    imgSrc: "/images/feature-icons/price.svg",
+    title: {
+      en: "Price",
+      fr: "Prix",
+    },
+    desc: {
+      en: "We guarantee the best quality at the best price for you.",
+      fr: "Nous garantissons la meilleure qualité au meilleur prix pour vous.",
+    },
+  },
+];
+
+const cardData = [
+  {
+    title: {
+      en: "Work with us",
+      fr: "Travaillez avec nous",
+    },
+    desc: {
+      en: "If you are a student or if you have advanced programming knowledge (Jr, Ssr, Sr) you can contact us to send your CV (Curriculum Vitae). It will be stored in our database for future searches for job profiles, and you will be recommended in the world ITEM. You can work with us regardless of your nationality, gender or orientation. We have an excellent work environment and we always add profiles to our projects.",
+      fr: "Si vous êtes étudiant ou si vous avez des connaissances avancées en programmation (Jr, Ssr, Sr), vous pouvez nous contacter pour envoyer votre CV (Curriculum Vitae). Il sera stocké dans notre base de données pour de futures recherches de profils professionnels, et vous serez recommandé dans le monde ITEM. Vous pouvez travailler avec nous quelle que soit votre nationalité, votre sexe ou votre orientation. Nous avons un excellent environnement de travail et nous ajoutons toujours des profils à nos projets.",
+    },
+    button: "Send Cv",
+    link: "contact",
+  },
+  {
+    title: {
+      en: "Each project is worked in a different way",
+      fr: "Chaque projet est travaillé différemment",
+    },
+    desc: {
+      en: "We take the time to analyze each project meticulously to provide the best proposal according to the client's needs. No project is worked in the same way. We are in constant communication to do our work in the most efficient way possible.",
+      fr: "Nous prenons le temps d'analyser minutieusement chaque projet pour fournir la meilleure proposition selon les besoins du client. Aucun projet n'est travaillé de la même manière. Nous sommes en communication constante pour effectuer notre travail de la manière la plus efficace possible.",
+    },
+    button: "Start Now",
+    link: "contact",
+  },
+  {
+    title: {
+      en: "Report a veneer ability",
+      fr: "Signaler une capacité de placage",
+    },
+    desc: {
+      en: "One of our main activities is computer security. If you found any vulnerability in any system, website or service provider, you can report it to us. We are in constant contact with companies reporting these incidents, offering our services. You may be compensated accordingly for reporting the problem or even joining us to solve it.",
+      fr: "L'une de nos principales activités est la sécurité informatique. Si vous trouvez une vulnérabilité dans un système, un site Web ou un fournisseur de services, vous pouvez nous le signaler. Nous sommes en contact constant avec les entreprises qui signalent ces incidents, offrant nos services. Vous pouvez être indemnisé en conséquence pour avoir signalé le problème ou même nous rejoindre pour le résoudre.",
+    },
+    button: "Report Problem",
+    link: "contact",
+  },
+  {
+    title: {
+      en: "Support 14/7",
+      fr: "Support 14/7",
+    },
+    desc: {
+      en: "Our dedicated support team is available 24/7 to address your needs promptly and efficiently, ensuring uninterrupted assistance whenever you require it. You can rely on us to provide round-the-clock support, delivering solutions whenever you reach out, day or night.",
+      fr: "Notre équipe de support dédiée est disponible 24/7 pour répondre à vos besoins rapidement et efficacement, assurant une assistance ininterrompue chaque fois que vous en avez besoin. Vous pouvez compter sur nous pour fournir un support 24 heures sur 24, offrant des solutions chaque fois que vous nous contactez, jour ou nuit.",
+    },
+    button: "Request support",
+    link: "contact",
+  },
+];

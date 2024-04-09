@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import useThemeSwitcher from "hooks/useThemeSwitcher";
+import { useTranslations } from "next-intl";
 
 const skills = [
   {
@@ -51,12 +52,13 @@ const skills = [
 
 function WeHandle() {
   const [theme] = useThemeSwitcher();
+  const t = useTranslations("Home.Platforms");
 
   return (
     <section>
       <Container className="mb-20">
         <h1 className="text-3xl md:text-[56px] text-center font-semibold">
-          Tech’s & Platforms We Handle
+          {t("Title")}
         </h1>
       </Container>
 
@@ -78,33 +80,34 @@ function WeHandle() {
           ) : null
         )}
       </Marquee> */}
-
-      <Swiper
-        slidesPerView={"auto"}
-        modules={[Autoplay]}
-        className="[&_.swiper-slide]:!w-fit [&_.swiper-slide]:h-auto"
-        loop={true}
-        autoplay={{
-          disableOnInteraction: false,
-          delay: 1000,
-        }}
-      >
-        {skills.map((item, i) =>
-          item.imgLight ? (
-            <SwiperSlide key={i}>
-              <div className="flex items-center justify-center h-full">
-                <Image
-                  src={theme === "dark" ? item.img : item.imgLight}
-                  alt="skill"
-                  width={100}
-                  height={100}
-                  className="mx-5 max-sm:size-12 max-xl:size-16"
-                />
-              </div>
-            </SwiperSlide>
-          ) : null
-        )}
-      </Swiper>
+      <div className="flex items-center justify-center w-full">
+        <Swiper
+          slidesPerView={"auto"}
+          modules={[Autoplay]}
+          className="[&_.swiper-slide]:!w-fit [&_.swiper-slide]:h-auto"
+          loop={true}
+          autoplay={{
+            disableOnInteraction: false,
+            delay: 1000,
+          }}
+        >
+          {skills.map((item, i) =>
+            item.imgLight ? (
+              <SwiperSlide key={i}>
+                <div className="flex items-center justify-center h-full">
+                  <Image
+                    src={theme === "dark" ? item.img : item.imgLight}
+                    alt="skill"
+                    width={100}
+                    height={100}
+                    className="mx-5 max-sm:size-12 max-xl:size-16"
+                  />
+                </div>
+              </SwiperSlide>
+            ) : null
+          )}
+        </Swiper>
+      </div>
     </section>
   );
 }

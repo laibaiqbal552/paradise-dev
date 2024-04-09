@@ -5,6 +5,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import useThemeSwitcher from "hooks/useThemeSwitcher";
+import { useTranslations } from "next-intl";
 
 const clients = [
   { src: "/images/trusted/hil.png", lightSrc: "/images/trusted-light/hil.png" },
@@ -35,11 +36,13 @@ const clients = [
 function TrustedClients() {
   const [theme] = useThemeSwitcher();
 
+  const t = useTranslations("TrustedClients");
+
   return (
     <section>
       <Container className="max-w-[80rem] w-full">
         <p className="text-3xl sm:text-4xl lg:text-[3.5rem] font-semibold text-center mb-20">
-          Our Trusted Clients
+          {t("Title")}
         </p>
       </Container>
 

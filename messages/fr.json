@@ -2,8 +2,45 @@
         "Home": {
             "Hero": {
                 "Title": "Démonstration de l'internationalisation avec Next.js",
-                "Subtitle": "Cette démo utilise Next.js et le package next-intl pour créer un site web multilingue. Nous explorons également son fonctionnement avec Hygraph.",
+                "Subtitle": "NOUS VOUS PROPOSONS DE DÉVELOPPER VOTRE",
+                "TypeWriter": "App, Site Web, Projet, Entreprise, Magasin",
                 "CallToAction": "Lisez à propos de nous"
+            },
+            
+            "Features":{
+                "Title": "fonctionnalités",
+                "SecondaryTitle": "features make us different"
+            },
+
+            "About":{
+                "Title": "à propos de nous",
+                "Description": "Nous sommes une division de l'entreprise Paradise Host SA spécialisée dans la programmation, le développement et la sécurité informatique. Nous proposons des services pour les entreprises, les sociétés et les particuliers."
+            },
+            "Process":{
+                "Title": "Processus",
+                "SubTitle":"Notre processus de travail",
+                "Description": "Voici notre procédure une fois que le travail est accepté de notre part et le budget du client. Nous vous inclurons dans chaque étape du processus pour le meilleur résultat !"
+            },
+            
+            "Quality":{
+                "Title": "Nous fournissons la qualité",
+                "Description":"Laissez-la à la main de notre équipe, nous avons la solution adaptée à vous. Consultez-nous maintenant sans aucune obligation.",
+                "ButtonText":"Contactez-nous"
+            },   
+            "Projects":{
+                "Title": "Projets précédents"  
+            },
+            "TrustedClients":{
+                "Title": "Nos clients fiables"
+            },
+            "Contact":{
+                "Title": "Contact",
+                "Description": "Vous avez des questions, des commentaires ou des demandes génériques? Nous nous efforçons de vous satisfaire, contactez-nous !",
+                "FormSubmitted": "Formulaire soumis avec succès",
+                "Mail": "Mail",
+                "Phone": "Téléphone",
+                "Location": "Localisation"
             }
         }
     }
+

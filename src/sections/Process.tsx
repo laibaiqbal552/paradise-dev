@@ -12,6 +12,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useRef } from "react";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,6 +65,10 @@ function Process() {
     { scope: container }
   );
 
+  const locale = useParams().locale;
+
+  const t = useTranslations("Home.Process");
+
   return (
     <section>
       <Container className="max-w-[1209px]">
@@ -70,11 +76,7 @@ function Process() {
           variant="super-heading"
           className="max-lg:text-center lh-1_3 mb-20 lg:mb-40 max-lg:!leading-[2]"
         >
-          <RevealTextEffect
-            text="This is our procedure once the work is accepted from us and the budget
-          from the client. We will include you in each stage of the process for
-          the best result!"
-          />
+          <RevealTextEffect text={t("Description")} />
         </Typography>
       </Container>
 
@@ -90,17 +92,16 @@ function Process() {
         <header className="mb-12 sm:mb-20">
           <Heading>
             <StrokedText className="uppercase text-center font-bold lh-1_4">
-              Process
+              {t("Title")}
             </StrokedText>
           </Heading>
 
           <h4 className="text-center text-5xl text-primary font-bold mb-7">
-            Our work process
+            {/* Our work process */}
+            {t("SubTitle")}
           </h4>
           <p className="text-center text-lg max-w-[50ch] mx-auto">
-            This is our procedure once the work is accepted from us and the
-            budget from the client. We will include you in each stage of the
-            process for the best result!
+            {t("Description")}
           </p>
         </header>
 
@@ -112,18 +113,13 @@ function Process() {
             id="cards"
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10"
           >
-            <Card
-              num={"01"}
-              text="The presentation will be made to the client detailing each point about how the project will be worked on, including the estimated time and budget for the work."
-            />
-            <Card
-              num={"02"}
-              text="If the client accepts, initial commissions will be charged, adding up to 60% of the main project in advance."
-            />
-            <Card
-              num={"03"}
-              text="The contract will be signed between both parties to begin the development of the project."
-            />
+            {processSteps.slice(0, 3).map((step) => (
+              <Card
+                key={step.num}
+                num={step.num}
+                text={step.text[locale as keyof typeof step.text]}
+              />
+            ))}
           </div>
 
           <div className="relative max-lg:hidden">
@@ -146,18 +142,13 @@ function Process() {
             id="cards"
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10"
           >
-            <Card
-              num={"04"}
-              text="There will be constant communication with the client as development progresses. There will be rounds of adjustments until the client is satisfied."
-            />
-            <Card
-              num={"05"}
-              text="When the project is close to completion, the client must pay the remaining part of the settlement for the delivery of the work."
-            />
-            <Card
-              num={"06"}
-              text="Once the work is delivered with the client's approval, there will be 30 days of support and subsidized hosting. There will be a quick response for any future errors."
-            />
+            {processSteps?.slice(3, 6)?.map((step) => (
+              <Card
+                key={step.num}
+                num={step.num}
+                text={step.text[locale as keyof typeof step.text]}
+              />
+            ))}
           </div>
         </main>
       </Container>
@@ -168,3 +159,48 @@ function Process() {
 export default dynamic(() => Promise.resolve(Process), {
   ssr: false,
 });
+
+const processSteps = [
+  {
+    num: "01",
+    text: {
+      en: "The presentation will be made to the client detailing each point about how the project will be worked on, including the estimated time and budget for the work.",
+      fr: "La présentation sera faite au client en détaillant chaque point sur la manière dont le projet sera travaillé, y compris le temps estimé et le budget pour le travail.",
+    },
+  },
+  {
+    num: "02",
+    text: {
+      en: "If the client accepts, initial commissions will be charged, adding up to 60% of the main project in advance.",
+      fr: "Si le client accepte, des commissions initiales seront facturées, s'ajoutant à 60% du projet principal à l'avance.",
+    },
+  },
+  {
+    num: "03",
+    text: {
+      en: "The contract will be signed between both parties to begin the development of the project.",
+      fr: "Le contrat sera signé entre les deux parties pour commencer le développement du projet.",
+    },
+  },
+  {
+    num: "04",
+    text: {
+      en: "There will be constant communication with the client as development progresses. There will be rounds of adjustments until the client is satisfied.",
+      fr: "Il y aura une communication constante avec le client à mesure que le développement progresse. Il y aura des séries d'ajustements jusqu'à ce que le client soit satisfait.",
+    },
+  },
+  {
+    num: "05",
+    text: {
+      en: "When the project is close to completion, the client must pay the remaining part of the settlement for the delivery of the work.",
+      fr: "Lorsque le projet est proche de l'achèvement, le client doit payer la partie restante du règlement pour la livraison du travail.",
+    },
+  },
+  {
+    num: "06",
+    text: {
+      en: "Once the work is delivered with the client's approval, there will be 30 days of support and subsidized hosting. There will be a quick response for any future errors.",
+      fr: "Une fois le travail livré avec l'approbation du client, il y aura 30 jours de support et d'hébergement subventionné. Il y aura une réponse rapide pour toute erreur future.",
+    },
+  },
+];

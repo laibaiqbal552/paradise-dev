@@ -2,155 +2,13 @@
 
 import Container from "components/Container";
 import { cn } from "lib/utils";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 import { ButtonHTMLAttributes, DetailedHTMLProps, useState } from "react";
 
 const tabs = ["Desarollo Web", "UI/UX Design", "Applications"] as const;
 
 type Tab = (typeof tabs)[number];
-
-const projects: Record<Tab, any> = {
-  Applications: [
-    {
-      name: "Paradise Dev",
-      description: "Here you are now!",
-      url: "https://paradisedev.webflow.io/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65fe5d48ce9ca62b68d27274_ParadiseDev%20_%20We%20develop%20your%20website%20extent%20(3).png",
-    },
-  ],
-
-  "UI/UX Design": [
-    {
-      name: "Paradise Dev",
-      description: "Here you are now!",
-      url: "https://paradisedev.webflow.io/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65fe5d48ce9ca62b68d27274_ParadiseDev%20_%20We%20develop%20your%20website%20extent%20(3).png",
-    },
-    {
-      name: "Paradise Host",
-      description: "Hosting Services",
-      url: "https://paradisehost.net/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd796eafb490c300af683f_paradisehost.png",
-    },
-    {
-      name: "Paradise Gaming",
-      description: "Online gaming community and influencer management",
-      url: "https://paradisegaming.net/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/6602a9a7f224f5ff2d3284d5_2c58e6a2-e1ed-4f26-8eab-9b39bd846cd9.png",
-    },
-    {
-      name: "Ika Developments",
-      description: "Architects studio",
-      url: "https://ika.com.ar/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd7970e958a25792146d34_ika.png",
-    },
-    {
-      name: "Austral Refrigeration",
-      description: "Cooling solutions",
-      url: "https://australrefrigeracion.com/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f96f059406c19c78bcb7b2_austral.png",
-    },
-    {
-      name: "Lauritsen",
-      description: "Study #1 in intellectual property, trademarks and patents",
-      url: "https://lauritsen.com.ar/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd796edd10750a16539d65_lauritsen.png",
-    },
-    {
-      name: "Registra tu Marca",
-      description: "Brands and patents",
-      url: "https://registratumarca.com.ar/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd79707d0845821f9dbf82_registratumarca.png",
-    },
-    {
-      name: "trainingwhead",
-      description: "Train with science by Tomas Mazza",
-      url: "https://trainingwhead.paradisedev.net/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f96f05a873a925a3748716_trainingwhead.png",
-    },
-    {
-      name: "Paradise Dev V1",
-      description: "This is old version",
-      url: "http://old.paradisedev.net",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd79707c0f3278655efe8e_paradisedev.png",
-    },
-  ],
-
-  "Desarollo Web": [
-    {
-      name: "Paradise Dev V2",
-      description: "Here you are now!",
-      url: "https://paradisedev.webflow.io/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65fe5d48ce9ca62b68d27274_ParadiseDev%20_%20We%20develop%20your%20website%20extent%20(3).png",
-    },
-    {
-      name: "Paradise Host",
-      description: "Hosting Services",
-      url: "https://paradisehost.net/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd796eafb490c300af683f_paradisehost.png",
-    },
-    {
-      name: "Paradise Gaming",
-      description: "Online gaming community and influencer management",
-      url: "https://paradisegaming.net/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/6602a9a7f224f5ff2d3284d5_2c58e6a2-e1ed-4f26-8eab-9b39bd846cd9.png",
-    },
-    {
-      name: "Ika Developments",
-      description: "Architects studio",
-      url: "https://ika.com.ar/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd7970e958a25792146d34_ika.png",
-    },
-    {
-      name: "Austral Refrigeration",
-      description: "Cooling solutions",
-      url: "https://australrefrigeracion.com/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f96f059406c19c78bcb7b2_austral.png",
-    },
-    {
-      name: "Lauritsen",
-      description: "Study #1 in intellectual property, trademarks and patents",
-      url: "https://lauritsen.com.ar/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd796edd10750a16539d65_lauritsen.png",
-    },
-    {
-      name: "Registra tu Marca",
-      description: "Brands and patents",
-      url: "https://registratumarca.com.ar/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd79707d0845821f9dbf82_registratumarca.png",
-    },
-    {
-      name: "trainingwhead",
-      description: "Train with science by Tomas Mazza",
-      url: "https://trainingwhead.paradisedev.net/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f96f05a873a925a3748716_trainingwhead.png",
-    },
-    {
-      name: "Paradise Dev V1",
-      description: "This is old version",
-      url: "http://old.paradisedev.net",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd79707c0f3278655efe8e_paradisedev.png",
-    },
-  ],
-};
 
 interface TabButtonProps
   extends DetailedHTMLProps<
@@ -219,11 +77,15 @@ const Card = ({
 function PreviousProjects() {
   const [tab, setTab] = useState<Tab>("Desarollo Web");
 
+  const t = useTranslations("Projects");
+
+  const locale = useParams().locale;
+
   return (
     <div>
       <Container className="max-w-[1920px]">
         <h1 className="text-center font-bold mb-12 sm:mb-16 text-3xl sm:text-4xl lg:text-[3.5rem]">
-          Previous Projects
+          {t("Title")}
         </h1>
 
         <div className="grid grid-cols-[50px_1fr] sm:grid-cols-[72px_1fr] gap-6 sm:gap-10 items-start">
@@ -257,8 +119,12 @@ function PreviousProjects() {
                   {items.map((item: any, a: any) => (
                     <Card
                       key={a}
-                      title={item.name}
-                      subtitle={item.description}
+                      title={item.name[locale as keyof typeof item.name]}
+                      subtitle={
+                        item.description[
+                          locale as keyof typeof item.description
+                        ]
+                      }
                       imgSrc={item.image}
                       link={item.url}
                     />
@@ -273,3 +139,261 @@ function PreviousProjects() {
 }
 
 export default PreviousProjects;
+
+const projects: Record<Tab, any> = {
+  Applications: [
+    {
+      name: {
+        en: "Paradise Dev",
+        fr: "Paradise Dev",
+      },
+      description: {
+        en: "Here you are now!",
+        fr: "Vous êtes ici maintenant !",
+      },
+      url: "https://paradisedev.webflow.io/",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65fe5d48ce9ca62b68d27274_ParadiseDev%20_%20We%20develop%20your%20website%20extent%20(3).png",
+    },
+  ],
+
+  "UI/UX Design": [
+    {
+      name: {
+        en: "Paradise Dev",
+        fr: "Paradise Dev",
+      },
+      description: {
+        en: "Here you are now!",
+        fr: "Vous êtes ici maintenant !",
+      },
+      url: "https://paradisedev.webflow.io/",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65fe5d48ce9ca62b68d27274_ParadiseDev%20_%20We%20develop%20your%20website%20extent%20(3).png",
+    },
+    {
+      name: {
+        en: "Paradise Host",
+        fr: "Paradise Host",
+      },
+      description: {
+        en: "Hosting Services",
+        fr: "Services d'hébergement",
+      },
+      url: "https://paradisehost.net/",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd796eafb490c300af683f_paradisehost.png",
+    },
+    {
+      name: {
+        en: "Paradise Gaming",
+        fr: "Paradise Gaming",
+      },
+      description: {
+        en: "Online gaming community and influencer management",
+        fr: "Communauté de jeux en ligne et gestion d'influenceurs",
+      },
+      url: "https://paradisegaming.net/",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/6602a9a7f224f5ff2d3284d5_2c58e6a2-e1ed-4f26-8eab-9b39bd846cd9.png",
+    },
+    {
+      name: {
+        en: "Ika Developments",
+        fr: "Ika Developments",
+      },
+      description: {
+        en: "Architects studio",
+        fr: "Studio d'architectes",
+      },
+      url: "https://ika.com.ar/",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd7970e958a25792146d34_ika.png",
+    },
+    {
+      name: {
+        en: "Austral Refrigeration",
+        fr: "Austral Réfrigération",
+      },
+      description: {
+        en: "Cooling solutions",
+        fr: "Solutions de refroidissement",
+      },
+      url: "https://australrefrigeracion.com/",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f96f059406c19c78bcb7b2_austral.png",
+    },
+    {
+      name: {
+        en: "Lauritsen",
+        fr: "Lauritsen",
+      },
+      description: {
+        en: "Study #1 in intellectual property, trademarks and patents",
+        fr: "Étude n°1 en propriété intellectuelle, marques et brevets",
+      },
+      url: "https://lauritsen.com.ar/",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd796edd10750a16539d65_lauritsen.png",
+    },
+    {
+      name: {
+        en: "Registra tu Marca",
+        fr: "Enregistre ta Marque",
+      },
+      description: {
+        en: "Brands and patents",
+        fr: "Marques et brevets",
+      },
+      url: "https://registratumarca.com.ar/",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd79707d0845821f9dbf82_registratumarca.png",
+    },
+    {
+      name: {
+        en: "trainingwhead",
+        fr: "trainingwhead",
+      },
+      description: {
+        en: "Train with science by Tomas Mazza",
+        fr: "Entraînez-vous avec la science par Tomas Mazza",
+      },
+      url: "https://trainingwhead.paradisedev.net/",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f96f05a873a925a3748716_trainingwhead.png",
+    },
+    {
+      name: {
+        en: "Paradise Dev V1",
+        fr: "Paradise Dev V1",
+      },
+      description: {
+        en: "This is old version",
+        fr: "Ceci est l'ancienne version",
+      },
+      url: "http://old.paradisedev.net",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd79707c0f3278655efe8e_paradisedev.png",
+    },
+  ],
+
+  "Desarollo Web": [
+    {
+      name: {
+        en: "Paradise Dev V2",
+        fr: "Paradise Dev V2",
+      },
+      description: {
+        en: "Here you are now!",
+        fr: "Vous êtes ici maintenant !",
+      },
+      url: "https://paradisedev.webflow.io/",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65fe5d48ce9ca62b68d27274_ParadiseDev%20_%20We%20develop%20your%20website%20extent%20(3).png",
+    },
+    {
+      name: {
+        en: "Paradise Host",
+        fr: "Paradise Host",
+      },
+      description: {
+        en: "Hosting Services",
+        fr: "Services d'hébergement",
+      },
+      url: "https://paradisehost.net/",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd796eafb490c300af683f_paradisehost.png",
+    },
+    {
+      name: {
+        en: "Paradise Gaming",
+        fr: "Paradise Gaming",
+      },
+      description: {
+        en: "Online gaming community and influencer management",
+        fr: "Communauté de jeux en ligne et gestion d'influenceurs",
+      },
+      url: "https://paradisegaming.net/",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/6602a9a7f224f5ff2d3284d5_2c58e6a2-e1ed-4f26-8eab-9b39bd846cd9.png",
+    },
+    {
+      name: {
+        en: "Ika Developments",
+        fr: "Ika Developments",
+      },
+      description: {
+        en: "Architects studio",
+        fr: "Studio d'architectes",
+      },
+      url: "https://ika.com.ar/",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd7970e958a25792146d34_ika.png",
+    },
+    {
+      name: {
+        en: "Austral Refrigeration",
+        fr: "Austral Réfrigération",
+      },
+      description: {
+        en: "Cooling solutions",
+        fr: "Solutions de refroidissement",
+      },
+      url: "https://australrefrigeracion.com/",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f96f059406c19c78bcb7b2_austral.png",
+    },
+    {
+      name: {
+        en: "Lauritsen",
+        fr: "Lauritsen",
+      },
+      description: {
+        en: "Study #1 in intellectual property, trademarks and patents",
+        fr: "Étude n°1 en propriété intellectuelle, marques et brevets",
+      },
+      url: "https://lauritsen.com.ar/",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd796edd10750a16539d65_lauritsen.png",
+    },
+    {
+      name: {
+        en: "Registra tu Marca",
+        fr: "Enregistre ta Marque",
+      },
+      description: {
+        en: "Brands and patents",
+        fr: "Marques et brevets",
+      },
+      url: "https://registratumarca.com.ar/",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd79707d0845821f9dbf82_registratumarca.png",
+    },
+    {
+      name: {
+        en: "trainingwhead",
+        fr: "trainingwhead",
+      },
+      description: {
+        en: "Train with science by Tomas Mazza",
+        fr: "Entraînez-vous avec la science par Tomas Mazza",
+      },
+      url: "https://trainingwhead.paradisedev.net/",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f96f05a873a925a3748716_trainingwhead.png",
+    },
+    {
+      name: {
+        en: "Paradise Dev V1",
+        fr: "Paradise Dev V1",
+      },
+      description: {
+        en: "This is old version",
+        fr: "Ceci est l'ancienne version",
+      },
+      url: "http://old.paradisedev.net",
+      image:
+        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd79707c0f3278655efe8e_paradisedev.png",
+    },
+  ],
+};

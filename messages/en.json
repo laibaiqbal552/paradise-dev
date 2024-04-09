@@ -2,8 +2,55 @@
         "Home": {
             "Hero": {
                 "Title": "Next.js Internalization Demo",
-                "Subtitle": "This demo uses Next.js and the next-intl package to create a multi-language website. We later also explore how it works with Hygraph.",
+                "Subtitle": "WE PROPOSE YOU TO DEVELOP YOUR",
+                "TypeWriter": "App, Website, Project, Business, Store",
                 "CallToAction": "Read about us"
+            },
+            
+            "Features":{
+                "Title": "features",
+                "SecondaryTitle": "features make us different"
+            },
+
+            "About":{
+                "Title": "about us",
+                "Description": "We are a division of the company Paradise Host SA specialized in programming, development and computer security. We offer services for businesses, companies and individuals."
+            },
+
+            "Platforms":{
+                "Title": "Tech’s & Platforms We Handle"
+            },
+
+            "Process":{
+                "Title": "Process",
+                "SubTitle":"Our work process",
+                "Description": "This is our procedure once the work is accepted from us and the budget from the client. We will include you in each stage of the process for the best result!"
+            },
+
+            "Quality":{
+                "Title": "We provide quality",
+                "Description":"Leave it in the hands of our team, we have the solution tailored to you. Consult now without any obligation.",
+                "ButtonText":"Get In Touch"
+            },
+
+            "Projects":{
+                "Title": "Previous Projects"  
+            },
+
+            "TrustedClients":{
+                "Title": "Our Trusted Clients"
+            },
+
+            "Contact":{
+                "Title": "Contact",
+                "Description": "Any questions, comments or general inquiries? We really appreciate your suggestions, contact us! ",
+                "Mail": "Mail",
+                "Phone": "Phone",
+                "Location": "Location",
+                "FormSubmitted": "Form Submitted Succesfully"
             }
+
+
+
     }
 }

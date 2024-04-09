@@ -5,14 +5,16 @@ import Heading from "components/Heading";
 import RevealTextEffect from "components/RevealTextEffect";
 import StrokedText from "components/StrokedText";
 import Typography from "components/Typography";
+import { useTranslations } from "next-intl";
 
 function About() {
+  const t = useTranslations("Home.About");
   return (
     <section>
       <Container>
         <Heading>
-          <StrokedText className="font-bold mb-6 text-center">
-            ABOUT US
+          <StrokedText className="font-bold mb-6 text-center uppercase">
+            {t("Title")}
           </StrokedText>
         </Heading>
 
@@ -20,7 +22,7 @@ function About() {
           variant="super-heading"
           className="lh-1_3 max-w-[1209px] mx-auto w-full max-lg:text-center"
         >
-          <RevealTextEffect text="We are a division of the company Paradise Host SA specialized in programming, development and computer security. We offer services for businesses, companies and individuals." />
+          <RevealTextEffect text={t("Description")} />
         </Typography>
       </Container>
     </section>

@@ -9,12 +9,41 @@ import { useState } from "react";
 import { cn } from "lib/utils";
 import OutsideClickDetector from "hooks/OutsideClickDetector";
 import { Link as ScrollLink } from "react-scroll";
+import Image from "next/image";
+import { locales } from "../i18n";
+// import {use} from "next-intl";
+import { redirect, useParams, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const locale = useParams().locale;
+  const pathname = usePathname();
+  const router = useRouter();
   const containerRef = OutsideClickDetector(() => {
     setIsMenuOpen(false);
   }, isMenuOpen === true);
+  const localeData = [
+    { label: "English", locale: "en", image: "/images/en-flag.png" },
+    { label: "Français", locale: "fr", image: "/images/fr-flag.png" },
+  ];
+
+  const currentLocale = localeData?.find((item) => item.locale === locale);
+
+  const [isLocaleOpen, setIsLocaleOpen] = useState<boolean>(false);
+  const [locales, setLocales] = useState<any>(currentLocale || localeData[0]);
+
+  const handleSetLocale = (locale: any) => {
+    setLocales(locale);
+    setIsLocaleOpen(false);
+  };
+
+  const redirectedPathName = (locale: string) => {
+    if (!pathname) return "/";
+    const segments = pathname.split("/");
+    segments[1] = locale;
+    return segments.join("/");
+  };
 
   return (
     <nav
@@ -104,6 +133,91 @@ function Navbar() {
           >
             <MdOutlineMenu />
           </button>
+
+          <div className="relative inline-block text-left">
+            <button
+              onClick={() => setIsLocaleOpen((val) => !val)}
+              type="button"
+              className="inline-flex justify-center gap-1 w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-primary"
+              id="menu-button"
+              aria-expanded="true"
+              aria-haspopup="true"
+            >
+              <Image
+                src={locales.image}
+                alt={locales.label}
+                className="inline mr-2"
+                width="20"
+                height="20"
+              />
+              {locales.label}
+              {/* <svg
+                className="-mr-1 ml-2 h-5 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg> */}
+            </button>
+
+            {isLocaleOpen && (
+              <div
+                className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="menu-button"
+                tabIndex={-1}
+              >
+                <div className="py-1" role="none">
+                  {localeData.map((locale, index) => (
+                    <Link
+                      onClick={() => handleSetLocale(locale)}
+                      key={index}
+                      href={redirectedPathName(locale.locale)}
+                      className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                      role="menuitem"
+                      tabIndex={-1}
+                      locale={locale.locale}
+                      id="menu-item-0"
+                    >
+                      <Image
+                        src={locale.image}
+                        alt={locale.label}
+                        className="inline mr-2"
+                        width="20"
+                        height="20"
+                      />{" "}
+                      {locale.label}
+                    </Link>
+                  ))}
+
+                  {/* <Link
+                    href=""
+                    className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                    role="menuitem"
+                    tabIndex={-1}
+                    id="menu-item-1"
+                    locale="fr"
+                  >
+                    <Image
+                      src="/images/flags/fr.png"
+                      alt="Français"
+                      className="inline mr-2"
+                      width="20"
+                      height="20"
+                    />
+                    Français
+                  </Link> */}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </Container>
     </nav>

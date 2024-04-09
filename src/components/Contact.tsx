@@ -12,6 +12,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { ReactNode } from "react";
 import Loader from "./Loader";
+import { useTranslations } from "next-intl";
 
 const FieldError = ({ children }: { children: ReactNode }) => {
   return children ? (
@@ -82,20 +83,26 @@ function Contact() {
     });
   };
 
+  const t = useTranslations("Home.Contact");
+
   return (
     <Container className="max-w-[1209px] border-t border-black/30 dark:border-white/60 pt-12">
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8 mb-12">
         <Card
-          title="Mail"
+          title={t("Mail")}
           subtitle="contact@paradisedev.net"
           imgSrc="/images/mail-icon.png"
         />
         <Card
-          title="Location"
+          title={t("Location")}
           subtitle="Suipacha 531 piso 8, Microcentro | Buenos Aires"
           imgSrc="/images/location-icon.png"
         />
-        <Card title="Phone" subtitle="Coming soon" imgSrc="/images/phone.svg" />
+        <Card
+          title={t("Phone")}
+          subtitle="Coming soon"
+          imgSrc="/images/phone.svg"
+        />
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -141,7 +148,7 @@ function Contact() {
       </form>
       {isSubmitted ? (
         <div className="py-3 px-6 bg-green-300 rounded-md text-black font-medium mb-5">
-          <p>Form Submitted Succesfully</p>
+          <p>{t("FormSubmitted")}</p>
         </div>
       ) : null}
 
@@ -151,10 +158,7 @@ function Contact() {
         className="font-medium lh-1_3"
       >
         <h1>
-          <RevealTextEffect
-            text="Any questions, comments or general inquiries? We really appreciate
-            your suggestions, contact us!"
-          />
+          <RevealTextEffect text={t("Description")} />
         </h1>
       </Typography>
     </Container>
