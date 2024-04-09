@@ -7,8 +7,10 @@ import { Button } from "components/Button";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { socialLinks } from "lib/constants";
+import { useTranslations } from "next-intl";
 
 function Hero() {
+  const t = useTranslations("Home.Hero");
   return (
     <section className="relative">
       <Container className="relative z-10">
@@ -29,7 +31,8 @@ function Hero() {
         />
 
         <h3 className="text-center text-[56px] font-medium mb-7 max-xl:text-[40px] max-sm:text-2xl">
-          Hello World
+          {/* {t["Title"]} */}
+          {t("Title")}
         </h3>
 
         <h1 className="text-[6.5rem] text-center font-semibold lh-1_2 max-xl:text-6xl max-sm:text-[36px]">
