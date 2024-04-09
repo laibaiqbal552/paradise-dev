@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import ThemeSwitcher from "./ThemeSwitcher";
-import { socialLinks } from "@/lib/constants";
+import { socialLinks } from "./../lib/constants";
 
 function Footer() {
   return (

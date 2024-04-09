@@ -1,7 +1,7 @@
 "use client";
 
-import useThemeSwitcher from "@/hooks/useThemeSwitcher";
-import { cn } from "@/lib/utils";
+import useThemeSwitcher from "hooks/useThemeSwitcher";
+import { cn } from "lib/utils";
 import { useTheme } from "next-themes";
 import React from "react";
 
@@ -26,7 +26,7 @@ function StrokedText(props: Props) {
   } = props;
 
   return (
-    <p
+    <div
       className={cn("text-transparent", className)}
       style={{
         WebkitTextStrokeWidth: strokeWidth,
@@ -35,7 +35,7 @@ function StrokedText(props: Props) {
       {..._props}
     >
       {children}
-    </p>
+    </div>
   );
 }
 

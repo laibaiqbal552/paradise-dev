@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "lib/utils";
 import { Slot } from "@radix-ui/react-slot";
 import { VariantProps, cva } from "class-variance-authority";
 import React, { HTMLAttributes } from "react";
@@ -22,7 +22,7 @@ interface Props
 }
 
 function Typography({ asChild, variant, className, ...props }: Props) {
-  const Comp = asChild ? Slot : "p";
+  const Comp = asChild ? Slot : "div";
 
   return (
     <Comp

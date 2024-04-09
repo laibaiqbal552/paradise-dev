@@ -1,10 +1,10 @@
 "use client";
 
-import Container from "@/components/Container";
+import Container from "components/Container";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import useThemeSwitcher from "@/hooks/useThemeSwitcher";
+import useThemeSwitcher from "hooks/useThemeSwitcher";
 
 const skills = [
   {

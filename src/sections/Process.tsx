@@ -1,11 +1,11 @@
 "use client";
 
-import Container from "@/components/Container";
-import GearsImage from "@/components/GearsImage";
-import Heading from "@/components/Heading";
-import RevealTextEffect from "@/components/RevealTextEffect";
-import StrokedText from "@/components/StrokedText";
-import Typography from "@/components/Typography";
+import Container from "components/Container";
+import GearsImage from "components/GearsImage";
+import Heading from "components/Heading";
+import RevealTextEffect from "components/RevealTextEffect";
+import StrokedText from "components/StrokedText";
+import Typography from "components/Typography";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

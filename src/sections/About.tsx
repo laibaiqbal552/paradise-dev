@@ -1,10 +1,10 @@
 "use client";
 
-import Container from "@/components/Container";
-import Heading from "@/components/Heading";
-import RevealTextEffect from "@/components/RevealTextEffect";
-import StrokedText from "@/components/StrokedText";
-import Typography from "@/components/Typography";
+import Container from "components/Container";
+import Heading from "components/Heading";
+import RevealTextEffect from "components/RevealTextEffect";
+import StrokedText from "components/StrokedText";
+import Typography from "components/Typography";
 
 function About() {
   return (

@@ -1,6 +1,6 @@
 "use client";
 
-import useThemeSwitcher from "@/hooks/useThemeSwitcher";
+import useThemeSwitcher from "hooks/useThemeSwitcher";
 
 const GearsImage = () => {
   const [theme] = useThemeSwitcher();

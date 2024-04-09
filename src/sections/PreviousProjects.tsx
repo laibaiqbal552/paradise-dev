@@ -1,7 +1,7 @@
 "use client";
 
-import Container from "@/components/Container";
-import { cn } from "@/lib/utils";
+import Container from "components/Container";
+import { cn } from "lib/utils";
 import { ButtonHTMLAttributes, DetailedHTMLProps, useState } from "react";
 
 const tabs = ["Desarollo Web", "UI/UX Design", "Applications"] as const;

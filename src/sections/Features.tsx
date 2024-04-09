@@ -1,10 +1,10 @@
 "use client";
 
-import { Button } from "@/components/Button";
-import Container from "@/components/Container";
-import Heading from "@/components/Heading";
-import StrokedText from "@/components/StrokedText";
-import { cn } from "@/lib/utils";
+import { Button } from "components/Button";
+import Container from "components/Container";
+import Heading from "components/Heading";
+import StrokedText from "components/StrokedText";
+import { cn } from "lib/utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";

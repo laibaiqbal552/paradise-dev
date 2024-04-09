@@ -1,6 +1,6 @@
 "use client";
 
-import useThemeSwitcher from "@/hooks/useThemeSwitcher";
+import useThemeSwitcher from "hooks/useThemeSwitcher";
 import Image, { ImageProps } from "next/image";
 
 function Logo({

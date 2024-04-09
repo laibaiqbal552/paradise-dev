@@ -1,12 +1,12 @@
 "use client";
 
 import { Typewriter } from "react-simple-typewriter";
-import Container from "@/components/Container";
+import Container from "components/Container";
 import Image from "next/image";
-import { Button } from "@/components/Button";
+import { Button } from "components/Button";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { socialLinks } from "@/lib/constants";
+import { socialLinks } from "lib/constants";
 
 function Hero() {
   return (

@@ -6,8 +6,8 @@ import { Button } from "./Button";
 import Logo from "./Logo";
 import { MdOutlineMenu } from "react-icons/md";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
-import OutsideClickDetector from "@/hooks/OutsideClickDetector";
+import { cn } from "lib/utils";
+import OutsideClickDetector from "hooks/OutsideClickDetector";
 import { Link as ScrollLink } from "react-scroll";
 
 function Navbar() {
@@ -19,12 +19,16 @@ function Navbar() {
   return (
     <nav
       ref={containerRef}
-      className="bg-white dark:bg-body-light relative z-[10000]"
+      className="bg-white dark:bg-body-light relative z-[10000] "
     >
       <Container asChild>
         <div className="flex items-center bg-white dark:bg-body-light justify-between lg:space-x-5 py-4 sm:py-1">
           <Link href="/" className="relative sm:top-1.5">
-            <Logo src={""} alt={"logo"} className="max-md:w-[192px]" />
+            <Logo
+              src="/images/logo.png"
+              alt={"logo"}
+              className="max-md:w-[192px]"
+            />
           </Link>
 
           <ul

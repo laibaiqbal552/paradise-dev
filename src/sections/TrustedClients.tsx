@@ -1,10 +1,10 @@
 "use client";
 
-import Container from "@/components/Container";
+import Container from "components/Container";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import useThemeSwitcher from "@/hooks/useThemeSwitcher";
+import useThemeSwitcher from "hooks/useThemeSwitcher";
 
 const clients = [
   { src: "/images/trusted/hil.png", lightSrc: "/images/trusted-light/hil.png" },

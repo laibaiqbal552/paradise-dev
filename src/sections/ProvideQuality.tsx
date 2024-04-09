@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/components/Button";
-import Container from "@/components/Container";
+import { Button } from "components/Button";
+import Container from "components/Container";
 import { Link as ScrollLink } from "react-scroll";
 
 function ProvideQuality() {
