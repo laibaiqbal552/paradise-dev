@@ -14,7 +14,7 @@ import { socialLinks } from "./../lib/constants";
 
 function Footer() {
   return (
-    <footer className="bg-primary dark:bg-body-light pb-16 sm:pb-28 pt-12 sm:pt-28">
+    <footer className="bg-primary dark:bg-body-light pb-16 sm:pb-28 pt-12 sm:pt-28 w-full">
       <Container asChild className="max-w-[1209px]">
         <div>
           <header className="flex max-lg:flex-col items-center justify-between max-lg:space-y-7 lg:space-x-5 mb-8">

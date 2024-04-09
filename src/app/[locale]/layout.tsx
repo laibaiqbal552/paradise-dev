@@ -10,11 +10,9 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body className="className" suppressHydrationWarning={true}>
-        <div className="max-w-6xl mx-auto">
-          {/* <Navbar /> */}
+        {/* <Navbar /> */}
 
-          <ThemeProvider attribute="class">{children}</ThemeProvider>
-        </div>
+        <ThemeProvider attribute="class">{children}</ThemeProvider>
       </body>
     </html>
   );
