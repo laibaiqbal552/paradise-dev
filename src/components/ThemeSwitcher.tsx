@@ -32,21 +32,13 @@ const Btn = ({ imgSrc, className, isActive, ...props }: any) => {
 };
 
 function ThemeSwitcher() {
-  const { setTheme, theme, systemTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  const isLight =
-    theme !== "system" ? theme === "light" : systemTheme === "light";
-  const isDark = theme !== "system" ? theme === "dark" : systemTheme === "dark";
-
-  useEffect(() => {
-    console.log(theme, systemTheme, "@theme");
-  }, [theme, systemTheme]);
 
   if (!mounted) {
     return null;
@@ -56,7 +48,7 @@ function ThemeSwitcher() {
     <>
       <div className="h-[48px] bg-white dark:bg-body-dark rounded-full flex items-center justify-center px-1.5 space-x-1.5">
         <Btn
-          isActive={isLight}
+          isActive={resolvedTheme === "light"}
           onClick={() => {
             setTheme("light");
           }}
@@ -64,7 +56,7 @@ function ThemeSwitcher() {
           imgSrc="/images/sun.svg"
         />
         <Btn
-          isActive={isDark}
+          isActive={resolvedTheme === "dark"}
           onClick={() => setTheme("dark")}
           type="button"
           imgSrc="/images/moon.svg"
