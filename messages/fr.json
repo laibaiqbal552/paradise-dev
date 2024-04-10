@@ -1,45 +1,87 @@
 {
         "Home": {
             "Hero": {
-                "Title": "Démonstration de l'internationalisation avec Next.js",
-                "Subtitle": "NOUS VOUS PROPOSONS DE DÉVELOPPER VOTRE",
-                "TypeWriter": "App, Site Web, Projet, Entreprise, Magasin",
-                "CallToAction": "Lisez à propos de nous"
+                "Title": "Hola Mundo",
+                "Subtitle": "TE PROPONEMOS DESARROLLAR TU",
+                "TypeWriter": "Aplicación, Sitio Web, Proyecto, Negocio, Tienda",
+                "CallToAction": "Leer sobre nosotros"
             },
             
             "Features":{
-                "Title": "fonctionnalités",
-                "SecondaryTitle": "features make us different"
+                "Title": "características",
+                "SecondaryTitle": "Las características nos hacen diferentes"
             },
 
             "About":{
-                "Title": "à propos de nous",
-                "Description": "Nous sommes une division de l'entreprise Paradise Host SA spécialisée dans la programmation, le développement et la sécurité informatique. Nous proposons des services pour les entreprises, les sociétés et les particuliers."
+                "Title": "Sobre nosotros",
+                "Description": "Somos una división de Paradise Host SA especializada en programación, desarrollo y seguridad informática. Ofrecemos servicios para empresas, corporaciones y particulares."
             },
             "Process":{
-                "Title": "Processus",
-                "SubTitle":"Notre processus de travail",
-                "Description": "Voici notre procédure une fois que le travail est accepté de notre part et le budget du client. Nous vous inclurons dans chaque étape du processus pour le meilleur résultat !"
+                "Title": "Proceso",
+                "SubTitle":"Nuestro proceso de trabajo",
+                "Description": "Aquí está nuestro procedimiento una vez aceptado el trabajo por nuestra parte y el presupuesto del cliente. ¡Te incluiremos en cada paso del proceso para obtener el mejor resultado!"
             },
             
             "Quality":{
-                "Title": "Nous fournissons la qualité",
-                "Description":"Laissez-la à la main de notre équipe, nous avons la solution adaptée à vous. Consultez-nous maintenant sans aucune obligation.",
-                "ButtonText":"Contactez-nous"
+                "Title": "Brindamos calidad",
+                "Description":"Déjelo en manos de nuestro equipo, tenemos la solución adecuada para usted. Consúltenos ahora sin ningún compromiso.",
+                "ButtonText":"Contáctenos"
             },   
             "Projects":{
-                "Title": "Projets précédents"  
+                "Title": "Proyectos anteriores"  
             },
             "TrustedClients":{
-                "Title": "Nos clients fiables"
+                "Title": "Nuestros clientes confiables"
             },
             "Contact":{
-                "Title": "Contact",
-                "Description": "Vous avez des questions, des commentaires ou des demandes génériques? Nous nous efforçons de vous satisfaire, contactez-nous !",
-                "FormSubmitted": "Formulaire soumis avec succès",
-                "Mail": "Mail",
-                "Phone": "Téléphone",
-                "Location": "Localisation"
+                "Title": "Contactar",
+                "Description": "¿Tiene preguntas, comentarios o solicitudes genéricas? Nos esforzamos por satisfacerte, ¡contáctanos!",
+                "FormSubmitted": "Formulario enviado exitosamente",
+                "Mail": "Correo electrónico",
+                "Phone": "Teléfono",
+                "Location": "Ubicación"
+            },
+            "data": {
+                "UIUXDesign": {
+                    "Paragraph": "Diseño UI/UX",
+                    "LogoSrc": "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9bf6dd14ef04a15a1058_Frame%20(2).svg",
+                    "Heading": "Propuestas de diseño para web o aplicaciones"
+                },
+                "WebDevelopment": {
+                    "Paragraph": "Desarrollo Web",
+                    "LogoSrc": "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9c5132f0a018a720e686_Frame%20(4).svg",
+                    "Heading": "E-Commerce, negocios, portafolios, landing, eventos"
+                },
+                "Applications": {
+                    "Paragraph": "Aplicaciones",
+                    "LogoSrc": "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f450969be961ba6c606f9b_Frame%20(45).png",
+                    "Heading": "Apps para iOS y Android en Kotlin, React y Swift"
+                },
+                "Support": {
+                    "Paragraph": "Soporte",
+                    "LogoSrc": "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f53097b018f5d03d87dea6_Frame.png",
+                    "Heading": "Soporte personalizado 24/7 para empresas y negocios"
+                },
+                "Datacenter": {
+                    "Paragraph": "Datacenter",
+                    "LogoSrc": "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9c6822515f8fc3406833_Frame%20(5).svg",
+                    "Heading": "Servidores propios proporcionados por ParadiseHost®"
+                },
+                "SSL": {
+                    "Paragraph": "SSL",
+                    "LogoSrc": "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9c2c9fa5ab7932d542e8_Frame%20(1).png",
+                    "Heading": "Certificados SSL para la seguridad de tu sitio web."
+                },
+                "SEO": {
+                    "Paragraph": "SEO",
+                    "LogoSrc": "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9d35968954ebaf19a3fa_Frame%20(3).png",
+                    "Heading": "Tu sitio web en las primeras posiciones de Google"
+                },
+                "Advertising": {
+                    "Paragraph": "Publicidad",
+                    "LogoSrc": "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9d5d58e514604bb2b972_Frame%20(6).svg",
+                    "Heading": "Meta Business (Instagram/Facebook) Google Ads"
+                }
             }
         }
     }

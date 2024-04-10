@@ -25,7 +25,7 @@ function Navbar() {
   }, isMenuOpen === true);
   const localeData = [
     { label: "English", locale: "en", image: "/images/en-flag.png" },
-    { label: "Français", locale: "fr", image: "/images/fr-flag.png" },
+    { label: "Spainsh", locale: "fr", image: "/images/fr-flag.jpg" },
   ];
 
   const currentLocale = localeData?.find((item) => item.locale === locale);
@@ -59,145 +59,132 @@ function Navbar() {
               className="max-md:w-[192px]"
             />
           </Link>
-
-          <ul
-            className={cn(
-              "flex lg:items-center max-lg:absolute max-lg:top-full max-lg:left-0 max-lg:w-full max-lg:-z-50 max-lg:flex-col transition-all duration-500 max-lg:-translate-y-full bg-white dark:bg-body-light",
-              isMenuOpen ? "max-lg:translate-y-0" : null
-            )}
-          >
-            <li>
-              <Button
-                padding="5"
-                variant="ghost"
-                className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center block"
-                asChild
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <Link href="/">Home</Link>
-              </Button>
-            </li>
-            <li>
-              <Button
-                padding="5"
-                variant="ghost"
-                className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center cursor-pointer block"
-                asChild
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <ScrollLink offset={-100} to="service">
-                  Service
-                </ScrollLink>
-              </Button>
-            </li>
-            <li>
-              <Button
-                padding="5"
-                variant="ghost"
-                className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center cursor-pointer block"
-                asChild
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <ScrollLink offset={-100} to="about">
-                  About Us
-                </ScrollLink>
-              </Button>
-            </li>
-            <li>
-              <Button
-                asChild
-                onClick={() => setIsMenuOpen(false)}
-                padding="5"
-                variant="ghost"
-                className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center cursor-pointer block"
-              >
-                <ScrollLink offset={-100} to="portfolio">
-                  Portfolio
-                </ScrollLink>
-              </Button>
-            </li>
-            <li className="max-lg:w-fit max-lg:mx-auto">
-              <Button
-                asChild
-                onClick={() => setIsMenuOpen(false)}
-                className="uppercase cursor-pointer block"
-              >
-                <ScrollLink to="contact">Begin</ScrollLink>
-              </Button>
-            </li>
-          </ul>
-
-          <button
-            onClick={() => setIsMenuOpen((val) => !val)}
-            className="max-lg:flex hidden text-2xl mr-4"
-          >
-            <MdOutlineMenu />
-          </button>
-
-          <div className="relative inline-block text-left">
-            <button
-              onClick={() => setIsLocaleOpen((val) => !val)}
-              type="button"
-              className="inline-flex justify-center gap-1 w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-primary"
-              id="menu-button"
-              aria-expanded="true"
-              aria-haspopup="true"
+          <div className="flex items-center gap-5">
+            <ul
+              className={cn(
+                "flex lg:items-center max-lg:absolute max-lg:top-full max-lg:left-0 max-lg:w-full max-lg:-z-50 max-lg:flex-col transition-all duration-500 max-lg:-translate-y-full bg-white dark:bg-body-light",
+                isMenuOpen ? "max-lg:translate-y-0" : null
+              )}
             >
-              <Image
-                src={locales.image}
-                alt={locales.label}
-                className="inline mr-2"
-                width="20"
-                height="20"
-              />
-              {locales.label}
-              {/* <svg
-                className="-mr-1 ml-2 h-5 w-5"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg> */}
+              <li>
+                <Button
+                  padding="5"
+                  variant="ghost"
+                  className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center block"
+                  asChild
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <Link href="/">Home2</Link>
+                </Button>
+              </li>
+              <li>
+                <Button
+                  padding="5"
+                  variant="ghost"
+                  className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center cursor-pointer block"
+                  asChild
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <ScrollLink offset={-100} to="service">
+                    Service
+                  </ScrollLink>
+                </Button>
+              </li>
+              <li>
+                <Button
+                  padding="5"
+                  variant="ghost"
+                  className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center cursor-pointer block"
+                  asChild
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <ScrollLink offset={-100} to="about">
+                    About Us
+                  </ScrollLink>
+                </Button>
+              </li>
+              <li>
+                <Button
+                  asChild
+                  onClick={() => setIsMenuOpen(false)}
+                  padding="5"
+                  variant="ghost"
+                  className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center cursor-pointer block"
+                >
+                  <ScrollLink offset={-100} to="portfolio">
+                    Portfolio
+                  </ScrollLink>
+                </Button>
+              </li>
+              <li className="max-lg:w-fit max-lg:mx-auto">
+                <Button
+                  asChild
+                  // onClick={() => setIsMenuOpen(false)}
+                  className="uppercase cursor-pointer block"
+                >
+                  <ScrollLink to="contact">Begin</ScrollLink>
+                </Button>
+              </li>
+            </ul>
+
+            <button
+              onClick={() => setIsMenuOpen((val) => !val)}
+              className="max-lg:flex hidden text-2xl mr-4"
+            >
+              <MdOutlineMenu />
             </button>
 
-            {isLocaleOpen && (
-              <div
-                className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="menu-button"
-                tabIndex={-1}
+            <div className="relative inline-block text-left">
+              <button
+                onClick={() => setIsLocaleOpen((val) => !val)}
+                type="button"
+                className="inline-flex justify-center gap-1 w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-primary"
+                id="menu-button"
+                aria-expanded="true"
+                aria-haspopup="true"
               >
-                <div className="py-1" role="none">
-                  {localeData.map((locale, index) => (
-                    <Link
-                      onClick={() => handleSetLocale(locale)}
-                      key={index}
-                      href={redirectedPathName(locale.locale)}
-                      className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                      role="menuitem"
-                      tabIndex={-1}
-                      locale={locale.locale}
-                      id="menu-item-0"
-                    >
-                      <Image
-                        src={locale.image}
-                        alt={locale.label}
-                        className="inline mr-2"
-                        width="20"
-                        height="20"
-                      />{" "}
-                      {locale.label}
-                    </Link>
-                  ))}
+                <Image
+                  src={locales.image}
+                  alt={locales.label}
+                  className="inline mr-2"
+                  width="20"
+                  height="20"
+                />
+                {locales.label}
+              </button>
 
-                  {/* <Link
+              {isLocaleOpen && (
+                <div
+                  className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  role="menu"
+                  aria-orientation="vertical"
+                  aria-labelledby="menu-button"
+                  tabIndex={-1}
+                >
+                  <div className="py-1" role="none">
+                    {localeData.map((locale, index) => (
+                      <Link
+                        onClick={() => handleSetLocale(locale)}
+                        key={index}
+                        href={redirectedPathName(locale.locale)}
+                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                        role="menuitem"
+                        tabIndex={-1}
+                        locale={locale.locale}
+                        id="menu-item-0"
+                      >
+                        <Image
+                          src={locale.image}
+                          alt={locale.label}
+                          className="inline mr-2"
+                          width="20"
+                          height="20"
+                        />{" "}
+                        {locale.label}
+                      </Link>
+                    ))}
+
+                    {/* <Link
                     href=""
                     className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
                     role="menuitem"
@@ -214,9 +201,10 @@ function Navbar() {
                     />
                     Français
                   </Link> */}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
       </Container>
