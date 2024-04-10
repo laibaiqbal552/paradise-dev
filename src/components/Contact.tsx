@@ -123,7 +123,7 @@ function Contact() {
               <FieldError>{errors?.affair?.message}</FieldError>
             </div>
 
-            <div className="pt-2 col-span-2">
+            <div className="pt-2 col-span-2 mb-8">
               <Textarea
                 placeholder="Message"
                 className="resize-none h-[20rem]"
