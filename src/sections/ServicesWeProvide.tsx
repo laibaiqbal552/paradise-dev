@@ -7,6 +7,8 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useRef } from "react";
 import { useParams } from "next/navigation";
+// import { data } from "messages/fr.json";
+// import { data as en } from "messages/en.json";
 
 const Card = ({
   imgSrc,
