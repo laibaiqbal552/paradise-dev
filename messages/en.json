@@ -50,48 +50,13 @@
                 "FormSubmitted": "Form Submitted Succesfully"
             },
 
-            "data": {
-                "UIUXDesign": {
-                    "Paragraph": "UI/UX Design",
-                    "LogoSrc": "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9bf6dd14ef04a15a1058_Frame%20(2).svg",
-                    "Heading": "Design proposals for web or applications"
-                },
-                "WebDevelopment": {
-                    "Paragraph": "Web Development",
-                    "LogoSrc": "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9c5132f0a018a720e686_Frame%20(4).svg",
-                    "Heading": "E-Commerce, business, portfolios, landing, events"
-                },
-                "Applications": {
-                    "Paragraph": "Applications",
-                    "LogoSrc": "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f450969be961ba6c606f9b_Frame%20(45).png",
-                    "Heading": "Apps for iOS and Android in Kotlin, React and Swift"
-                },
-                "Support": {
-                    "Paragraph": "Support",
-                    "LogoSrc": "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f53097b018f5d03d87dea6_Frame.png",
-                    "Heading": "Personalized 24/7 for companies and businesses"
-                },
-                "Datacenter": {
-                    "Paragraph": "Datacenter",
-                    "LogoSrc": "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9c6822515f8fc3406833_Frame%20(5).svg",
-                    "Heading": "Own servers provided by ParadiseHost®"
-                },
-                "SSL": {
-                    "Paragraph": "SSL",
-                    "LogoSrc": "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9c2c9fa5ab7932d542e8_Frame%20(1).png",
-                    "Heading": "SSL certificates for the security of your website."
-                },
-                "SEO": {
-                    "Paragraph": "SEO",
-                    "LogoSrc": "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9d35968954ebaf19a3fa_Frame%20(3).png",
-                    "Heading": "Your website in the first positions of Google"
-                },
-                "Advertising": {
-                    "Paragraph": "Advertising",
-                    "LogoSrc": "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9d5d58e514604bb2b972_Frame%20(6).svg",
-                    "Heading": "Meta Business (Instagram/Facebook) Google Ads"
-                }
+            "Footer":{
+                "Description": "ParadiseDev® is a subdivision of Paradise Host S.A. and a registered trademark",
+                "Copyright": "Copyright 2024© | All rights reserved",
+                "DevelopedBy": "Site designed and developed by the Paradise Dev® team | Hosted by Paradise Host®"
             }
+
+        
 
 
     }

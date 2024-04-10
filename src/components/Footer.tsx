@@ -11,8 +11,10 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { socialLinks } from "./../lib/constants";
+import { useTranslations } from "next-intl";
 
 function Footer() {
+  const t = useTranslations("Home.Footer");
   return (
     <footer className="bg-primary dark:bg-body-light pb-16 sm:pb-28 pt-12 sm:pt-28 w-full">
       <Container asChild className="max-w-[1209px]">
@@ -41,11 +43,7 @@ function Footer() {
 
           <main className="border-t border-b-2 border-white/50 dark:border-white/5 py-10 pb-20 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-y-14 gap-x-8 text-white [&_a]:text-white/60 [&_a:hover]:text-white">
             <aside className="max-lg:col-span-full">
-              <p className="dark:opacity-60">
-                ParadiseDev® is a subdivision of Paradise{" "}
-                <br className="max-lg:hidden" /> Host S.A. and a registered
-                trademark
-              </p>
+              <p className="dark:opacity-60">{t("Description")}</p>
             </aside>
 
             <div className="space-y-4">
@@ -105,12 +103,9 @@ function Footer() {
           </main>
 
           <div className="mt-14 flex max-sm:flex-col-reverse items-start sm:items-center justify-between sm:space-x-6 text-sm text-white/70">
-            <p>Copyright 2024© | All rights reserved</p>
+            <p>{t("Copyright")}</p>
 
-            <p>
-              Site designed and developed by the Paradise Dev® team | Hosted by
-              Paradise Host®
-            </p>
+            <p>{t("DevelopedBy")}</p>
 
             <div className="max-sm:mb-4">
               <ThemeSwitcher />

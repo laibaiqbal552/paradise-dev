@@ -175,7 +175,9 @@ function Features() {
               desc={item.desc[locale as keyof typeof item.desc]}
             >
               <Button asChild className="cursor-pointer">
-                <ScrollLink to={item.link}>{item.button}</ScrollLink>
+                <ScrollLink to={item.link}>
+                  {item.button[locale as keyof typeof item.button]}
+                </ScrollLink>
               </Button>
             </Card>
           ))}
@@ -244,7 +246,10 @@ const cardData = [
       en: "If you are a student or if you have advanced programming knowledge (Jr, Ssr, Sr) you can contact us to send your CV (Curriculum Vitae). It will be stored in our database for future searches for job profiles, and you will be recommended in the world ITEM. You can work with us regardless of your nationality, gender or orientation. We have an excellent work environment and we always add profiles to our projects.",
       fr: "Si vous êtes étudiant ou si vous avez des connaissances avancées en programmation (Jr, Ssr, Sr), vous pouvez nous contacter pour envoyer votre CV (Curriculum Vitae). Il sera stocké dans notre base de données pour de futures recherches de profils professionnels, et vous serez recommandé dans le monde ITEM. Vous pouvez travailler avec nous quelle que soit votre nationalité, votre sexe ou votre orientation. Nous avons un excellent environnement de travail et nous ajoutons toujours des profils à nos projets.",
     },
-    button: "Send Cv",
+    button: {
+      en: "Send Cv",
+      fr: "Envoyer Cv",
+    },
     link: "contact",
   },
   {
@@ -256,7 +261,10 @@ const cardData = [
       en: "We take the time to analyze each project meticulously to provide the best proposal according to the client's needs. No project is worked in the same way. We are in constant communication to do our work in the most efficient way possible.",
       fr: "Nous prenons le temps d'analyser minutieusement chaque projet pour fournir la meilleure proposition selon les besoins du client. Aucun projet n'est travaillé de la même manière. Nous sommes en communication constante pour effectuer notre travail de la manière la plus efficace possible.",
     },
-    button: "Start Now",
+    button: {
+      en: "Start Now",
+      fr: "Commencez Maintenant",
+    },
     link: "contact",
   },
   {
@@ -268,7 +276,10 @@ const cardData = [
       en: "One of our main activities is computer security. If you found any vulnerability in any system, website or service provider, you can report it to us. We are in constant contact with companies reporting these incidents, offering our services. You may be compensated accordingly for reporting the problem or even joining us to solve it.",
       fr: "L'une de nos principales activités est la sécurité informatique. Si vous trouvez une vulnérabilité dans un système, un site Web ou un fournisseur de services, vous pouvez nous le signaler. Nous sommes en contact constant avec les entreprises qui signalent ces incidents, offrant nos services. Vous pouvez être indemnisé en conséquence pour avoir signalé le problème ou même nous rejoindre pour le résoudre.",
     },
-    button: "Report Problem",
+    button: {
+      en: "Report Problem",
+      fr: "Signaler un Problème",
+    },
     link: "contact",
   },
   {
@@ -280,7 +291,12 @@ const cardData = [
       en: "Our dedicated support team is available 24/7 to address your needs promptly and efficiently, ensuring uninterrupted assistance whenever you require it. You can rely on us to provide round-the-clock support, delivering solutions whenever you reach out, day or night.",
       fr: "Notre équipe de support dédiée est disponible 24/7 pour répondre à vos besoins rapidement et efficacement, assurant une assistance ininterrompue chaque fois que vous en avez besoin. Vous pouvez compter sur nous pour fournir un support 24 heures sur 24, offrant des solutions chaque fois que vous nous contactez, jour ou nuit.",
     },
-    button: "Request support",
+    button: {
+      en: "Request support",
+      fr: "Demander du Support",
+    },
     link: "contact",
   },
 ];
+
+// Since the variable 'cardData' is already declared, we will modify the existing structure to include translations for the 'button' attribute directly.
