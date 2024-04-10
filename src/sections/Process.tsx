@@ -165,42 +165,42 @@ const processSteps = [
     num: "01",
     text: {
       en: "The presentation will be made to the client detailing each point about how the project will be worked on, including the estimated time and budget for the work.",
-      fr: "La présentation sera faite au client en détaillant chaque point sur la manière dont le projet sera travaillé, y compris le temps estimé et le budget pour le travail.",
+      sp: "La présentation sera faite au client en détaillant chaque point sur la manière dont le projet sera travaillé, y compris le temps estimé et le budget pour le travail.",
     },
   },
   {
     num: "02",
     text: {
       en: "If the client accepts, initial commissions will be charged, adding up to 60% of the main project in advance.",
-      fr: "Si le client accepte, des commissions initiales seront facturées, s'ajoutant à 60% du projet principal à l'avance.",
+      sp: "Si le client accepte, des commissions initiales seront facturées, s'ajoutant à 60% du projet principal à l'avance.",
     },
   },
   {
     num: "03",
     text: {
       en: "The contract will be signed between both parties to begin the development of the project.",
-      fr: "Le contrat sera signé entre les deux parties pour commencer le développement du projet.",
+      sp: "Le contrat sera signé entre les deux parties pour commencer le développement du projet.",
     },
   },
   {
     num: "04",
     text: {
       en: "There will be constant communication with the client as development progresses. There will be rounds of adjustments until the client is satisfied.",
-      fr: "Il y aura une communication constante avec le client à mesure que le développement progresse. Il y aura des séries d'ajustements jusqu'à ce que le client soit satisfait.",
+      sp: "Il y aura une communication constante avec le client à mesure que le développement progresse. Il y aura des séries d'ajustements jusqu'à ce que le client soit satisfait.",
     },
   },
   {
     num: "05",
     text: {
       en: "When the project is close to completion, the client must pay the remaining part of the settlement for the delivery of the work.",
-      fr: "Lorsque le projet est proche de l'achèvement, le client doit payer la partie restante du règlement pour la livraison du travail.",
+      sp: "Lorsque le projet est proche de l'achèvement, le client doit payer la partie restante du règlement pour la livraison du travail.",
     },
   },
   {
     num: "06",
     text: {
       en: "Once the work is delivered with the client's approval, there will be 30 days of support and subsidized hosting. There will be a quick response for any future errors.",
-      fr: "Une fois le travail livré avec l'approbation du client, il y aura 30 jours de support et d'hébergement subventionné. Il y aura une réponse rapide pour toute erreur future.",
+      sp: "Une fois le travail livré avec l'approbation du client, il y aura 30 jours de support et d'hébergement subventionné. Il y aura une réponse rapide pour toute erreur future.",
     },
   },
 ];

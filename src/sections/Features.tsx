@@ -194,44 +194,44 @@ const featureData = [
     imgSrc: "/images/feature-icons/stars.svg",
     title: {
       en: "Trajectory",
-      fr: "Trajectoire",
+      sp: "Trajectoire",
     },
     desc: {
       en: "Our 5 years of experience in the field support us.",
-      fr: "Nos 5 ans d'expérience dans le domaine nous soutiennent.",
+      sp: "Nos 5 ans d'expérience dans le domaine nous soutiennent.",
     },
   },
   {
     imgSrc: "/images/feature-icons/location.svg",
     title: {
       en: "Attention",
-      fr: "Attention",
+      sp: "Attention",
     },
     desc: {
       en: "24/7 support and office with customer service unlimited.",
-      fr: "Support 24/7 et bureau avec service client illimité.",
+      sp: "Support 24/7 et bureau avec service client illimité.",
     },
   },
   {
     imgSrc: "/images/feature-icons/tick.png",
     title: {
       en: "Quality",
-      fr: "Qualité",
+      sp: "Qualité",
     },
     desc: {
       en: "We take care of polishing every last detail of your project.",
-      fr: "Nous prenons soin de peaufiner chaque dernier détail de votre projet.",
+      sp: "Nous prenons soin de peaufiner chaque dernier détail de votre projet.",
     },
   },
   {
     imgSrc: "/images/feature-icons/price.svg",
     title: {
       en: "Price",
-      fr: "Prix",
+      sp: "Prix",
     },
     desc: {
       en: "We guarantee the best quality at the best price for you.",
-      fr: "Nous garantissons la meilleure qualité au meilleur prix pour vous.",
+      sp: "Nous garantissons la meilleure qualité au meilleur prix pour vous.",
     },
   },
 ];
@@ -240,60 +240,60 @@ const cardData = [
   {
     title: {
       en: "Work with us",
-      fr: "Travaillez avec nous",
+      sp: "Travaillez avec nous",
     },
     desc: {
       en: "If you are a student or if you have advanced programming knowledge (Jr, Ssr, Sr) you can contact us to send your CV (Curriculum Vitae). It will be stored in our database for future searches for job profiles, and you will be recommended in the world ITEM. You can work with us regardless of your nationality, gender or orientation. We have an excellent work environment and we always add profiles to our projects.",
-      fr: "Si vous êtes étudiant ou si vous avez des connaissances avancées en programmation (Jr, Ssr, Sr), vous pouvez nous contacter pour envoyer votre CV (Curriculum Vitae). Il sera stocké dans notre base de données pour de futures recherches de profils professionnels, et vous serez recommandé dans le monde ITEM. Vous pouvez travailler avec nous quelle que soit votre nationalité, votre sexe ou votre orientation. Nous avons un excellent environnement de travail et nous ajoutons toujours des profils à nos projets.",
+      sp: "Si vous êtes étudiant ou si vous avez des connaissances avancées en programmation (Jr, Ssr, Sr), vous pouvez nous contacter pour envoyer votre CV (Curriculum Vitae). Il sera stocké dans notre base de données pour de futures recherches de profils professionnels, et vous serez recommandé dans le monde ITEM. Vous pouvez travailler avec nous quelle que soit votre nationalité, votre sexe ou votre orientation. Nous avons un excellent environnement de travail et nous ajoutons toujours des profils à nos projets.",
     },
     button: {
       en: "Send Cv",
-      fr: "Envoyer Cv",
+      sp: "Envoyer Cv",
     },
     link: "contact",
   },
   {
     title: {
       en: "Each project is worked in a different way",
-      fr: "Chaque projet est travaillé différemment",
+      sp: "Chaque projet est travaillé différemment",
     },
     desc: {
       en: "We take the time to analyze each project meticulously to provide the best proposal according to the client's needs. No project is worked in the same way. We are in constant communication to do our work in the most efficient way possible.",
-      fr: "Nous prenons le temps d'analyser minutieusement chaque projet pour fournir la meilleure proposition selon les besoins du client. Aucun projet n'est travaillé de la même manière. Nous sommes en communication constante pour effectuer notre travail de la manière la plus efficace possible.",
+      sp: "Nous prenons le temps d'analyser minutieusement chaque projet pour fournir la meilleure proposition selon les besoins du client. Aucun projet n'est travaillé de la même manière. Nous sommes en communication constante pour effectuer notre travail de la manière la plus efficace possible.",
     },
     button: {
       en: "Start Now",
-      fr: "Commencez Maintenant",
+      sp: "Commencez Maintenant",
     },
     link: "contact",
   },
   {
     title: {
       en: "Report a veneer ability",
-      fr: "Signaler une capacité de placage",
+      sp: "Signaler une capacité de placage",
     },
     desc: {
       en: "One of our main activities is computer security. If you found any vulnerability in any system, website or service provider, you can report it to us. We are in constant contact with companies reporting these incidents, offering our services. You may be compensated accordingly for reporting the problem or even joining us to solve it.",
-      fr: "L'une de nos principales activités est la sécurité informatique. Si vous trouvez une vulnérabilité dans un système, un site Web ou un fournisseur de services, vous pouvez nous le signaler. Nous sommes en contact constant avec les entreprises qui signalent ces incidents, offrant nos services. Vous pouvez être indemnisé en conséquence pour avoir signalé le problème ou même nous rejoindre pour le résoudre.",
+      sp: "L'une de nos principales activités est la sécurité informatique. Si vous trouvez une vulnérabilité dans un système, un site Web ou un fournisseur de services, vous pouvez nous le signaler. Nous sommes en contact constant avec les entreprises qui signalent ces incidents, offrant nos services. Vous pouvez être indemnisé en conséquence pour avoir signalé le problème ou même nous rejoindre pour le résoudre.",
     },
     button: {
       en: "Report Problem",
-      fr: "Signaler un Problème",
+      sp: "Signaler un Problème",
     },
     link: "contact",
   },
   {
     title: {
       en: "Support 14/7",
-      fr: "Support 14/7",
+      sp: "Support 14/7",
     },
     desc: {
       en: "Our dedicated support team is available 24/7 to address your needs promptly and efficiently, ensuring uninterrupted assistance whenever you require it. You can rely on us to provide round-the-clock support, delivering solutions whenever you reach out, day or night.",
-      fr: "Notre équipe de support dédiée est disponible 24/7 pour répondre à vos besoins rapidement et efficacement, assurant une assistance ininterrompue chaque fois que vous en avez besoin. Vous pouvez compter sur nous pour fournir un support 24 heures sur 24, offrant des solutions chaque fois que vous nous contactez, jour ou nuit.",
+      sp: "Notre équipe de support dédiée est disponible 24/7 pour répondre à vos besoins rapidement et efficacement, assurant une assistance ininterrompue chaque fois que vous en avez besoin. Vous pouvez compter sur nous pour fournir un support 24 heures sur 24, offrant des solutions chaque fois que vous nous contactez, jour ou nuit.",
     },
     button: {
       en: "Request support",
-      fr: "Demander du Support",
+      sp: "Demander du Support",
     },
     link: "contact",
   },

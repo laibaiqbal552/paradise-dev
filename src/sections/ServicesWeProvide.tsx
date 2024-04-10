@@ -116,97 +116,97 @@ const data = [
   {
     paragraph: {
       en: "UI/UX Design",
-      fr: "Conception UI/UX",
+      sp: "Conception UI/UX",
     },
     logoSrc:
       "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9bf6dd14ef04a15a1058_Frame%20(2).svg",
     heading: {
       en: "Design proposals for web or applications",
-      fr: "Propositions de design pour le web ou des applications",
+      sp: "Propositions de design pour le web ou des applications",
     },
   },
   {
     paragraph: {
       en: "Web Development",
-      fr: "Développement Web",
+      sp: "Développement Web",
     },
     logoSrc:
       "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9c5132f0a018a720e686_Frame%20(4).svg",
     heading: {
       en: "E-Commerce, business, portfolios, landing, events",
-      fr: "E-Commerce, entreprise, portfolios, landing, événements",
+      sp: "E-Commerce, entreprise, portfolios, landing, événements",
     },
   },
   {
     paragraph: {
       en: "Applications",
-      fr: "Applications",
+      sp: "Applications",
     },
     logoSrc:
       "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f450969be961ba6c606f9b_Frame%20(45).png",
     heading: {
       en: "Apps for iOS and Android in Kotlin, React and Swift",
-      fr: "Applications pour iOS et Android en Kotlin, React et Swift",
+      sp: "Applications pour iOS et Android en Kotlin, React et Swift",
     },
   },
   {
     paragraph: {
       en: "Support",
-      fr: "Support",
+      sp: "Support",
     },
     logoSrc:
       "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f53097b018f5d03d87dea6_Frame.png",
     heading: {
       en: "Personalized 24/7 for companies and businesses",
-      fr: "Personnalisé 24/7 pour les entreprises et les sociétés",
+      sp: "Personnalisé 24/7 pour les entreprises et les sociétés",
     },
   },
   {
     paragraph: {
       en: "Datacenter",
-      fr: "Datacenter",
+      sp: "Datacenter",
     },
     logoSrc:
       "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9c6822515f8fc3406833_Frame%20(5).svg",
     heading: {
       en: "Own servers provided by ParadiseHost®",
-      fr: "Serveurs propres fournis par ParadiseHost®",
+      sp: "Serveurs propres fournis par ParadiseHost®",
     },
   },
   {
     paragraph: {
       en: "SSL",
-      fr: "SSL",
+      sp: "SSL",
     },
     logoSrc:
       "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9c2c9fa5ab7932d542e8_Frame%20(1).png",
     heading: {
       en: "SSL certificates for the security of your website.",
-      fr: "Certificats SSL pour la sécurité de votre site Web.",
+      sp: "Certificats SSL pour la sécurité de votre site Web.",
     },
   },
   {
     paragraph: {
       en: "SEO",
-      fr: "SEO",
+      sp: "SEO",
     },
     logoSrc:
       "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9d35968954ebaf19a3fa_Frame%20(3).png",
     heading: {
       en: "Your website in the first positions of Google",
-      fr: "Votre site Web dans les premières positions de Google",
+      sp: "Votre site Web dans les premières positions de Google",
     },
   },
   {
     paragraph: {
       en: "Advertising",
-      fr: "Publicité",
+      sp: "Publicité",
     },
     logoSrc:
       "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9d5d58e514604bb2b972_Frame%20(6).svg",
     heading: {
       en: "Meta Business (Instagram/Facebook) Google Ads",
-      fr: "Meta Business (Instagram/Facebook) Google Ads",
+      sp: "Meta Business (Instagram/Facebook) Google Ads",
     },
   },
 ];
