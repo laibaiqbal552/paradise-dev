@@ -7,6 +7,8 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useRef } from "react";
 import { useParams } from "next/navigation";
+import { useTranslations } from "next-intl";
+import StrokedText from "components/StrokedText";
 // import { data } from "messages/fr.json";
 // import { data as en } from "messages/en.json";
 
@@ -81,11 +83,14 @@ function ServicesWeProvide() {
   );
 
   const locale = useParams().locale;
+  const t = useTranslations("Home.Services");
   return (
     <section ref={containerRef}>
       <Container>
-        <h1 className="text-center uppercase font-bold text-3xl sm:text-[64px] lh-1_2 mb-10 lg:mb-20">
-          <span className="text-primary">Services</span> We <br /> Provide
+        <h1 className="text-center uppercase font-bold text-3xl sm:text-[64px] lh-1_2 mb-10 lg:mb-20 max-w-[597px] mx-auto">
+          <StrokedText className="font-bold mb-10 sm:mb-20 text-center uppercase">
+            {t("Title")}
+          </StrokedText>
         </h1>
 
         <main

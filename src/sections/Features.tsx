@@ -154,13 +154,11 @@ function Features() {
           </div>
 
           <h3 className="text-3xl sm:text-[64px] text-center font-bold lh-1_2 uppercase max-w-lg mx-auto">
-            {/* {t("SecondaryTitle").split(" ")[0]} */}
             <span className="text-primary">
               {" "}
               {t("SecondaryTitle").split(" ")[0]}
             </span>{" "}
             {t("SecondaryTitle").split(" ").slice(1).join(" ")}
-            {/* MAKE <br /> US DIFFERENT */}
           </h3>
         </header>
       </Container>

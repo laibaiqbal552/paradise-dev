@@ -20,7 +20,9 @@
             "Platforms":{
                 "Title": "Tech’s & Platforms We Handle"
             },
-
+            "Services":{
+                "Title": "Services we provide"
+            },
             "Process":{
                 "Title": "Process",
                 "SubTitle":"Our work process",

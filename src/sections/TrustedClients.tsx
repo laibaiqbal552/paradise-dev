@@ -36,7 +36,7 @@ const clients = [
 function TrustedClients() {
   const [theme] = useThemeSwitcher();
 
-  const t = useTranslations("TrustedClients");
+  const t = useTranslations("Home.TrustedClients");
 
   return (
     <section>

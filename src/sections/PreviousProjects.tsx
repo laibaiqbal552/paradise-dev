@@ -77,7 +77,7 @@ const Card = ({
 function PreviousProjects() {
   const [tab, setTab] = useState<Tab>("Desarollo Web");
 
-  const t = useTranslations("Projects");
+  const t = useTranslations("Home.Projects");
 
   const locale = useParams().locale;
 

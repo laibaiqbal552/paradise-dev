@@ -16,6 +16,12 @@
                 "Title": "Sobre nosotros",
                 "Description": "Somos una división de Paradise Host SA especializada en programación, desarrollo y seguridad informática. Ofrecemos servicios para empresas, corporaciones y particulares."
             },
+              "Platforms":{
+                "Title": "Tecnologías y Plataformas que Manejamos"
+            },
+              "Services":{
+                "Title": "Servicios que proporcionamos"
+            },
             "Process":{
                 "Title": "Proceso",
                 "SubTitle":"Nuestro proceso de trabajo",
@@ -23,7 +29,7 @@
             },
             
             "Quality":{
-                "Title": "Brindamos calidad",
+                "Title": "Brindamos calidad", 
                 "Description":"Déjelo en manos de nuestro equipo, tenemos la solución adecuada para usted. Consúltenos ahora sin ningún compromiso.",
                 "ButtonText":"Contáctenos"
             },   

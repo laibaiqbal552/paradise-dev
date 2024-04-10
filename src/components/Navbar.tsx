@@ -74,7 +74,7 @@ function Navbar() {
                   asChild
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Link href="/">Home2</Link>
+                  <Link href="/">Home</Link>
                 </Button>
               </li>
               <li>
