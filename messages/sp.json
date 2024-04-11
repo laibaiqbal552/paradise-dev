@@ -14,44 +14,44 @@
 
             "About":{
                 "Title": "Sobre nosotros",
-                "Description": "Somos una división de Paradise Host SA especializada en programación, desarrollo y seguridad informática. Ofrecemos servicios para empresas, corporaciones y particulares."
+                "Description": "Somos una división de la empresa Paradise Host SA especializada en programación, desarrollo y seguridad informática. Ofrecemos servicios para negocios, empresas y particulares."
             },
               "Platforms":{
-                "Title": "Tecnologías y Plataformas que Manejamos"
+                "Title": "Tecnologías y plataformas que manejamos"
             },
               "Services":{
-                "Title": "Servicios que proporcionamos"
+                "Title": "Servicios que brindamos"
             },
             "Process":{
                 "Title": "Proceso",
                 "SubTitle":"Nuestro proceso de trabajo",
-                "Description": "Aquí está nuestro procedimiento una vez aceptado el trabajo por nuestra parte y el presupuesto del cliente. ¡Te incluiremos en cada paso del proceso para obtener el mejor resultado!"
+                "Description": "Este es nuestro procedimiento una vez aceptado el trabajo por nuestra parte y el presupuesto por parte del cliente. ¡Te incluiremos en cada etapa del proceso para obtener el mejor resultado!"
             },
             
             "Quality":{
-                "Title": "Brindamos calidad", 
-                "Description":"Déjelo en manos de nuestro equipo, tenemos la solución adecuada para usted. Consúltenos ahora sin ningún compromiso.",
-                "ButtonText":"Contáctenos"
+                "Title": "Nosotros proporcionamos calidad", 
+                "Description":"Déjalo en manos de nuestro equipo, tenemos la solución a tu medida. Consulte ahora sin ningún compromiso.",
+                "ButtonText":"Ponerse en contacto"
             },   
             "Projects":{
                 "Title": "Proyectos anteriores"  
             },
             "TrustedClients":{
-                "Title": "Nuestros clientes confiables"
+                "Title": "Nuestros clientes de confianza"
             },
             "Contact":{
-                "Title": "Contactar",
-                "Description": "¿Tiene preguntas, comentarios o solicitudes genéricas? Nos esforzamos por satisfacerte, ¡contáctanos!",
-                "FormSubmitted": "Formulario enviado exitosamente",
-                "Mail": "Correo electrónico",
+                "Title": "Contacto",
+                "Description": "¿Alguna pregunta, comentario o consulta general? Realmente apreciamos tus sugerencias, ¡contáctanos!",
+                 "Mail": "Correo",
                 "Phone": "Teléfono",
-                "Location": "Ubicación"
+                "Location": "Ubicación",
+                "FormSubmitted": "Formulario enviado exitosamente"
             },
 
             "Footer":{
-                "Description": "ParadiseDev® est une subdivision de Paradise Host S.A. et une marque déposée",
-                "Copyright": "Droit d'auteur 2024© | Tous droits réservés",
-                "DevelopedBy": "Site conçu et développé par l'équipe Paradise Dev® | Hébergé par Paradise Host®"
+                "Description": "ParadiseDev® es una subdivisión de Paradise Host S.A. y una marca registrada",
+                "Copyright": "Derechos de autor 2024© | Reservados todos los derechos",
+                "DevelopedBy": "Sitio diseñado y desarrollado por el equipo de Paradise Dev® | Organizado por Paradise Host®"
             }
         }
     }
