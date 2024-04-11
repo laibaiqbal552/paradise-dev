@@ -9,6 +9,7 @@ import { useRef } from "react";
 import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import StrokedText from "components/StrokedText";
+import { useTheme } from "next-themes";
 // import { data } from "messages/fr.json";
 // import { data as en } from "messages/en.json";
 
@@ -84,6 +85,7 @@ function ServicesWeProvide() {
 
   const locale = useParams().locale;
   const t = useTranslations("Home.Services");
+  const { resolvedTheme } = useTheme();
   return (
     <section ref={containerRef}>
       <Container>
@@ -101,7 +103,11 @@ function ServicesWeProvide() {
             <Card
               key={i}
               title={item.paragraph[locale as keyof typeof item.paragraph]}
-              imgSrc={item.logoSrc}
+              imgSrc={
+                resolvedTheme
+                  ? item?.logoSrc[resolvedTheme as keyof typeof item.logoSrc]
+                  : item?.logoSrc?.light
+              }
               desc={item.heading[locale as keyof typeof item.heading]}
             />
           ))}
@@ -121,97 +127,113 @@ const data = [
   {
     paragraph: {
       en: "UI/UX Design",
-      sp: "Conception UI/UX",
+      es: "Diseño UI/UX",
     },
-    logoSrc:
-      "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9bf6dd14ef04a15a1058_Frame%20(2).svg",
+    logoSrc: {
+      light: "/images/services/light/8.png",
+      dark: "/images/services/dark/5.svg",
+    },
     heading: {
       en: "Design proposals for web or applications",
-      sp: "Propositions de design pour le web ou des applications",
+      es: "Propuestas de diseño para web o aplicaciones",
     },
   },
   {
     paragraph: {
       en: "Web Development",
-      sp: "Développement Web",
+      es: "Desarrollo Web",
     },
-    logoSrc:
-      "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9c5132f0a018a720e686_Frame%20(4).svg",
+    logoSrc: {
+      light: "/images/services/light/7.png",
+      dark: "/images/services/dark/4.svg",
+    },
     heading: {
       en: "E-Commerce, business, portfolios, landing, events",
-      sp: "E-Commerce, entreprise, portfolios, landing, événements",
+      es: "E-Commerce, negocios, portafolios, páginas de aterrizaje, eventos",
     },
   },
   {
     paragraph: {
       en: "Applications",
-      sp: "Applications",
+      es: "Aplicaciones",
     },
-    logoSrc:
-      "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f450969be961ba6c606f9b_Frame%20(45).png",
+    logoSrc: {
+      light: "/images/services/light/3.png",
+      dark: "/images/services/dark/6.png",
+    },
     heading: {
       en: "Apps for iOS and Android in Kotlin, React and Swift",
-      sp: "Applications pour iOS et Android en Kotlin, React et Swift",
+      es: "Aplicaciones para iOS y Android en Kotlin, React y Swift",
     },
   },
   {
     paragraph: {
       en: "Support",
-      sp: "Support",
+      es: "Soporte",
     },
-    logoSrc:
-      "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f53097b018f5d03d87dea6_Frame.png",
+    logoSrc: {
+      light: "/images/services/light/6.png",
+      dark: "/images/services/dark/3.png",
+    },
     heading: {
       en: "Personalized 24/7 for companies and businesses",
-      sp: "Personnalisé 24/7 pour les entreprises et les sociétés",
+      es: "Soporte personalizado 24/7 para empresas y negocios",
     },
   },
   {
     paragraph: {
       en: "Datacenter",
-      sp: "Datacenter",
+      es: "Centro de Datos",
     },
-    logoSrc:
-      "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9c6822515f8fc3406833_Frame%20(5).svg",
+    logoSrc: {
+      light: "/images/services/light/4.svg",
+      dark: "/images/services/dark/8.svg",
+    },
     heading: {
       en: "Own servers provided by ParadiseHost®",
-      sp: "Serveurs propres fournis par ParadiseHost®",
+      es: "Servidores propios proporcionados por ParadiseHost®",
     },
   },
   {
     paragraph: {
       en: "SSL",
-      sp: "SSL",
+      es: "SSL",
     },
-    logoSrc:
-      "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9c2c9fa5ab7932d542e8_Frame%20(1).png",
+    logoSrc: {
+      light: "/images/services/light/5.png",
+      dark: "/images/services/dark/2.png",
+    },
     heading: {
       en: "SSL certificates for the security of your website.",
-      sp: "Certificats SSL pour la sécurité de votre site Web.",
+      es: "Certificados SSL para la seguridad de tu sitio web.",
     },
   },
   {
     paragraph: {
       en: "SEO",
-      sp: "SEO",
+      es: "SEO",
     },
-    logoSrc:
-      "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9d35968954ebaf19a3fa_Frame%20(3).png",
+    logoSrc: {
+      light: "/images/services/light/9.png",
+      dark: "/images/services/dark/7.png",
+    },
     heading: {
       en: "Your website in the first positions of Google",
-      sp: "Votre site Web dans les premières positions de Google",
+      es: "Tu sitio web en las primeras posiciones de Google",
     },
   },
   {
     paragraph: {
       en: "Advertising",
-      sp: "Publicité",
+      es: "Publicidad",
     },
-    logoSrc:
-      "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ea9d5d58e514604bb2b972_Frame%20(6).svg",
+    logoSrc: {
+      light: "/images/services/light/1.svg",
+      dark: "/images/services/dark/1.svg",
+    },
     heading: {
       en: "Meta Business (Instagram/Facebook) Google Ads",
-      sp: "Meta Business (Instagram/Facebook) Google Ads",
+      es: "Meta Business (Instagram/Facebook) Google Ads",
     },
   },
 ];

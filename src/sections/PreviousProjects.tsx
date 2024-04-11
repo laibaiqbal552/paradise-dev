@@ -145,11 +145,11 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Paradise Dev",
-        sp: "Paradise Dev",
+        sp: "Desarrollador del paraíso",
       },
       description: {
         en: "Here you are now!",
-        sp: "Vous êtes ici maintenant !",
+        sp: "¡Aquí estás ahora!",
       },
       url: "https://paradisedev.webflow.io/",
       image:
@@ -161,11 +161,11 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Paradise Dev",
-        sp: "Paradise Dev",
+        sp: "Desarrollador del paraíso",
       },
       description: {
         en: "Here you are now!",
-        sp: "Vous êtes ici maintenant !",
+        sp: "¡Aquí estás ahora!",
       },
       url: "https://paradisedev.webflow.io/",
       image:
@@ -174,11 +174,11 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Paradise Host",
-        sp: "Paradise Host",
+        sp: "Anfitrión del paraíso",
       },
       description: {
         en: "Hosting Services",
-        sp: "Services d'hébergement",
+        sp: "Servicios de alojamiento",
       },
       url: "https://paradisehost.net/",
       image:
@@ -187,11 +187,11 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Paradise Gaming",
-        sp: "Paradise Gaming",
+        sp: "Juegos Paraíso",
       },
       description: {
         en: "Online gaming community and influencer management",
-        sp: "Communauté de jeux en ligne et gestion d'influenceurs",
+        sp: "Comunidad de juegos online y gestión de influencers",
       },
       url: "https://paradisegaming.net/",
       image:
@@ -200,11 +200,11 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Ika Developments",
-        sp: "Ika Developments",
+        sp: "Desarrollos Ika",
       },
       description: {
         en: "Architects studio",
-        sp: "Studio d'architectes",
+        sp: "estudio de arquitectos",
       },
       url: "https://ika.com.ar/",
       image:
@@ -213,11 +213,11 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Austral Refrigeration",
-        sp: "Austral Réfrigération",
+        sp: "Refrigeración Austral",
       },
       description: {
         en: "Cooling solutions",
-        sp: "Solutions de refroidissement",
+        sp: "Soluciones de refrigeración",
       },
       url: "https://australrefrigeracion.com/",
       image:
@@ -230,7 +230,7 @@ const projects: Record<Tab, any> = {
       },
       description: {
         en: "Study #1 in intellectual property, trademarks and patents",
-        sp: "Étude n°1 en propriété intellectuelle, marques et brevets",
+        sp: "Estudio #1 en propiedad intelectual, marcas y patentes",
       },
       url: "https://lauritsen.com.ar/",
       image:
@@ -239,11 +239,11 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Registra tu Marca",
-        sp: "Enregistre ta Marque",
+        sp: "Registra tu Marca",
       },
       description: {
         en: "Brands and patents",
-        sp: "Marques et brevets",
+        sp: "Marcas y patentes",
       },
       url: "https://registratumarca.com.ar/",
       image:
@@ -252,11 +252,11 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "trainingwhead",
-        sp: "trainingwhead",
+        sp: "cabeza de entrenamiento",
       },
       description: {
         en: "Train with science by Tomas Mazza",
-        sp: "Entraînez-vous avec la science par Tomas Mazza",
+        sp: "Entrena con ciencia por Tomas Mazza",
       },
       url: "https://trainingwhead.paradisedev.net/",
       image:
@@ -265,7 +265,7 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Paradise Dev V1",
-        sp: "Paradise Dev V1",
+        sp: "Paraíso Desarrollador V1",
       },
       description: {
         en: "This is old version",
@@ -281,7 +281,7 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Paradise Dev V2",
-        sp: "Paradise Dev V2",
+        sp: "Paraíso Desarrollador V2",
       },
       description: {
         en: "Here you are now!",
@@ -294,11 +294,11 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Paradise Host",
-        sp: "Paradise Host",
+        sp: "Anfitrión del paraíso",
       },
       description: {
         en: "Hosting Services",
-        sp: "Services d'hébergement",
+        sp: "Servicios de alojamiento",
       },
       url: "https://paradisehost.net/",
       image:
@@ -307,11 +307,11 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Paradise Gaming",
-        sp: "Paradise Gaming",
+        sp: "Juegos Paraíso",
       },
       description: {
         en: "Online gaming community and influencer management",
-        sp: "Communauté de jeux en ligne et gestion d'influenceurs",
+        sp: "Comunidad de juegos online y gestión de influencers.",
       },
       url: "https://paradisegaming.net/",
       image:
@@ -320,11 +320,11 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Ika Developments",
-        sp: "Ika Developments",
+        sp: "Desarrollos Ika",
       },
       description: {
         en: "Architects studio",
-        sp: "Studio d'architectes",
+        sp: "estudio de arquitectos",
       },
       url: "https://ika.com.ar/",
       image:
@@ -333,11 +333,11 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Austral Refrigeration",
-        sp: "Austral Réfrigération",
+        sp: "Refrigeración Austral",
       },
       description: {
-        en: "Cooling solutions",
-        sp: "Solutions de refroidissement",
+        en: "Refrigeración Austral",
+        sp: "Refrigeración Austral",
       },
       url: "https://australrefrigeracion.com/",
       image:
@@ -359,11 +359,11 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Registra tu Marca",
-        sp: "Enregistre ta Marque",
+        sp: "Registra tu Marca",
       },
       description: {
         en: "Brands and patents",
-        sp: "Marques et brevets",
+        sp: "Marcas y patentes",
       },
       url: "https://registratumarca.com.ar/",
       image:
@@ -372,7 +372,7 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "trainingwhead",
-        sp: "trainingwhead",
+        sp: "cabeza de entrenamiento",
       },
       description: {
         en: "Train with science by Tomas Mazza",
@@ -385,11 +385,11 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Paradise Dev V1",
-        sp: "Paradise Dev V1",
+        sp: "Paraíso Desarrollador V1",
       },
       description: {
         en: "This is old version",
-        sp: "Ceci est l'ancienne version",
+        sp: "Esta es la versión antigua",
       },
       url: "http://old.paradisedev.net",
       image:
