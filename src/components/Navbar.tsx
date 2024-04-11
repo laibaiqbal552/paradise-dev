@@ -138,7 +138,7 @@ function Navbar() {
               <button
                 onClick={() => setIsLocaleOpen((val) => !val)}
                 type="button"
-                className="inline-flex justify-center gap-1 w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-primary"
+                className="inline-flex justify-center items-center gap-1 w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-primary"
                 id="menu-button"
                 aria-expanded="true"
                 aria-haspopup="true"
@@ -146,7 +146,7 @@ function Navbar() {
                 <Image
                   src={locales.image}
                   alt={locales.label}
-                  className="inline mr-2"
+                  className="inline md:mr-2 mr-1"
                   width="20"
                   height="20"
                 />
@@ -161,26 +161,28 @@ function Navbar() {
                   aria-labelledby="menu-button"
                   tabIndex={-1}
                 >
-                  <div className="py-1" role="none">
+                  <div className="py-1 " role="none">
                     {localeData.map((locale, index) => (
                       <Link
                         onClick={() => handleSetLocale(locale)}
                         key={index}
                         href={redirectedPathName(locale.locale)}
-                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                        className="text-gray-700 px-4 flex items-center py-2 text-sm hover:bg-gray-100"
                         role="menuitem"
                         tabIndex={-1}
                         locale={locale.locale}
                         id="menu-item-0"
                       >
-                        <Image
-                          src={locale.image}
-                          alt={locale.label}
-                          className="inline mr-2"
-                          width="20"
-                          height="20"
-                        />{" "}
-                        {locale.label}
+                        <div className="mr-2 ">
+                          <Image
+                            src={locale.image}
+                            alt={locale.label}
+                            className="inline "
+                            width="20"
+                            height="20"
+                          />
+                        </div>
+                        <div className="pt-1"> {locale.label}</div>
                       </Link>
                     ))}
 
