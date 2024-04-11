@@ -12,6 +12,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { socialLinks } from "./../lib/constants";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 function Footer() {
   const t = useTranslations("Home.Footer");
@@ -28,12 +29,16 @@ function Footer() {
                   <li key={i}>
                     <Button
                       shape="icon"
-                      className="text-2xl text-primary bg-white"
+                      className="text-2xl text-primary bg-white hover:bg-[#2dcd1c]"
                       asChild
                     >
-                      <a href={item.link} target="_blank">
+                      <Link
+                        href={item.link}
+                        target="_blank"
+                        className=" text-primary z-10 relative"
+                      >
                         <item.Icon />
-                      </a>
+                      </Link>
                     </Button>
                   </li>
                 ))}
