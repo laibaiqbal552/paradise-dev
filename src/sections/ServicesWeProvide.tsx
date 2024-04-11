@@ -10,6 +10,7 @@ import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import StrokedText from "components/StrokedText";
 import { useTheme } from "next-themes";
+import Heading from "components/Heading";
 // import { data } from "messages/fr.json";
 // import { data as en } from "messages/en.json";
 
@@ -89,12 +90,15 @@ function ServicesWeProvide() {
   return (
     <section ref={containerRef}>
       <Container>
-        <h1 className="text-center uppercase font-bold text-3xl sm:text-[64px] lh-1_2 mb-10 lg:mb-20 max-w-[597px] mx-auto">
+        {/* <h1 className="text-center uppercase font-bold text-3xl sm:text-[64px] lh-1_2 mb-10 lg:mb-20 max-w-[597px] mx-auto">
           <StrokedText className="font-bold mb-10 sm:mb-20 text-center uppercase">
             {t("Title")}
           </StrokedText>
-        </h1>
-
+        </h1> */}
+        <h3 className="text-3xl sm:text-[64px] text-center font-bold lh-1_2 uppercase max-w-xl mx-auto">
+          <span className="text-primary"> {t("Title").split(" ")[0]}</span>{" "}
+          {t("Title").split(" ").slice(1).join(" ")}
+        </h3>
         <main
           id="main"
           className="max-lg:grid max-sm:grid-cols-1 max-lg:grid-cols-2 max-lg:gap-5 lg:flex lg:[&>*]:min-w-[20rem] lg:justify-center lg:h-[25rem] relative"

@@ -22,7 +22,7 @@ const Card = ({ text, num }: { text: string; num: number | string }) => {
     <div className="border border-primary rounded-xl p-6 bg-white dark:bg-body relative z-40 transition-all duration-700 hover:bg-primary/20 dark:hover:bg-primary/20">
       <StrokedText
         color="#bd9fe0"
-        className="text-[52px] md:text-[104px] font-bold lh-1 mb-3"
+        className="text-[52px] md:text-[104px] font-bold lh-1 mb-3  font-montserrat"
       >
         {num}
       </StrokedText>

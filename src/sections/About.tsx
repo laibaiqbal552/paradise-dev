@@ -13,7 +13,7 @@ function About() {
     <section>
       <Container>
         <Heading>
-          <StrokedText className="font-bold mb-6 text-center uppercase">
+          <StrokedText className="font-bold mb-6 text-center uppercase font-montserrat">
             {t("Title")}
           </StrokedText>
         </Heading>

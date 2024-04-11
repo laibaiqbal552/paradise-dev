@@ -136,7 +136,7 @@ function Features() {
       <Container asChild className="mb-10 lg:mb-28">
         <header>
           <Heading>
-            <StrokedText className="font-bold mb-10 sm:mb-20 text-center uppercase">
+            <StrokedText className="font-bold mb-10 sm:mb-20 text-center uppercase font-montserrat">
               {t("Title")}
             </StrokedText>
           </Heading>
@@ -148,14 +148,19 @@ function Features() {
             {featureData?.map((item, index) => (
               <FeatureCard
                 key={index}
-                imgSrc={item.imgSrc[resolvedTheme as keyof typeof item.imgSrc]}
+                // imgSrc={item.imgSrc[resolvedTheme as keyof typeof item.imgSrc]}
+                imgSrc={
+                  resolvedTheme
+                    ? item?.imgSrc[resolvedTheme as keyof typeof item.imgSrc]
+                    : item?.imgSrc?.light
+                }
                 title={item.title[locale as keyof typeof item.title]}
                 desc={item.desc[locale as keyof typeof item.desc]}
               />
             ))}
           </div>
 
-          <h3 className="text-3xl sm:text-[64px] text-center font-bold lh-1_2 uppercase max-w-lg mx-auto">
+          <h3 className="text-3xl sm:text-[64px] text-center font-bold lh-1_2 uppercase max-w-xl mx-auto">
             <span className="text-primary">
               {" "}
               {t("SecondaryTitle").split(" ")[0]}
@@ -192,9 +197,8 @@ export default Features;
 const featureData = [
   {
     imgSrc: {
-      light:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65ddd02745a403327e9bb2e1_server.svg",
-      dark: "/images/feature-icons/dark/stars.svg",
+      light: "/images/feature-icons/light/star1.svg",
+      dark: "/images/feature-icons/dark/star1.svg",
     },
     title: {
       en: "Trajectory",

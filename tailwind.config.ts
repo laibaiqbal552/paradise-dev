@@ -12,7 +12,7 @@ const config: Config = {
   darkMode: "class",
   theme: {
     fontFamily: {
-      montserrat: "var(--montserrat)",
+    montserrat: ["Montserrat", "sans-serif"],
     },
     extend: {
       colors: {

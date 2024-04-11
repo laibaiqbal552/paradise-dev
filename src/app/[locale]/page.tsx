@@ -17,13 +17,13 @@ export default function Home() {
     <>
       <Navbar />
 
-      {/* <div className="mt-10 sm:mt-[96px] mb-14 lg:mb-40">
+      <div className="mt-10 sm:mt-[96px] mb-14 lg:mb-40">
         <Hero />
       </div>
 
       <div className="mb-20 lg:mb-40">
         <Features />
-      </div>*/}
+      </div>
 
       <div className="mb-20" id="about">
         <About />
