@@ -25,7 +25,7 @@ function Navbar() {
   }, isMenuOpen === true);
   const localeData = [
     { label: "English", locale: "en", image: "/images/en-flag.png" },
-    { label: "Spainsh", locale: "sp", image: "/images/fr-flag.jpg" },
+    { label: "Español", locale: "sp", image: "/images/fr-flag.jpg" },
   ];
 
   const currentLocale = localeData?.find((item) => item.locale === locale);
