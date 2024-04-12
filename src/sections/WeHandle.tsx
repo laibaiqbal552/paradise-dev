@@ -56,7 +56,7 @@ function WeHandle() {
 
   return (
     <section>
-      <Container className="mb-20">
+      <Container className="mb-10 sm:mb-20">
         <h1 className="text-3xl md:text-[56px] text-center font-semibold">
           {t("Title")}
         </h1>
@@ -84,11 +84,20 @@ function WeHandle() {
         <Swiper
           slidesPerView={"auto"}
           modules={[Autoplay]}
-          className="[&_.swiper-slide]:!w-fit [&_.swiper-slide]:h-auto"
+          className="sm:[&_.swiper-slide]:!w-fit sm:[&_.swiper-slide]:h-auto"
           loop={true}
           autoplay={{
             disableOnInteraction: false,
             delay: 1000,
+          }}
+          breakpoints={{
+            0: {
+              slidesPerView: 2,
+            },
+
+            640: {
+              slidesPerView: "auto",
+            },
           }}
         >
           {skills.map((item, i) =>
@@ -100,7 +109,7 @@ function WeHandle() {
                     alt="skill"
                     width={100}
                     height={100}
-                    className="mx-5 max-sm:size-12 max-xl:size-16"
+                    className="mx-5 max-xl:w-16 max-xl:h-16 object-contain aspect-square max-sm:!w-[50%] max-sm:!h-[50%]"
                   />
                 </div>
               </SwiperSlide>

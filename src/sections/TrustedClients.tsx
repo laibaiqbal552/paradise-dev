@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
 "use client";
 
 import Container from "components/Container";
@@ -41,7 +43,7 @@ function TrustedClients() {
   return (
     <section>
       <Container className="max-w-[80rem] w-full">
-        <p className="text-3xl sm:text-4xl lg:text-[3.5rem] font-semibold text-center mb-20">
+        <p className="text-3xl sm:text-4xl lg:text-[3.5rem] font-semibold text-center mb-6 sm:mb-20">
           {t("Title")}
         </p>
       </Container>
@@ -63,18 +65,27 @@ function TrustedClients() {
       <Swiper
         slidesPerView={"auto"}
         modules={[Autoplay]}
-        className="[&_.swiper-slide]:!w-fit [&_.swiper-slide]:h-auto"
+        className="sm:[&_.swiper-slide]:!w-fit sm:[&_.swiper-slide]:h-auto [&_.swiper-slide]:flex [&_.swiper-slide]:justify-center [&_.swiper-slide]:items-center"
         loop={true}
         autoplay={{
           disableOnInteraction: false,
           delay: 1000,
+        }}
+        breakpoints={{
+          0: {
+            slidesPerView: 2,
+          },
+
+          640: {
+            slidesPerView: "auto",
+          },
         }}
       >
         {clients.map((item, i) => (
           <SwiperSlide key={i}>
             <img
               src={theme === "dark" ? item.src : item.lightSrc}
-              className="h-9 sm:h-14 xl:h-[80px] w-auto mx-1.5 sm:mx-3 xl:mx-6"
+              className="sm:h-14 xl:h-[80px] sm:w-auto sm:mx-3 xl:mx-6 object-contain aspect-square max-sm:!w-[50%] max-sm:!h-[50%]"
             />
           </SwiperSlide>
         ))}
