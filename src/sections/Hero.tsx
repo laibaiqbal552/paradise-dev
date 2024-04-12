@@ -8,6 +8,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { socialLinks } from "lib/constants";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 function Hero() {
   const t = useTranslations("Home.Hero");
@@ -55,9 +56,9 @@ function Hero() {
           .map((item, i) => (
             <li key={i}>
               <Button asChild shape="icon" className="text-2xl">
-                <a href={item.link} target="_blank">
+                <Link href={item.link} target="_blank">
                   <item.Icon />
-                </a>
+                </Link>
               </Button>
             </li>
           ))}

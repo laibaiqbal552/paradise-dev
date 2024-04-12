@@ -51,7 +51,7 @@ const Card = ({
           width={50}
           height={50}
           src={imgSrc}
-          alt=""
+          alt="alt"
           className="max-sm:size-10"
         />
       </aside>

@@ -1,11 +1,6 @@
 import { ThemeProvider } from "components/theme-provider";
-// import { locales } from "../../i18n";
-// import { unstable_setRequestLocale } from "next-intl/server";
 import { NextIntlClientProvider, useMessages } from "next-intl";
-
-// export function generateStaticParams() {
-//   return locales.map((locale) => ({ locale }));
-// }
+import Head from "next/head"; // Import the Head component
 
 export default function RootLayout({
   children,
@@ -14,13 +9,17 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  // unstable_setRequestLocale(locale);
   const messages = useMessages();
   return (
     <html lang={locale}>
+      <Head>
+        <title>Paradise website</title>
+        <meta name="description" content="WE PROPOSE YOU TO DEVELOP YOUR" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        {/* Add other meta tags as needed */}
+      </Head>
       <body className="className" suppressHydrationWarning={true}>
-        {/* <Navbar /> */}
-
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider attribute="class">{children}</ThemeProvider>
         </NextIntlClientProvider>
