@@ -52,56 +52,56 @@ function Footer() {
             </aside>
 
             <div className="space-y-4">
-              <p>About</p>
+              <p>{t("Pages1.AboutUs")}</p>
               <ul className="space-y-3">
                 <li>
-                  <a href="#">Us</a>
+                  <Link href="#">{t("Pages1.AboutUs")}</Link>
                 </li>
                 <li>
-                  <a href="#">Conditions</a>
+                  <Link href="#">{t("Pages1.Conditions")}</Link>
                 </li>
                 <li>
-                  <a href="#">Hosting</a>
+                  <Link href="#">{t("Pages1.Hosting")}</Link>
                 </li>
                 <li>
-                  <a href="#">Gaming</a>
+                  <Link href="#">{t("Pages1.Gaming")}</Link>
                 </li>
                 <li>
-                  <a href="#">FAQ</a>
+                  <Link href="#">{t("Pages1.FAQ")}</Link>
                 </li>
               </ul>
             </div>
             <div className="space-y-4">
-              <p>Browse</p>
+              <p>{t("Pages2.heading")}</p>
               <ul className="space-y-3">
                 <li>
-                  <a href="#">Home</a>
+                  <Link href="#">{t("Pages2.Home")}</Link>
                 </li>
                 <li>
-                  <a href="#">Services</a>
+                  <Link href="#">{t("Pages2.Services")}</Link>
                 </li>
                 <li>
-                  <a href="#">Portfolio</a>
+                  <Link href="#">{t("Pages2.Portfolio")}</Link>
                 </li>
                 <li>
-                  <a href="#">Process</a>
+                  <Link href="#">{t("Pages2.Process")}</Link>
                 </li>
                 <li>
-                  <a href="#">Contact</a>
+                  <Link href="#">{t("Pages2.ContactBrowse")}</Link>
                 </li>
               </ul>
             </div>
             <div className="space-y-4">
-              <p>Our Services</p>
+              <p>{t("Pages3.heading")}</p>
               <ul className="space-y-3">
                 <li>
-                  <a href="#">Web Development</a>
+                  <Link href="#">{t("Pages3.WebDevelopment")}</Link>
                 </li>
                 <li>
-                  <a href="#">UI/UX Design</a>
+                  <Link href="#">{t("Pages3.UIUXDesign")}</Link>
                 </li>
                 <li>
-                  <a href="#">Applications</a>
+                  <Link href="#">{t("Pages3.Applications")}</Link>
                 </li>
               </ul>
             </div>

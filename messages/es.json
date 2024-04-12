@@ -52,8 +52,42 @@
             "Footer":{
                 "Description": "ParadiseDev® es una subdivisión de Paradise Host S.A. y una marca registrada",
                 "Copyright": "Derechos de autor 2024© | Reservados todos los derechos",
-                "DevelopedBy": "Sitio diseñado y desarrollado por el equipo de Paradise Dev® | Organizado por Paradise Host®"
+                "DevelopedBy": "Sitio diseñado y desarrollado por el equipo de Paradise Dev® | Organizado por Paradise Host®",
+                "Pages1": {
+                    "heading": "Acerca de",
+                    "AboutUs": "Nosotros",
+                    "Conditions": "Condiciones",
+                    "Hosting": "Hosting",
+                    "Gaming": "Gaming",
+                    "FAQ": "FAQ"
+                },
+                "Pages2": {
+                "heading": "Browse",
+                "Home": "Inicio",
+                "Services": "Servicios",
+                "Portfolio": "Portfolio",
+                "Process": "Proceso",
+                "ContactBrowse": "Contacto"
+            },
+               "Pages3": {
+               
+                "heading": "Nuestros Servicios",
+                "WebDevelopment": "Desarrollo Web",
+                "UIUXDesign": "Diseño UI/UX",
+                "Applications": "Aplicaciones"
+            }
             }
         }
     }
+
+
+
+
+
+
+
+
+
+
+
 
