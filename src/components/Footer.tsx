@@ -16,6 +16,26 @@ import Link from "next/link";
 
 function Footer() {
   const t = useTranslations("Home.Footer");
+  const pages1 = [
+    { key: "Pages1.AboutUs", href: "#" },
+    { key: "Pages1.Conditions", href: "#" },
+    { key: "Pages1.Hosting", href: "#" },
+    { key: "Pages1.Gaming", href: "#" },
+    { key: "Pages1.FAQ", href: "#" },
+  ];
+  const pages2 = [
+    { key: "Pages2.Home", href: "#" },
+    { key: "Pages2.Services", href: "#" },
+    { key: "Pages2.Portfolio", href: "#" },
+    { key: "Pages2.Process", href: "#" },
+    { key: "Pages2.ContactBrowse", href: "#" },
+  ];
+  const pages3 = [
+    { key: "Pages3.WebDevelopment", href: "#" },
+    { key: "Pages3.UIUXDesign", href: "#" },
+    { key: "Pages3.Applications", href: "#" },
+  ];
+
   return (
     <footer className="bg-primary dark:bg-body-light pb-16 sm:pb-28 pt-12 sm:pt-28 w-full">
       <Container asChild className="max-w-[1209px]">
@@ -52,57 +72,33 @@ function Footer() {
             </aside>
 
             <div className="space-y-4">
-              <p>{t("Pages1.AboutUs")}</p>
+              <p>{t("Pages1.heading")}</p>
               <ul className="space-y-3">
-                <li>
-                  <Link href="#">{t("Pages1.AboutUs")}</Link>
-                </li>
-                <li>
-                  <Link href="#">{t("Pages1.Conditions")}</Link>
-                </li>
-                <li>
-                  <Link href="#">{t("Pages1.Hosting")}</Link>
-                </li>
-                <li>
-                  <Link href="#">{t("Pages1.Gaming")}</Link>
-                </li>
-                <li>
-                  <Link href="#">{t("Pages1.FAQ")}</Link>
-                </li>
+                {pages1.map((page) => (
+                  <li key={page.key}>
+                    <Link href={page.href}>{t(page.key)}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="space-y-4">
               <p>{t("Pages2.heading")}</p>
               <ul className="space-y-3">
-                <li>
-                  <Link href="#">{t("Pages2.Home")}</Link>
-                </li>
-                <li>
-                  <Link href="#">{t("Pages2.Services")}</Link>
-                </li>
-                <li>
-                  <Link href="#">{t("Pages2.Portfolio")}</Link>
-                </li>
-                <li>
-                  <Link href="#">{t("Pages2.Process")}</Link>
-                </li>
-                <li>
-                  <Link href="#">{t("Pages2.ContactBrowse")}</Link>
-                </li>
+                {pages2.map((page) => (
+                  <li key={page.key}>
+                    <Link href={page.href}>{t(page.key)}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="space-y-4">
               <p>{t("Pages3.heading")}</p>
               <ul className="space-y-3">
-                <li>
-                  <Link href="#">{t("Pages3.WebDevelopment")}</Link>
-                </li>
-                <li>
-                  <Link href="#">{t("Pages3.UIUXDesign")}</Link>
-                </li>
-                <li>
-                  <Link href="#">{t("Pages3.Applications")}</Link>
-                </li>
+                {pages3.map((page) => (
+                  <li key={page.key}>
+                    <Link href={page.href}>{t(page.key)}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </main>
