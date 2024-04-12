@@ -145,7 +145,7 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Paradise Dev",
-        es: "Desarrollador del paraíso",
+        es: "ParadiseDev",
       },
       description: {
         en: "Here you are now!",
@@ -174,7 +174,7 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Paradise Host",
-        es: "Anfitrión del paraíso",
+        es: "ParadiseHost",
       },
       description: {
         en: "Hosting Services",
@@ -200,7 +200,7 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Ika Developments",
-        es: "Desarrollos Ika",
+        es: "Ika Desarrollos",
       },
       description: {
         en: "Architects studio",
@@ -239,7 +239,7 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Registra tu Marca",
-        es: "Registra tu Marca",
+        es: "RegistraTuMarca",
       },
       description: {
         en: "Brands and patents",

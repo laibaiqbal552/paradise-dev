@@ -257,11 +257,11 @@ const cardData = [
   {
     title: {
       en: "Work with us",
-      es: "Trabaja con nosotros",
+      es: "Trabajá con nosotros",
     },
     desc: {
       en: "If you are a student or if you have advanced programming knowledge (Jr, Ssr, Sr) you can contact us to send your CV (Curriculum Vitae). It will be stored in our database for future searches for job profiles, and you will be recommended in the world ITEM. You can work with us regardless of your nationality, gender or orientation. We have an excellent work environment and we always add profiles to our projects.",
-      es: "Si eres estudiante o si tienes conocimientos avanzados de programación (Jr, Ssr, Sr) puedes contactarnos para enviar tu CV (Curriculum Vitae). Quedará almacenado en nuestra base de datos para futuras búsquedas de perfiles laborales, y serás recomendado en el mundo ITEM. Puedes trabajar con nosotros independientemente de tu nacionalidad, género u orientación. Tenemos un excelente ambiente de trabajo y siempre sumamos perfiles a nuestros proyectos.",
+      es: "Si sos estudiante o si tenés conocimientos avanzados de programación (Jr, Ssr, Sr) podés contactarnos para enviar tu CV (Curriculum Vitae), el mismo será almacenado en nuestra base de datos para futuras búsquedas de perfiles laborales, y serás recomendado en el mundo IT. Podrás trabajar con nosotros sin importar tu nacionalidad, género u orientación. Contamos con un excelente clima laboral y siempre sumamos perfiles a nuestros proyectos.",
     },
     button: {
       en: "Send Cv",
@@ -272,11 +272,11 @@ const cardData = [
   {
     title: {
       en: "Each project is worked in a different way",
-      es: "Cada proyecto se trabaja de una manera diferente.",
+      es: "Cada proyecto se trabaja de una forma distinta",
     },
     desc: {
       en: "We take the time to analyze each project meticulously to provide the best proposal according to the client's needs. No project is worked in the same way. We are in constant communication to do our work in the most efficient way possible.",
-      es: "Nos tomamos el tiempo para analizar meticulosamente cada proyecto para brindar la mejor propuesta de acuerdo a las necesidades del cliente. Ningún proyecto se trabaja de la misma manera. Estamos en constante comunicación para realizar nuestro trabajo de la manera más eficiente posible.",
+      es: "Nos tomamos el tiempo de analizar cada proyecto meticulosamente para acercar la mejor propuesta acorde a las necesidades del cliente. Ningún proyecto se trabaja de la misma manera. Estamos en constante comunicación para hacer nuestro trabajo de la manera mas eficiente posible.",
     },
     button: {
       en: "Start Now",
@@ -287,11 +287,11 @@ const cardData = [
   {
     title: {
       en: "Report a veneer ability",
-      es: "Informar una capacidad de chapa",
+      es: "Reporta una vulnerabilidad",
     },
     desc: {
       en: "One of our main activities is computer security. If you found any vulnerability in any system, website or service provider, you can report it to us. We are in constant contact with companies reporting these incidents, offering our services. You may be compensated accordingly for reporting the problem or even joining us to solve it.",
-      es: "Una de nuestras principales actividades es la seguridad informática. Si encontró alguna vulnerabilidad en algún sistema, sitio web o proveedor de servicios, puede informarnos. Estamos en constante contacto con empresas reportando estas incidencias, ofreciendo nuestros servicios. Es posible que reciba una compensación correspondiente por informar el problema o incluso unirse a nosotros para resolverlo.",
+      es: "Una de nuestras actividades principales es la seguridad informática. Si encontraste alguna vulnerabilidad en algún sistema, página web o proveedor de servicios, podés informarnosla. Estamos en constante contacto con empresas reportando estas incidencias, ofreciendo nuestros servicios. Podrás ser remunerado según corresponda por informar del problema o incluso sumarte a nosotros para solucionarlo.",
     },
     button: {
       en: "Report Problem",

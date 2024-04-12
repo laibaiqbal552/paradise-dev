@@ -2,7 +2,7 @@
         "Home": {
             "Hero": {
                 "Title": "Hola Mundo",
-                "Subtitle": "TE PROPONEMOS DESARROLLAR TU",
+                "Subtitle": "Proponemos desarrollar y potenciar tu",
                 "TypeWriter": "Aplicación, Sitio Web, Proyecto, Negocio, Tienda",
                 "CallToAction": "Leer sobre nosotros"
             },
@@ -25,7 +25,7 @@
             "Process":{
                 "Title": "Proceso",
                 "SubTitle":"Nuestro proceso de trabajo",
-                "Description": "Este es nuestro procedimiento una vez aceptado el trabajo por nuestra parte y el presupuesto por parte del cliente. ¡Te incluiremos en cada etapa del proceso para obtener el mejor resultado!"
+                "Description": "Este es nuestro procedimiento una vez que se acepta el trabajo de nuestra parte y el presupuesto de parte del cliente, ¡Te incluiremos en cada etapa del proceso para el mejor resultado!"
             },
             
             "Quality":{
@@ -34,10 +34,10 @@
                 "ButtonText":"Ponerse en contacto"
             },   
             "Projects":{
-                "Title": "Proyectos anteriores"  
+                "Title": "Trabajos anteriores"  
             },
             "TrustedClients":{
-                "Title": "Nuestros clientes de confianza"
+                "Title": "Nuestros clientes"
             },
             "Contact":{
                 "Title": "Contacto",
@@ -45,7 +45,8 @@
                  "Mail": "Correo",
                 "Phone": "Teléfono",
                 "Location": "Ubicación",
-                "FormSubmitted": "Formulario enviado exitosamente"
+                "FormSubmitted": "Formulario enviado exitosamente",
+                "send": "Enviar"
             },
 
             "Footer":{

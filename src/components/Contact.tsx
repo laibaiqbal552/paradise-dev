@@ -142,7 +142,7 @@ function Contact() {
           {isSubmitting ? (
             <Loader className="stroke-black dark:stroke-primary" />
           ) : (
-            "SEND"
+            t("send")
           )}
         </Button>
       </form>
