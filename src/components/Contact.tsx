@@ -153,6 +153,7 @@ function Contact() {
       ) : null}
 
       <Typography variant="super-heading" className="font-medium lh-1_3">
+        <RevealTextEffect text={"My Name is Abdullah Mehboob"} />
         <RevealTextEffect text={t("Description")} />
       </Typography>
     </Container>
