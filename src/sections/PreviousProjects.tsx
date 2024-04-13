@@ -65,7 +65,7 @@ const Card = ({
           height={100}
           src={imgSrc}
           className="w-full"
-          alt="img"
+          alt="previous project"
         />
 
         <Link

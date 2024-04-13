@@ -19,7 +19,7 @@ const Btn = ({ imgSrc, className, isActive, ...props }: any) => {
     >
       <Image
         src={imgSrc}
-        alt="sub"
+        alt="Theme Switcher"
         width={30}
         height={30}
         className={cn(

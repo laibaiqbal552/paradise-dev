@@ -85,7 +85,7 @@ function TrustedClients() {
         {clients.map((item, i) => (
           <SwiperSlide key={i}>
             <Image
-              alt="alt"
+              alt="Trusted Client"
               width={100}
               height={100}
               src={theme === "dark" ? item.src : item.lightSrc}

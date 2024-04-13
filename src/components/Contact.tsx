@@ -13,7 +13,7 @@ import * as yup from "yup";
 import { ReactNode } from "react";
 import Loader from "./Loader";
 import { useTranslations } from "next-intl";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 const FieldError = ({ children }: { children: ReactNode }) => {
   return children ? (
     <p className="text-xs text-red-400 mt-1.5">{children}</p>
@@ -51,7 +51,7 @@ const Card = ({
           width={50}
           height={50}
           src={imgSrc}
-          alt="alt"
+          alt="Contact Image"
           className="max-sm:size-10"
         />
       </aside>
@@ -133,7 +133,7 @@ function Contact() {
             </div>
           </div>
         </fieldset>
-        <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!} />
+        {/* <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!} /> */}
         <Button
           disabled={isSubmitting}
           type="submit"

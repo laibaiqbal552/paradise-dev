@@ -130,6 +130,7 @@ function Navbar() {
             <button
               onClick={() => setIsMenuOpen((val) => !val)}
               className="max-lg:flex hidden text-2xl mr-4"
+              aria-label="Menu"
             >
               <MdOutlineMenu />
             </button>
