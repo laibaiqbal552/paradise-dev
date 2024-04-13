@@ -26,7 +26,7 @@ function RevealTextEffect({ text }: { text: string }) {
         },
       });
     },
-    { scope: container, dependencies: [mounted] }
+    { scope: container }
   );
 
   return (
