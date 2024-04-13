@@ -10,11 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 function RevealTextEffect({ text }: { text: string }) {
   const container = useRef(null);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   useGSAP(
     () => {
@@ -33,8 +28,6 @@ function RevealTextEffect({ text }: { text: string }) {
     },
     { scope: container, dependencies: [mounted] }
   );
-
-  if (!mounted) return null;
 
   return (
     <p ref={container}>
