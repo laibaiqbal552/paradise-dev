@@ -45,7 +45,7 @@ function ThemeSwitcher() {
   }
 
   return (
-    <>
+    <div>
       <div className="h-[48px] bg-white dark:bg-body-dark rounded-full flex items-center justify-center px-1.5 space-x-1.5">
         <Btn
           isActive={resolvedTheme === "light"}
@@ -62,7 +62,7 @@ function ThemeSwitcher() {
           imgSrc="/images/moon.svg"
         />
       </div>
-    </>
+    </div>
   );
 }
 

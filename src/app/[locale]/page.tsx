@@ -14,7 +14,7 @@ import Header2 from "components/Header2";
 // import Hero2 from "components/Hero2";
 export default function Home() {
   return (
-    <>
+    <div>
       <Navbar />
 
       <div className="mt-10 sm:mt-[96px] mb-14 lg:mb-40">
@@ -58,6 +58,6 @@ export default function Home() {
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 }

@@ -18,7 +18,12 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         {/* Add other meta tags as needed */}
       </head>
-      <body className="className" suppressHydrationWarning={true}>
+      <body
+        className="className"
+        suppressHydrationWarning={true}
+        data-ember-extension="1"
+      >
+        {/* delete data-ember-extension="1" */}
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider attribute="class">{children}</ThemeProvider>
         </NextIntlClientProvider>
