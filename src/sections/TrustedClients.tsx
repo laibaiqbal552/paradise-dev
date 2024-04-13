@@ -84,13 +84,19 @@ function TrustedClients() {
       >
         {clients.map((item, i) => (
           <SwiperSlide key={i}>
-            <Image
+            <div className="flex items-center justify-center h-full">
+              <img
+                src={theme === "dark" ? item.src : item.lightSrc}
+                className="sm:h-14 xl:h-[80px] sm:w-auto sm:mx-3 xl:mx-6 object-contain  max-sm:!w-[70%] max-sm:!h-[70%]"
+              />
+            </div>
+            {/* <Image
               alt="Trusted Client"
               width={100}
               height={100}
               src={theme === "dark" ? item.src : item.lightSrc}
               className="sm:h-14 xl:h-[80px] sm:w-auto sm:mx-3 xl:mx-6 object-contain aspect-square max-sm:!w-[50%] max-sm:!h-[50%]"
-            />
+            /> */}
           </SwiperSlide>
         ))}
       </Swiper>
