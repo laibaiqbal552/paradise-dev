@@ -32,7 +32,7 @@
 .lh-1_9 {
   line-height: 1.9 !important;
 }
-
+ 
 @layer base {
   * {
     @apply font-montserrat;
@@ -44,7 +44,7 @@
     scroll-behavior: smooth;
   }
 }
-
+ 
 #fade-in-animation {
   animation: fad-in 1s linear forwards;
 }
