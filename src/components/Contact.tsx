@@ -152,14 +152,8 @@ function Contact() {
         </div>
       ) : null}
 
-      <Typography
-        asChild
-        variant="super-heading"
-        className="font-medium lh-1_3"
-      >
-        <h1>
-          <RevealTextEffect text={t("Description")} />
-        </h1>
+      <Typography variant="super-heading" className="font-medium lh-1_3">
+        <RevealTextEffect text={t("Description")} />
       </Typography>
     </Container>
   );
