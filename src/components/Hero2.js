@@ -8,6 +8,7 @@ import Link from "next/link";
                 <p className="pt-8 text-xl">{t('Subtitle')}</p>
                 <Link
                     href="/about"
+                    aria-label="Call To Action"
                     className="px-4 py-4 mt-6 bg-blue-500 text-white rounded inline-block"
                 >
                     {t('CallToAction')}

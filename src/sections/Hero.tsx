@@ -56,7 +56,7 @@ function Hero() {
           .map((item, i) => (
             <li key={i}>
               <Button asChild shape="icon" className="text-2xl">
-                <Link href={item.link} target="_blank">
+                <Link href={item.link} target="_blank" aria-label={item.title}>
                   <item.Icon />
                 </Link>
               </Button>

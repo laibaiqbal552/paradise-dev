@@ -52,7 +52,7 @@ function Navbar() {
     >
       <Container asChild>
         <div className="flex items-center bg-white dark:bg-body-light justify-between lg:space-x-5 py-4 sm:py-1">
-          <Link href="/" className="relative sm:top-1.5">
+          <Link href="/" className="relative sm:top-1.5" aria-label="Home">
             <Logo
               src="/images/logo.png"
               alt={"logo"}
@@ -74,7 +74,9 @@ function Navbar() {
                   asChild
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Link href="/">Home</Link>
+                  <Link href="/" aria-label="Home">
+                    Home
+                  </Link>
                 </Button>
               </li>
               <li>
@@ -167,6 +169,7 @@ function Navbar() {
                       <Link
                         onClick={() => handleSetLocale(locale)}
                         key={index}
+                        aria-label={locale.label}
                         href={redirectedPathName(locale.locale)}
                         className="text-gray-700 px-4 flex items-center py-2 text-sm hover:bg-gray-100"
                         role="menuitem"

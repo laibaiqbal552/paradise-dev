@@ -71,6 +71,7 @@ const Card = ({
         <Link
           href={link}
           target="_blank"
+          aria-label="Open Site"
           className="absolute top-0 left-0 w-full h-full z-40 transition-all duration-500 bg-black/25 hover:bg-black/75 cursor-pointer flex items-center justify-center group"
         >
           <span className="text-[2rem] font-medium transition-all duration-500 opacity-0 group-hover:opacity-100">

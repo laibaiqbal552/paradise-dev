@@ -55,6 +55,7 @@ function Footer() {
                       <Link
                         href={item.link}
                         target="_blank"
+                        aria-label={item.title}
                         className=" text-primary z-10 relative"
                       >
                         <item.Icon />
@@ -86,7 +87,9 @@ function Footer() {
               <ul className="space-y-3">
                 {pages2.map((page) => (
                   <li key={page.key}>
-                    <Link href={page.href}>{t(page.key)}</Link>
+                    <Link href={page.href} aria-label="link title">
+                      {t(page.key)}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -96,7 +99,9 @@ function Footer() {
               <ul className="space-y-3">
                 {pages3.map((page) => (
                   <li key={page.key}>
-                    <Link href={page.href}>{t(page.key)}</Link>
+                    <Link href={page.href} aria-label="link title">
+                      {t(page.key)}
+                    </Link>
                   </li>
                 ))}
               </ul>
