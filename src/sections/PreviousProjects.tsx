@@ -60,13 +60,7 @@ const Card = ({
       <p className="text-sm sm:text-xl sm:h-[60px] max-sm:mb-6">{subtitle}</p>
 
       <div className="relative">
-        <Image
-          width={100}
-          height={100}
-          src={imgSrc}
-          className="w-full"
-          alt="previous project"
-        />
+        <img src={imgSrc} className="w-full" alt="previous project" />
 
         <Link
           href={link}

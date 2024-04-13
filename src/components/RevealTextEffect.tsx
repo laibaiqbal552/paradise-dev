@@ -1,7 +1,7 @@
 "use client";
 
 import { useGSAP } from "@gsap/react";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import dynamic from "next/dynamic";
@@ -10,6 +10,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 function RevealTextEffect({ text }: { text: string }) {
   const container = useRef(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useGSAP(
     () => {
@@ -26,8 +31,10 @@ function RevealTextEffect({ text }: { text: string }) {
         },
       });
     },
-    { scope: container }
+    { scope: container, dependencies: [mounted] }
   );
+
+  if (!mounted) return null;
 
   return (
     <p ref={container}>
