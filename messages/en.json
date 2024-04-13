@@ -6,6 +6,16 @@
                 "TypeWriter": "App, Website, Project, Business, Store",
                 "CallToAction": "Read about us"
             },
+            "Navbar":{    
+                "menu": {
+                    "Home": "Home",
+                    "Services": "Services",
+                    "AboutUs": "About Us",
+                    "Portfolio": "Portfolio",
+                    "Begin": "begin"
+                
+                }           
+            },
             
             "Features":{
                 "Title": "features",

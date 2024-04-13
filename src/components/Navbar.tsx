@@ -14,6 +14,7 @@ import { locales } from "../i18n";
 // import {use} from "next-intl";
 import { redirect, useParams, usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -44,6 +45,14 @@ function Navbar() {
     segments[1] = locale;
     return segments.join("/");
   };
+  const t = useTranslations("Home.Navbar");
+  const menuItems = [
+    { key: "menu.Home", href: "/" },
+    { key: "menu.Services", href: "/" },
+    { key: "menu.AboutUs", href: "/" },
+    { key: "menu.Portfolio", href: "/" },
+    { key: "menu.Begin", href: "/" },
+  ];
 
   return (
     <nav
@@ -75,7 +84,7 @@ function Navbar() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <Link href="/" aria-label="Home">
-                    Home
+                    {t("menu.Home")}
                   </Link>
                 </Button>
               </li>
@@ -88,7 +97,7 @@ function Navbar() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <ScrollLink offset={-100} to="service">
-                    Service
+                    {t("menu.Services")}
                   </ScrollLink>
                 </Button>
               </li>
@@ -101,7 +110,7 @@ function Navbar() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <ScrollLink offset={-100} to="about">
-                    About Us
+                    {t("menu.AboutUs")}
                   </ScrollLink>
                 </Button>
               </li>
@@ -114,7 +123,7 @@ function Navbar() {
                   className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center cursor-pointer block"
                 >
                   <ScrollLink offset={-100} to="portfolio">
-                    Portfolio
+                    {t("menu.Portfolio")}
                   </ScrollLink>
                 </Button>
               </li>
@@ -124,7 +133,7 @@ function Navbar() {
                   // onClick={() => setIsMenuOpen(false)}
                   className="uppercase cursor-pointer block"
                 >
-                  <ScrollLink to="contact">Begin</ScrollLink>
+                  <ScrollLink to="contact">{t("menu.Begin")}</ScrollLink>
                 </Button>
               </li>
             </ul>
