@@ -8,161 +8,10 @@ import StrokedText from "components/StrokedText";
 import Typography from "components/Typography";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import dynamic from "next/dynamic";
-import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
-
-gsap.registerPlugin(ScrollTrigger);
-
-const Card = ({ text, num }: { text: string; num: number | string }) => {
-  return (
-    <div className="border border-primary rounded-xl p-6 bg-white dark:bg-body relative z-40 transition-all duration-700 hover:bg-primary/20 dark:hover:bg-primary/20">
-      <StrokedText
-        color="#bd9fe0"
-        className="text-[52px] md:text-[104px] font-bold lh-1 mb-3  font-montserrat"
-      >
-        {num}
-      </StrokedText>
-      <p className="text-base md:text-xl lh-1_6">{text}</p>
-    </div>
-  );
-};
-
-function Process() {
-  const container = useRef(null);
-
-  useGSAP(
-    () => {
-      // const sections = gsap.utils.toArray("#cards") as HTMLElement[];
-
-      // sections.forEach((section: HTMLElement) => {
-      //   gsap.set(`#${section.id} > *`, { opacity: 0, y: 20 });
-
-      //   gsap.to(`#${section.id} > *`, {
-      //     y: 0,
-      //     opacity: 1,
-      //     stagger: 0.2,
-      //     scrollTrigger: {
-      //       trigger: section,
-      //     },
-      //   });
-      // });
-
-      gsap.set(`#cards > *`, { opacity: 0, y: 20 });
-
-      gsap.to(`#cards > *`, {
-        y: 0,
-        opacity: 1,
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: "#cards",
-        },
-      });
-    },
-    { scope: container }
-  );
-
-  const locale = useParams().locale;
-
-  const t = useTranslations("Home.Process");
-
-  return (
-    <section>
-      <Container className="max-w-[1209px]">
-        <Typography
-          variant="super-heading"
-          className="max-lg:text-center lh-1_3 mb-20 lg:mb-40 max-lg:!leading-[2]"
-        >
-          <RevealTextEffect text={t("Description")} />
-        </Typography>
-      </Container>
-
-      <Container className="relative">
-        <Image
-          src="/images/badge.png"
-          alt="Process Badge"
-          width={100}
-          height={100}
-          className="absolute top-[60%] right-0 -translate-y-1/2 max-lg:hidden"
-        />
-
-        <header className="mb-12 sm:mb-20">
-          <Heading>
-            <StrokedText className="uppercase text-center font-bold lh-1_4">
-              {t("Title")}
-            </StrokedText>
-          </Heading>
-
-          <h4 className="text-center text-5xl text-primary font-bold mb-7">
-            {/* Our work process */}
-            {t("SubTitle")}
-          </h4>
-          <p className="text-center text-lg max-w-[50ch] mx-auto">
-            {t("Description")}
-          </p>
-        </header>
-
-        <main
-          ref={container}
-          className="max-w-[66rem] mx-auto z-20 max-lg:grid max-lg:gap-6"
-        >
-          <div
-            id="cards"
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10"
-          >
-            {processSteps.slice(0, 3).map((step) => (
-              <Card
-                key={step.num}
-                num={step.num}
-                text={step.text[locale as keyof typeof step.text]}
-              />
-            ))}
-          </div>
-
-          <div className="relative max-lg:hidden">
-            <Image
-              src="/images/connector-lines.png"
-              className="mx-auto w-[79%]  -top-3 z-10 relative -mb-8"
-              alt="Connector Lines"
-              width={100}
-              height={100}
-            />
-
-            <GearsImage />
-
-            <Image
-              src="/images/connector-lines.png"
-              className="mx-auto w-[79%] rotate-180 top-3 z-10 relative"
-              alt="Connector Lines"
-              width={100}
-              height={100}
-            />
-          </div>
-
-          <div
-            id="cards"
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10"
-          >
-            {processSteps?.slice(3, 6)?.map((step) => (
-              <Card
-                key={step.num}
-                num={step.num}
-                text={step.text[locale as keyof typeof step.text]}
-              />
-            ))}
-          </div>
-        </main>
-      </Container>
-    </section>
-  );
-}
-
-export default dynamic(() => Promise.resolve(Process), {
-  ssr: false,
-});
 
 const processSteps = [
   {
@@ -208,3 +57,137 @@ const processSteps = [
     },
   },
 ];
+
+const Card = ({ text, num }: { text: string; num: number | string }) => {
+  return (
+    <div
+      id="single-card"
+      className=" opacity-0 translate-y-[20px] border border-primary rounded-xl p-6 bg-white dark:bg-body relative z-40 transition-all duration-700 hover:bg-primary/20 dark:hover:bg-primary/20"
+    >
+      <StrokedText
+        color="#bd9fe0"
+        className="text-[52px] md:text-[104px] font-bold lh-1 mb-3  font-montserrat"
+      >
+        {num}
+      </StrokedText>
+      <p className="text-base md:text-xl lh-1_6">{text}</p>
+    </div>
+  );
+};
+
+function LocalProcess() {
+  const container = useRef(null);
+  const locale = useParams().locale;
+  const t = useTranslations("Home.Process");
+
+  useGSAP(
+    () => {
+      // gsap.set("#single-card", { opacity: 0, y: 20 });
+
+      gsap.to("#single-card", {
+        y: 0,
+        opacity: 1,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: "#cards",
+        },
+      });
+    },
+    { scope: container, dependencies: [t, locale] }
+  );
+
+  return (
+    <section ref={container}>
+      <Container className="max-w-[1209px]">
+        <Typography
+          variant="super-heading"
+          className="max-lg:text-center lh-1_3 mb-20 lg:mb-40 max-lg:!leading-[2]"
+        >
+          <RevealTextEffect text={t("Description")} />
+        </Typography>
+      </Container>
+
+      <Container className="relative">
+        <img
+          src="/images/badge.png"
+          alt="Process Badge"
+          className="absolute top-[60%] right-0 -translate-y-1/2 max-lg:hidden"
+        />
+
+        <header className="mb-12 sm:mb-20">
+          <Heading>
+            <StrokedText className="uppercase text-center font-bold lh-1_4">
+              {t("Title")}
+            </StrokedText>
+          </Heading>
+
+          <h4 className="text-center text-5xl text-primary font-bold mb-7">
+            {/* Our work process */}
+            {t("SubTitle")}
+          </h4>
+          <p className="text-center text-lg max-w-[50ch] mx-auto">
+            {t("Description")}
+          </p>
+        </header>
+
+        <main className="max-w-[66rem] mx-auto z-20 max-lg:grid max-lg:gap-6">
+          <div
+            id="cards"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10"
+          >
+            {processSteps.slice(0, 3).map((step, i) => (
+              <Card
+                key={i}
+                num={step.num}
+                text={step.text[locale as keyof typeof step.text]}
+              />
+            ))}
+          </div>
+
+          <div className="relative max-lg:hidden">
+            <img
+              src="/images/connector-lines.png"
+              className="mx-auto w-[79%]  -top-3 z-10 relative -mb-8"
+              alt="Connector Lines"
+            />
+
+            <GearsImage />
+
+            <img
+              src="/images/connector-lines.png"
+              className="mx-auto w-[79%] rotate-180 top-3 z-10 relative"
+              alt="Connector Lines"
+            />
+          </div>
+
+          <div
+            id="cards"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10"
+          >
+            {processSteps?.slice(3, 6)?.map((step, i) => (
+              <Card
+                key={i}
+                num={step.num}
+                text={step.text[locale as keyof typeof step.text]}
+              />
+            ))}
+          </div>
+        </main>
+      </Container>
+    </section>
+  );
+}
+
+const Process = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (isMounted) return <LocalProcess />;
+};
+
+export default dynamic(() => Promise.resolve(Process), {
+  ssr: false,
+});

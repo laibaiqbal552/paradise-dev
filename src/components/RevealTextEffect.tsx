@@ -1,20 +1,15 @@
 "use client";
 
 import { useGSAP } from "@gsap/react";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import dynamic from "next/dynamic";
 
-gsap.registerPlugin(ScrollTrigger);
-
-function RevealTextEffect({ text }: { text: string }) {
+const Nested = ({ text }: { text: string }) => {
   const container = useRef(null);
 
   useGSAP(
     () => {
-      // gsap.set("span", { opacity: 0.1 });
-
       gsap.to("span", {
         opacity: 1,
         stagger: 0.2,
@@ -26,7 +21,7 @@ function RevealTextEffect({ text }: { text: string }) {
         },
       });
     },
-    { scope: container }
+    { scope: container, dependencies: [text] }
   );
 
   return (
@@ -38,6 +33,16 @@ function RevealTextEffect({ text }: { text: string }) {
       ))}
     </p>
   );
+};
+
+function RevealTextEffect({ text }: { text: string }) {
+  const [isMounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (isMounted) return <Nested text={text} />;
 }
 
 export default dynamic(() => Promise.resolve(RevealTextEffect), {

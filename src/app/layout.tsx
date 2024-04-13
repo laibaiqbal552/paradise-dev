@@ -1,3 +1,4 @@
+import SetupPlugin from "components/SetupPlugin";
 import "./globals.css";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -8,5 +9,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return children;
+  return (
+    <>
+      <SetupPlugin />
+      {children}
+    </>
+  );
 }
