@@ -11,6 +11,7 @@ import Hero from "sections/Hero";
 import ServicesWeProvide from "sections/ServicesWeProvide";
 import PreviousProjects from "sections/PreviousProjects";
 import Header2 from "components/Header2";
+import RevealTextEffect from "components/RevealTextEffect";
 // import Hero2 from "components/Hero2";
 export default function Home() {
   return (
@@ -54,7 +55,8 @@ export default function Home() {
       </div>
 
       <div id="contact" className="mb-10 sm:mb-20">
-        <Contact />
+        {/* <Contact /> */}
+        <RevealTextEffect text={"My name is Abdullah Mehboob"} />
       </div>
 
       <Footer />
