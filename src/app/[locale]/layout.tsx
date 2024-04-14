@@ -25,7 +25,15 @@ export default function RootLayout({
       >
         {/* delete data-ember-extension="1" */}
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <ThemeProvider attribute="class">{children}</ThemeProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            disableTransitionOnChange
+            enableSystem={false}
+            enableColorScheme={true}
+          >
+            {children}
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
