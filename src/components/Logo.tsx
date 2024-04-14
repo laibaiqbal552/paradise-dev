@@ -12,7 +12,15 @@ function Logo({
   const [theme] = useThemeSwitcher();
   const src = theme === "light" ? "/images/logo-black.svg" : "/images/logo.png";
 
-  return <Image {...props} src={src} width={width} height={height} alt={alt} />;
+  return (
+    <Image
+      {...props}
+      src={src}
+      width={width}
+      height={height}
+      alt={alt || "alt"}
+    />
+  );
 }
 
 export default Logo;

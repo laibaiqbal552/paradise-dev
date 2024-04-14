@@ -157,7 +157,7 @@ function Navbar() {
               >
                 <Image
                   src={locales.image}
-                  alt={locales.label}
+                  alt={locales.label || "alt"}
                   className="inline md:mr-2 mr-1"
                   width="20"
                   height="20"
@@ -189,7 +189,7 @@ function Navbar() {
                         <div className="mr-2 ">
                           <Image
                             src={locale.image}
-                            alt={locale.label}
+                            alt={locale.label || "alt"}
                             className="inline "
                             width="20"
                             height="20"
