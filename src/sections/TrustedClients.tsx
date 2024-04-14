@@ -87,6 +87,7 @@ function TrustedClients() {
               <img
                 src={theme === "dark" ? item.src : item.lightSrc}
                 className="sm:h-14 xl:h-[80px] sm:w-auto sm:mx-3 xl:mx-6 object-contain  max-sm:!w-[70%] max-sm:!h-[70%]"
+                alt="slides images"
               />
             </div>
 
@@ -97,7 +98,6 @@ function TrustedClients() {
               src={theme === "dark" ? item.src : item.lightSrc}
               className="sm:h-14 xl:h-[80px] sm:w-auto sm:mx-3 xl:mx-6 object-contain aspect-square max-sm:!w-[50%] max-sm:!h-[50%]"
             /> */}
-
           </SwiperSlide>
         ))}
       </Swiper>
