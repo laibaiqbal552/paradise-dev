@@ -13,7 +13,7 @@ function RevealTextEffect({ text }: { text: string }) {
 
   useGSAP(
     () => {
-      // gsap.set("span", { opacity: 0.1 });
+      gsap.set("span", { opacity: 0.1 });
 
       gsap.to("span", {
         opacity: 1,
@@ -33,7 +33,7 @@ function RevealTextEffect({ text }: { text: string }) {
     <p ref={container}>
       {text.split(" ").map((word, i) => (
         <React.Fragment key={i}>
-          <span className="opacity-10">{word}</span>{" "}
+          <span>{word}</span>{" "}
         </React.Fragment>
       ))}
     </p>
