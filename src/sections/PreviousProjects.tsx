@@ -3,8 +3,10 @@
 import Container from "components/Container";
 import { cn } from "lib/utils";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { useParams } from "next/navigation";
 import { ButtonHTMLAttributes, DetailedHTMLProps, useState } from "react";
+import Link from "next/link";
 
 const tabs = ["Desarollo Web", "UI/UX Design", "Applications"] as const;
 
@@ -58,17 +60,18 @@ const Card = ({
       <p className="text-sm sm:text-xl sm:h-[60px] max-sm:mb-6">{subtitle}</p>
 
       <div className="relative">
-        <img src={imgSrc} className="w-full" alt="img" />
+        <img src={imgSrc} className="w-full" alt="previous project" />
 
-        <a
+        <Link
           href={link}
           target="_blank"
+          aria-label="Open Site"
           className="absolute top-0 left-0 w-full h-full z-40 transition-all duration-500 bg-black/25 hover:bg-black/75 cursor-pointer flex items-center justify-center group"
         >
           <span className="text-[2rem] font-medium transition-all duration-500 opacity-0 group-hover:opacity-100">
             Open Site
           </span>
-        </a>
+        </Link>
       </div>
     </div>
   );

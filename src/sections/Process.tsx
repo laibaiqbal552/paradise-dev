@@ -83,7 +83,7 @@ function Process() {
       <Container className="relative">
         <Image
           src="/images/badge.png"
-          alt=""
+          alt="Process Badge"
           width={100}
           height={100}
           className="absolute top-[60%] right-0 -translate-y-1/2 max-lg:hidden"
@@ -123,18 +123,22 @@ function Process() {
           </div>
 
           <div className="relative max-lg:hidden">
-            <img
+            <Image
               src="/images/connector-lines.png"
               className="mx-auto w-[79%]  -top-3 z-10 relative -mb-8"
-              alt=""
+              alt="Connector Lines"
+              width={100}
+              height={100}
             />
 
             <GearsImage />
 
-            <img
+            <Image
               src="/images/connector-lines.png"
               className="mx-auto w-[79%] rotate-180 top-3 z-10 relative"
-              alt=""
+              alt="Connector Lines"
+              width={100}
+              height={100}
             />
           </div>
 

@@ -8,6 +8,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { socialLinks } from "lib/constants";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 function Hero() {
   const t = useTranslations("Home.Hero");
@@ -38,7 +39,7 @@ function Hero() {
           {t("Title")}
         </h3>
 
-        <h1 className="text-[6.5rem] text-center font-semibold lh-1_2 max-xl:text-6xl max-sm:text-[36px]">
+        <h1 className="text-[6.5rem] capitalize text-center font-semibold lh-1_2 max-xl:text-6xl max-sm:text-[36px]">
           {t("Subtitle")}
           <br />
           <span className="text-primary">
@@ -55,9 +56,9 @@ function Hero() {
           .map((item, i) => (
             <li key={i}>
               <Button asChild shape="icon" className="text-2xl">
-                <a href={item.link} target="_blank">
+                <Link href={item.link} target="_blank" aria-label={item.title}>
                   <item.Icon />
-                </a>
+                </Link>
               </Button>
             </li>
           ))}

@@ -14,6 +14,7 @@ import { locales } from "../i18n";
 // import {use} from "next-intl";
 import { redirect, useParams, usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -44,6 +45,14 @@ function Navbar() {
     segments[1] = locale;
     return segments.join("/");
   };
+  const t = useTranslations("Home.Navbar");
+  const menuItems = [
+    { key: "menu.Home", href: "/" },
+    { key: "menu.Services", href: "/" },
+    { key: "menu.AboutUs", href: "/" },
+    { key: "menu.Portfolio", href: "/" },
+    { key: "menu.Begin", href: "/" },
+  ];
 
   return (
     <nav
@@ -52,7 +61,7 @@ function Navbar() {
     >
       <Container asChild>
         <div className="flex items-center bg-white dark:bg-body-light justify-between lg:space-x-5 py-4 sm:py-1">
-          <Link href="/" className="relative sm:top-1.5">
+          <Link href="/" className="relative sm:top-1.5" aria-label="Home">
             <Logo
               src="/images/logo.png"
               alt={"logo"}
@@ -74,7 +83,9 @@ function Navbar() {
                   asChild
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Link href="/">Home</Link>
+                  <Link href="/" aria-label="Home">
+                    {t("menu.Home")}
+                  </Link>
                 </Button>
               </li>
               <li>
@@ -86,7 +97,7 @@ function Navbar() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <ScrollLink offset={-100} to="service">
-                    Service
+                    {t("menu.Services")}
                   </ScrollLink>
                 </Button>
               </li>
@@ -99,7 +110,7 @@ function Navbar() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <ScrollLink offset={-100} to="about">
-                    About Us
+                    {t("menu.AboutUs")}
                   </ScrollLink>
                 </Button>
               </li>
@@ -112,7 +123,7 @@ function Navbar() {
                   className="hover:bg-primary/20 max-lg:w-full text-left hover:text-primary hover:py-4 max-sm:text-center cursor-pointer block"
                 >
                   <ScrollLink offset={-100} to="portfolio">
-                    Portfolio
+                    {t("menu.Portfolio")}
                   </ScrollLink>
                 </Button>
               </li>
@@ -122,7 +133,7 @@ function Navbar() {
                   // onClick={() => setIsMenuOpen(false)}
                   className="uppercase cursor-pointer block"
                 >
-                  <ScrollLink to="contact">Begin</ScrollLink>
+                  <ScrollLink to="contact">{t("menu.Begin")}</ScrollLink>
                 </Button>
               </li>
             </ul>
@@ -130,6 +141,7 @@ function Navbar() {
             <button
               onClick={() => setIsMenuOpen((val) => !val)}
               className="max-lg:flex hidden text-2xl mr-4"
+              aria-label="Menu"
             >
               <MdOutlineMenu />
             </button>
@@ -166,6 +178,7 @@ function Navbar() {
                       <Link
                         onClick={() => handleSetLocale(locale)}
                         key={index}
+                        aria-label={locale.label}
                         href={redirectedPathName(locale.locale)}
                         className="text-gray-700 px-4 flex items-center py-2 text-sm hover:bg-gray-100"
                         role="menuitem"

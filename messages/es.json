@@ -6,7 +6,16 @@
                 "TypeWriter": "Aplicación, Sitio Web, Proyecto, Negocio, Tienda",
                 "CallToAction": "Leer sobre nosotros"
             },
-            
+             "Navbar":{    
+                "menu": {
+                    "Home": "Inicio",
+                    "Services": "Servicios",
+                    "AboutUs": "Nosotros",
+                    "Portfolio": "Portfolio",
+                    "Begin": "Comenzar" 
+               
+                }           
+            },
             "Features":{
                 "Title": "características",
                 "SecondaryTitle": "Las características nos hacen diferentes"

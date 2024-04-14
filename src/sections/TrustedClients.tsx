@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import useThemeSwitcher from "hooks/useThemeSwitcher";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const clients = [
   { src: "/images/trusted/hil.png", lightSrc: "/images/trusted-light/hil.png" },
@@ -89,6 +90,15 @@ function TrustedClients() {
                 className="sm:h-14 xl:h-[80px] sm:w-auto sm:mx-3 xl:mx-6 object-contain  max-sm:!w-[70%] max-sm:!h-[70%]"
               />
             </div>
+
+            {/* <Image
+              alt="Trusted Client"
+              width={100}
+              height={100}
+              src={theme === "dark" ? item.src : item.lightSrc}
+              className="sm:h-14 xl:h-[80px] sm:w-auto sm:mx-3 xl:mx-6 object-contain aspect-square max-sm:!w-[50%] max-sm:!h-[50%]"
+            /> */}
+
           </SwiperSlide>
         ))}
       </Swiper>
