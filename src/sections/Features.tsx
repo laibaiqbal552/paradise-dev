@@ -55,11 +55,13 @@ const Card = ({
   reverse,
   title,
   desc,
+  imgSrc,
   children,
 }: {
   reverse?: boolean;
   title: string;
   desc: string;
+  imgSrc: any;
   children?: ReactNode;
 }) => {
   return (
@@ -71,7 +73,7 @@ const Card = ({
     >
       <div className={cn("", reverse ? "lg:order-2 flex-shrink-0" : "")}>
         <Image
-          src="/images/work-with-us.png"
+          src={imgSrc}
           className="rounded-3xl max-lg:w-full"
           alt="work-with-us"
           width={555}
@@ -178,6 +180,7 @@ function Features() {
               key={index}
               title={item.title[locale as keyof typeof item.title]}
               desc={item.desc[locale as keyof typeof item.desc]}
+              imgSrc={item.imgSrc}
             >
               <Button asChild className="cursor-pointer">
                 <ScrollLink to={item.link}>
@@ -267,6 +270,7 @@ const cardData = [
       en: "Send Cv",
       es: "Enviar CV",
     },
+    imgSrc: "/images/work-with-us.png",
     link: "contact",
   },
   {
@@ -282,6 +286,7 @@ const cardData = [
       en: "Start Now",
       es: "Empezar ahora",
     },
+    imgSrc: "/images/project-is-worked.png",
     link: "contact",
   },
   {
@@ -297,6 +302,7 @@ const cardData = [
       en: "Report Problem",
       es: "Reportar problema",
     },
+    imgSrc: "/images/report-a-veneer.jpg",
     link: "contact",
   },
   {
@@ -312,6 +318,7 @@ const cardData = [
       en: "Request support",
       es: "Pedir soporte",
     },
+    imgSrc: "/images/Support.png",
     link: "contact",
   },
 ];

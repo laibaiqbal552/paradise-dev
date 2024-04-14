@@ -34,7 +34,7 @@ function Hero() {
           height={64}
         />
 
-        <h3 className="text-center text-[56px] font-medium mb-7 max-xl:text-[40px] max-sm:text-2xl">
+        <h3 className="text-center uppercase text-[56px] font-medium mb-7 max-xl:text-[40px] max-sm:text-2xl">
           {/* {t["Title"]} */}
           {t("Title")}
         </h3>
@@ -42,7 +42,7 @@ function Hero() {
         <h1 className="text-[6.5rem] capitalize text-center font-semibold lh-1_2 max-xl:text-6xl max-sm:text-[36px]">
           {t("Subtitle")}
           <br />
-          <span className="text-primary">
+          <span className="text-primary uppercase">
             <Typewriter cursor loop words={words} />
           </span>
         </h1>
