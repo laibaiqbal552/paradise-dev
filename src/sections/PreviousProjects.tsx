@@ -67,7 +67,7 @@ const Card = ({
             className="w-full h-full object-cover"
             width={426 * 3}
             height={523 * 3}
-            alt="previous project"
+            alt={title}
             loading="lazy"
           />
         </div>
