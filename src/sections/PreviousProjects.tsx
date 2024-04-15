@@ -4,6 +4,7 @@ import Container from "components/Container";
 import { cn } from "lib/utils";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import ResponsiveImage from "next/legacy/image";
 import { useParams } from "next/navigation";
 import { ButtonHTMLAttributes, DetailedHTMLProps, useState } from "react";
 import Link from "next/link";
@@ -59,8 +60,17 @@ const Card = ({
       </h2>
       <p className="text-sm sm:text-xl sm:h-[60px] max-sm:mb-6">{subtitle}</p>
 
-      <div className="relative">
-        <img src={imgSrc} className="w-full" alt="previous project" />
+      <div className="relative ">
+        <div className="flex">
+          <ResponsiveImage
+            src={imgSrc}
+            className="w-full h-full object-cover"
+            width={426 * 3}
+            height={523 * 3}
+            alt="previous project"
+            loading="lazy"
+          />
+        </div>
 
         <Link
           href={link}
@@ -155,8 +165,7 @@ const projects: Record<Tab, any> = {
         es: "¡Aquí estás ahora!",
       },
       url: "https://paradisedev.webflow.io/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65fe5d48ce9ca62b68d27274_ParadiseDev%20_%20We%20develop%20your%20website%20extent%20(3).png",
+      image: "/images/projects/paradise-dev.png",
     },
   ],
 
@@ -171,8 +180,7 @@ const projects: Record<Tab, any> = {
         es: "¡Aquí estás ahora!",
       },
       url: "https://paradisedev.webflow.io/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65fe5d48ce9ca62b68d27274_ParadiseDev%20_%20We%20develop%20your%20website%20extent%20(3).png",
+      image: "/images/projects/paradise-dev.png",
     },
     {
       name: {
@@ -184,8 +192,7 @@ const projects: Record<Tab, any> = {
         es: "Servicios de alojamiento",
       },
       url: "https://paradisehost.net/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd796eafb490c300af683f_paradisehost.png",
+      image: "/images/projects/paradise-dev.png",
     },
     {
       name: {
@@ -197,8 +204,7 @@ const projects: Record<Tab, any> = {
         es: "Comunidad de juegos online y gestión de influencers",
       },
       url: "https://paradisegaming.net/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/6602a9a7f224f5ff2d3284d5_2c58e6a2-e1ed-4f26-8eab-9b39bd846cd9.png",
+      image: "/images/projects/paradise-dev.png",
     },
     {
       name: {
@@ -210,8 +216,7 @@ const projects: Record<Tab, any> = {
         es: "estudio de arquitectos",
       },
       url: "https://ika.com.ar/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd7970e958a25792146d34_ika.png",
+      image: "/images/projects/paradise-dev.png",
     },
     {
       name: {
@@ -223,8 +228,7 @@ const projects: Record<Tab, any> = {
         es: "Soluciones de refrigeración",
       },
       url: "https://australrefrigeracion.com/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f96f059406c19c78bcb7b2_austral.png",
+      image: "/images/projects/paradise-dev.png",
     },
     {
       name: {
@@ -236,8 +240,7 @@ const projects: Record<Tab, any> = {
         es: "Estudio #1 en propiedad intelectual, marcas y patentes",
       },
       url: "https://lauritsen.com.ar/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd796edd10750a16539d65_lauritsen.png",
+      image: "/images/projects/paradise-dev.png",
     },
     {
       name: {
@@ -249,8 +252,7 @@ const projects: Record<Tab, any> = {
         es: "Marcas y patentes",
       },
       url: "https://registratumarca.com.ar/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd79707d0845821f9dbf82_registratumarca.png",
+      image: "/images/projects/paradise-dev.png",
     },
     {
       name: {
@@ -262,8 +264,7 @@ const projects: Record<Tab, any> = {
         es: "Entrena con ciencia por Tomas Mazza",
       },
       url: "https://trainingwhead.paradisedev.net/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f96f05a873a925a3748716_trainingwhead.png",
+      image: "/images/projects/paradise-dev.png",
     },
     {
       name: {
@@ -275,8 +276,7 @@ const projects: Record<Tab, any> = {
         es: "Ceci est l'ancienne version",
       },
       url: "http://old.paradisedev.net",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd79707c0f3278655efe8e_paradisedev.png",
+      image: "/images/projects/paradise-dev.png",
     },
   ],
 
@@ -291,8 +291,7 @@ const projects: Record<Tab, any> = {
         es: "Vous êtes ici maintenant !",
       },
       url: "https://paradisedev.webflow.io/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65fe5d48ce9ca62b68d27274_ParadiseDev%20_%20We%20develop%20your%20website%20extent%20(3).png",
+      image: "/images/projects/paradise-dev.png",
     },
     {
       name: {
@@ -304,8 +303,7 @@ const projects: Record<Tab, any> = {
         es: "Servicios de alojamiento",
       },
       url: "https://paradisehost.net/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd796eafb490c300af683f_paradisehost.png",
+      image: "/images/projects/paradise-dev.png",
     },
     {
       name: {
@@ -317,8 +315,7 @@ const projects: Record<Tab, any> = {
         es: "Comunidad de juegos online y gestión de influencers.",
       },
       url: "https://paradisegaming.net/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/6602a9a7f224f5ff2d3284d5_2c58e6a2-e1ed-4f26-8eab-9b39bd846cd9.png",
+      image: "/images/projects/paradise-dev.png",
     },
     {
       name: {
@@ -330,8 +327,7 @@ const projects: Record<Tab, any> = {
         es: "estudio de arquitectos",
       },
       url: "https://ika.com.ar/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd7970e958a25792146d34_ika.png",
+      image: "/images/projects/paradise-dev.png",
     },
     {
       name: {
@@ -343,8 +339,7 @@ const projects: Record<Tab, any> = {
         es: "Refrigeración Austral",
       },
       url: "https://australrefrigeracion.com/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f96f059406c19c78bcb7b2_austral.png",
+      image: "/images/projects/paradise-dev.png",
     },
     {
       name: {
@@ -356,8 +351,7 @@ const projects: Record<Tab, any> = {
         es: "Étude n°1 en propriété intellectuelle, marques et brevets",
       },
       url: "https://lauritsen.com.ar/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd796edd10750a16539d65_lauritsen.png",
+      image: "/images/projects/paradise-dev.png",
     },
     {
       name: {
@@ -369,8 +363,7 @@ const projects: Record<Tab, any> = {
         es: "Marcas y patentes",
       },
       url: "https://registratumarca.com.ar/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd79707d0845821f9dbf82_registratumarca.png",
+      image: "/images/projects/paradise-dev.png",
     },
     {
       name: {
@@ -382,8 +375,7 @@ const projects: Record<Tab, any> = {
         es: "Entraînez-vous avec la science par Tomas Mazza",
       },
       url: "https://trainingwhead.paradisedev.net/",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65f96f05a873a925a3748716_trainingwhead.png",
+      image: "/images/projects/paradise-dev.png",
     },
     {
       name: {
@@ -395,8 +387,7 @@ const projects: Record<Tab, any> = {
         es: "Esta es la versión antigua",
       },
       url: "http://old.paradisedev.net",
-      image:
-        "https://assets-global.website-files.com/65bf563f6bb1c09b8eeba7e2/65dd79707c0f3278655efe8e_paradisedev.png",
+      image: "/images/projects/paradise-dev.png",
     },
   ],
 };
