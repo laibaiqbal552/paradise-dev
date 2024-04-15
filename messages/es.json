@@ -2,7 +2,7 @@
         "Home": {
             "Hero": {
                 "Title": "Hola Mundo",
-                "Subtitle": "Proponemos desarrollar y potenciar tu",
+                "Subtitle": "PROPONEMOS DESARROLLAR Y POTENCIAR TU",
                 "TypeWriter": "Aplicación, Sitio Web, Proyecto, Negocio, Tienda",
                 "CallToAction": "Leer sobre nosotros"
             },
@@ -60,8 +60,8 @@
 
             "Footer":{
                 "Description": "ParadiseDev® es una subdivisión de Paradise Host S.A. y una marca registrada",
-                "Copyright": "Derechos de autor 2024© | Reservados todos los derechos",
-                "DevelopedBy": "Sitio diseñado y desarrollado por el equipo de Paradise Dev® | Organizado por Paradise Host®",
+                "Copyright": "Copyright 2024© | Todos los derechos reservados",
+                "DevelopedBy": "Sitio diseñado y desarrollado por el equipo de Paradise Dev® | Alojado por Paradise Host®",
                 "Pages1": {
                     "heading": "Acerca de",
                     "AboutUs": "Nosotros",
