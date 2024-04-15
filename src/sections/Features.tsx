@@ -162,13 +162,13 @@ function Features() {
             ))}
           </div>
 
-          <h3 className="text-3xl sm:text-[64px] text-center font-bold lh-1_2 uppercase max-w-xl mx-auto">
+          {/* <h3 className="text-3xl sm:text-[64px] text-center font-bold lh-1_2 uppercase max-w-xl mx-auto">
             <span className="text-primary bg-transparent">
               {" "}
               {t("SecondaryTitle").split(" ")[0]}
             </span>{" "}
             {t("SecondaryTitle").split(" ").slice(1).join(" ")}
-          </h3>
+          </h3> */}
         </header>
       </Container>
 

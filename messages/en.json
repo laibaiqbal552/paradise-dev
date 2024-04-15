@@ -56,11 +56,18 @@
             "Contact":{
                 "Title": "Contact",
                 "Description": "Any questions, comments or general inquiries? We really appreciate your suggestions, contact us!",
+                "MailInfo":"contact@paradisedev.net",
                 "Mail": "Mail",
+                "mailSubtitle": "Suipacha 531 piso 8, Microcentro | Buenos Aires",
                 "Phone": "Phone",
+                "phoneSubtitle": "Coming Soon",
                 "Location": "Location",
                 "FormSubmitted": "Form Submitted Succesfully",
-                "send": "Send"
+                "send": "Send",
+                "placeholderName":"Name",
+                "placeholderEmail":"Email",
+                "placeholderAffair":"Affair",
+                "placeholderMessage":"Message"
             },
 
             "Footer":{

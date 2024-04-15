@@ -90,17 +90,17 @@ function Contact() {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8 mb-12">
         <Card
           title={t("Mail")}
-          subtitle="contact@paradisedev.net"
+          subtitle={t("MailInfo")}
           imgSrc="/images/mail-icon.png"
         />
         <Card
           title={t("Location")}
-          subtitle="Suipacha 531 piso 8, Microcentro | Buenos Aires"
+          subtitle={t("mailSubtitle")}
           imgSrc="/images/location-icon.png"
         />
         <Card
           title={t("Phone")}
-          subtitle="Coming soon"
+          subtitle={t("phoneSubtitle")}
           imgSrc="/images/phone.svg"
         />
       </div>
@@ -109,23 +109,29 @@ function Contact() {
         <fieldset disabled={isSubmitting}>
           <div className="grid grid-cols-2 gap-y-4 gap-x-6">
             <div>
-              <Input placeholder="Name" {...register("name")} />
+              <Input placeholder={t("placeholderName")} {...register("name")} />
               <FieldError>{errors?.name?.message}</FieldError>
             </div>
 
             <div>
-              <Input placeholder="Email*" {...register("email")} />
+              <Input
+                placeholder={t("placeholderEmail")}
+                {...register("email")}
+              />
               <FieldError>{errors?.email?.message}</FieldError>
             </div>
 
             <div className="col-span-2">
-              <Input placeholder="Affair" {...register("affair")} />
+              <Input
+                placeholder={t("placeholderAffair")}
+                {...register("affair")}
+              />
               <FieldError>{errors?.affair?.message}</FieldError>
             </div>
 
             <div className="pt-2 col-span-2 mb-8">
               <Textarea
-                placeholder="Message"
+                placeholder={t("placeholderMessage")}
                 className="resize-none h-[20rem]"
                 {...register("message")}
               />

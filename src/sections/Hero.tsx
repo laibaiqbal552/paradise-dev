@@ -34,12 +34,12 @@ function Hero() {
           height={64}
         />
 
-        <h3 className="text-center uppercase text-[56px] font-medium mb-7 max-xl:text-[40px] max-sm:text-2xl">
+        <h3 className="text-center capitalize text-[56px] font-medium mb-7 max-xl:text-[40px] max-sm:text-2xl">
           {/* {t["Title"]} */}
           {t("Title")}
         </h3>
 
-        <h1 className="text-[6.5rem] capitalize text-center font-semibold lh-1_2 max-xl:text-6xl max-sm:text-[36px]">
+        <h1 className="text-[6.5rem] uppercase text-center font-semibold lh-1_2 max-xl:text-6xl max-sm:text-[36px]">
           {t("Subtitle")}
           <br />
           <span className="text-primary uppercase">

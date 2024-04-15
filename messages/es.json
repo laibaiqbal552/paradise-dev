@@ -17,7 +17,7 @@
                 }           
             },
             "Features":{
-                "Title": "características",
+                "Title": "Atributos",
                 "SecondaryTitle": "Las características nos hacen diferentes"
             },
 
@@ -51,11 +51,18 @@
             "Contact":{
                 "Title": "Contacto",
                 "Description": "¿Alguna pregunta, comentario o consulta general? Realmente apreciamos tus sugerencias, ¡contáctanos!",
+                "MailInfo":"contacto@paradisedev.net",
                  "Mail": "Correo",
+                   "mailSubtitle": "Suipacha 531 Piso 8, Microcentro | Buenos Aires",
                 "Phone": "Teléfono",
+                "phoneSubtitle": "Proximamente",
                 "Location": "Ubicación",
-                "FormSubmitted": "Formulario enviado exitosamente",
-                "send": "Enviar"
+                "FormSubmitted": "Formulario enviado exitosamente", 
+                "send": "Enviar",
+                 "placeholderName":"Nombre",
+                "placeholderEmail":"Correo electrónico",
+                "placeholderAffair":"Asunto",
+                "placeholderMessage":"Mensaje"
             },
 
             "Footer":{

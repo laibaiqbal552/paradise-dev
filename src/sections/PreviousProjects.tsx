@@ -97,7 +97,7 @@ function PreviousProjects() {
   return (
     <div>
       <Container className="max-w-[1920px]">
-        <h1 className="text-center font-bold mb-12 sm:mb-16 text-3xl sm:text-4xl lg:text-[3.5rem]">
+        <h1 className="text-center capitalize font-bold mb-12 sm:mb-16 text-3xl sm:text-4xl lg:text-[3.5rem]">
           {t("Title")}
         </h1>
 
@@ -157,15 +157,15 @@ const projects: Record<Tab, any> = {
   Applications: [
     {
       name: {
-        en: "Paradise Dev",
-        es: "ParadiseDev",
+        en: "Paradise App",
+        es: "Paradise App",
       },
       description: {
-        en: "Here you are now!",
-        es: "¡Aquí estás ahora!",
+        en: "Paradise Host Service Management App",
+        es: "Paradise Host Service Management App",
       },
-      url: "https://paradisedev.webflow.io/",
-      image: "/images/projects/paradise-dev.png",
+      url: "https://registratumarca.com.ar/",
+      image: "/images/projects/paradise-app.png",
     },
   ],
 
@@ -173,11 +173,11 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Paradise Dev",
-        es: "Desarrollador del paraíso",
+        es: "Paradise Dev",
       },
       description: {
         en: "Here you are now!",
-        es: "¡Aquí estás ahora!",
+        es: "Here you are now!",
       },
       url: "https://paradisedev.webflow.io/",
       image: "/images/projects/paradise-dev.png",
@@ -185,50 +185,50 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Paradise Host",
-        es: "ParadiseHost",
+        es: "Paradise Host",
       },
       description: {
         en: "Hosting Services",
-        es: "Servicios de alojamiento",
+        es: "Hosting Services",
       },
       url: "https://paradisehost.net/",
-      image: "/images/projects/paradise-dev.png",
+      image: "/images/projects/hosting-services.png",
     },
     {
       name: {
         en: "Paradise Gaming",
-        es: "Juegos Paraíso",
+        es: "Paradise Gaming",
       },
       description: {
         en: "Online gaming community and influencer management",
         es: "Comunidad de juegos online y gestión de influencers",
       },
       url: "https://paradisegaming.net/",
-      image: "/images/projects/paradise-dev.png",
+      image: "/images/projects/paradise-gaming.png",
+    },
+    {
+      name: {
+        en: "Paradise Store",
+        es: "Paradise Store",
+      },
+      description: {
+        en: "E-commerce of digital assets",
+        es: "E-commerce of digital assets",
+      },
+      url: "https://paradisegaming.net/",
+      image: "/images/projects/Paradise-Store.png",
     },
     {
       name: {
         en: "Ika Developments",
-        es: "Ika Desarrollos",
+        es: "Ika Developments",
       },
       description: {
         en: "Architects studio",
-        es: "estudio de arquitectos",
+        es: "Architects studio",
       },
       url: "https://ika.com.ar/",
-      image: "/images/projects/paradise-dev.png",
-    },
-    {
-      name: {
-        en: "Austral Refrigeration",
-        es: "Refrigeración Austral",
-      },
-      description: {
-        en: "Cooling solutions",
-        es: "Soluciones de refrigeración",
-      },
-      url: "https://australrefrigeracion.com/",
-      image: "/images/projects/paradise-dev.png",
+      image: "/images/projects/Ika-developments.png",
     },
     {
       name: {
@@ -237,58 +237,83 @@ const projects: Record<Tab, any> = {
       },
       description: {
         en: "Study #1 in intellectual property, trademarks and patents",
-        es: "Estudio #1 en propiedad intelectual, marcas y patentes",
+        es: "Study #1 in intellectual property, trademarks and patents",
       },
       url: "https://lauritsen.com.ar/",
-      image: "/images/projects/paradise-dev.png",
+      image: "/images/projects/lauritsen.png",
     },
     {
       name: {
         en: "Registra tu Marca",
-        es: "RegistraTuMarca",
+        es: "Registra Tu Marca",
       },
       description: {
         en: "Brands and patents",
-        es: "Marcas y patentes",
+        es: "Brands and patents",
       },
       url: "https://registratumarca.com.ar/",
-      image: "/images/projects/paradise-dev.png",
+      image: "/images/projects/Registra-tu-Marca.png",
     },
     {
       name: {
+        en: "Paradise App",
+        es: "Paradise App",
+      },
+      description: {
+        en: "Paradise Host Service Management App",
+        es: "Paradise Host Service Management App",
+      },
+      url: "https://registratumarca.com.ar/",
+      image: "/images/projects/paradise-app.png",
+    },
+    {
+      name: {
+        en: "Austral Refrigeration",
+        es: "Austral Refrigeration",
+      },
+      description: {
+        en: "Cooling solutions",
+        es: "Cooling solutions",
+      },
+      url: "https://australrefrigeracion.com/",
+      image: "/images/projects/austral-refrigeration.png",
+    },
+
+    {
+      name: {
         en: "trainingwhead",
-        es: "cabeza de entrenamiento",
+        es: "trainingwhead",
       },
       description: {
         en: "Train with science by Tomas Mazza",
-        es: "Entrena con ciencia por Tomas Mazza",
+        es: "Train with science by Tomas Mazza",
       },
       url: "https://trainingwhead.paradisedev.net/",
-      image: "/images/projects/paradise-dev.png",
+      image: "/images/projects/trainingwhead.png",
     },
     {
       name: {
         en: "Paradise Dev V1",
-        es: "Paraíso Desarrollador V1",
+        es: "Paradise Dev V1",
       },
       description: {
         en: "This is old version",
-        es: "Ceci est l'ancienne version",
+        es: "This is old version",
       },
       url: "http://old.paradisedev.net",
-      image: "/images/projects/paradise-dev.png",
+      image: "/images/projects/Paradise-Dev-V1.png",
     },
   ],
 
   "Desarollo Web": [
     {
       name: {
-        en: "Paradise Dev V2",
-        es: "Paraíso Desarrollador V2",
+        en: "Paradise Dev",
+        es: "Paradise Dev",
       },
       description: {
         en: "Here you are now!",
-        es: "Vous êtes ici maintenant !",
+        es: "Here you are now!",
       },
       url: "https://paradisedev.webflow.io/",
       image: "/images/projects/paradise-dev.png",
@@ -296,50 +321,50 @@ const projects: Record<Tab, any> = {
     {
       name: {
         en: "Paradise Host",
-        es: "Anfitrión del paraíso",
+        es: "Paradise Host",
       },
       description: {
         en: "Hosting Services",
-        es: "Servicios de alojamiento",
+        es: "Hosting Services",
       },
       url: "https://paradisehost.net/",
-      image: "/images/projects/paradise-dev.png",
+      image: "/images/projects/hosting-services.png",
     },
     {
       name: {
         en: "Paradise Gaming",
-        es: "Juegos Paraíso",
+        es: "Paradise Gaming",
       },
       description: {
         en: "Online gaming community and influencer management",
-        es: "Comunidad de juegos online y gestión de influencers.",
+        es: "Online gaming community and influencer management",
       },
       url: "https://paradisegaming.net/",
-      image: "/images/projects/paradise-dev.png",
+      image: "/images/projects/paradise-gaming.png",
     },
     {
       name: {
         en: "Ika Developments",
-        es: "Desarrollos Ika",
+        es: "Ika Developments",
       },
       description: {
         en: "Architects studio",
-        es: "estudio de arquitectos",
+        es: "Architects studio",
       },
       url: "https://ika.com.ar/",
-      image: "/images/projects/paradise-dev.png",
+      image: "/images/projects/Ika-developments.png",
     },
     {
       name: {
         en: "Austral Refrigeration",
-        es: "Refrigeración Austral",
+        es: "Austral Refrigeration",
       },
       description: {
         en: "Refrigeración Austral",
         es: "Refrigeración Austral",
       },
       url: "https://australrefrigeracion.com/",
-      image: "/images/projects/paradise-dev.png",
+      image: "/images/projects/austral-refrigeration.png",
     },
     {
       name: {
@@ -348,10 +373,10 @@ const projects: Record<Tab, any> = {
       },
       description: {
         en: "Study #1 in intellectual property, trademarks and patents",
-        es: "Étude n°1 en propriété intellectuelle, marques et brevets",
+        es: "Study #1 in intellectual property, trademarks and patents",
       },
       url: "https://lauritsen.com.ar/",
-      image: "/images/projects/paradise-dev.png",
+      image: "/images/projects/lauritsen.png",
     },
     {
       name: {
@@ -360,34 +385,34 @@ const projects: Record<Tab, any> = {
       },
       description: {
         en: "Brands and patents",
-        es: "Marcas y patentes",
+        es: "Brands and patents",
       },
       url: "https://registratumarca.com.ar/",
-      image: "/images/projects/paradise-dev.png",
+      image: "/images/projects/Registra-tu-Marca.png",
     },
     {
       name: {
         en: "trainingwhead",
-        es: "cabeza de entrenamiento",
+        es: "trainingwhead",
       },
       description: {
         en: "Train with science by Tomas Mazza",
-        es: "Entraînez-vous avec la science par Tomas Mazza",
+        es: "Train with science by Tomas Mazza",
       },
       url: "https://trainingwhead.paradisedev.net/",
-      image: "/images/projects/paradise-dev.png",
+      image: "/images/projects/trainingwhead.png",
     },
     {
       name: {
         en: "Paradise Dev V1",
-        es: "Paraíso Desarrollador V1",
+        es: "Paradise Dev V1",
       },
       description: {
         en: "This is old version",
-        es: "Esta es la versión antigua",
+        es: "This is old version",
       },
       url: "http://old.paradisedev.net",
-      image: "/images/projects/paradise-dev.png",
+      image: "/images/projects/Paradise-Dev-V1.png",
     },
   ],
 };
