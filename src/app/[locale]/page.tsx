@@ -12,8 +12,11 @@ import ServicesWeProvide from "sections/ServicesWeProvide";
 import PreviousProjects from "sections/PreviousProjects";
 import RevealTextEffect from "components/RevealTextEffect";
 import SetupPlugin from "components/SetupPlugin";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function Home() {
+export default function Home({ params }: { params: { locale: string } }) {
+  unstable_setRequestLocale(params.locale);
+
   return (
     <div>
       <SetupPlugin />

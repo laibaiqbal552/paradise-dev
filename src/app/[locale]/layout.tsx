@@ -1,5 +1,11 @@
 import { ThemeProvider } from "components/theme-provider";
+import { locales } from "i18n";
 import { NextIntlClientProvider, useMessages } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export default function RootLayout({
   children,
@@ -8,6 +14,8 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  unstable_setRequestLocale(locale);
+
   const messages = useMessages();
   return (
     <html lang={locale}>
