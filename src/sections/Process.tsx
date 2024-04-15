@@ -12,6 +12,7 @@ import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
+import Image from "next/legacy/image";
 
 const processSteps = [
   {
@@ -108,11 +109,16 @@ function LocalProcess() {
       </Container>
 
       <Container className="relative">
-        <img
-          src="/images/badge.png"
-          alt="Process Badge"
-          className="absolute top-[60%] right-0 -translate-y-1/2 max-lg:hidden"
-        />
+        <div className="absolute top-[60%] right-0 -translate-y-1/2 max-lg:hidden ">
+          <Image
+            src="/images/badge.png"
+            alt="Process Badge"
+            className="w-full h-full object-cover"
+            width={177}
+            height={177}
+            loading="lazy"
+          />
+        </div>
 
         <header className="mb-12 sm:mb-20">
           <Heading>
@@ -145,19 +151,27 @@ function LocalProcess() {
           </div>
 
           <div className="relative max-lg:hidden">
-            <img
-              src="/images/connector-lines.png"
-              className="mx-auto w-[79%]  -top-3 z-10 relative -mb-8"
-              alt="Connector Lines"
-            />
+            <div className="mx-auto w-[79%] -mb-8 -top-3 z-10 relative flex">
+              <Image
+                src="/images/connector-lines.png"
+                className="w-full h-full object-cover"
+                width={834 * 3}
+                height={124 * 3}
+                alt="Connector Lines"
+                loading="lazy"
+              />
+            </div>
 
             <GearsImage />
-
-            <img
-              src="/images/connector-lines.png"
-              className="mx-auto w-[79%] rotate-180 top-3 z-10 relative"
-              alt="Connector Lines"
-            />
+            <div className="mx-auto w-[79%] rotate-180 top-3 z-10 relative flex">
+              <Image
+                className="w-full h-full object-cover"
+                width={834 * 3}
+                height={124 * 3}
+                src="/images/connector-lines.png"
+                alt="Connector Lines"
+              />
+            </div>
           </div>
 
           <div

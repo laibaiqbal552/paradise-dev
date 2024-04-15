@@ -6,9 +6,10 @@ import Container from "components/Container";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import useThemeSwitcher from "hooks/useThemeSwitcher";
+// import useThemeSwitcher from "hooks/useThemeSwitcher";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 const clients = [
   { src: "/images/trusted/hil.png", lightSrc: "/images/trusted-light/hil.png" },
@@ -37,7 +38,9 @@ const clients = [
 ];
 
 function TrustedClients() {
-  const [theme] = useThemeSwitcher();
+  // const [theme] = useThemeSwitcher();
+
+  const { resolvedTheme: theme } = useTheme();
   const t = useTranslations("Home.TrustedClients");
 
   return (
@@ -67,6 +70,7 @@ function TrustedClients() {
         modules={[Autoplay]}
         className="sm:[&_.swiper-slide]:!w-fit [&_.swiper-slide]:h-auto"
         loop={true}
+        spaceBetween={32}
         autoplay={{
           disableOnInteraction: false,
           delay: 1000,
@@ -83,7 +87,7 @@ function TrustedClients() {
       >
         {clients.map((item, i) => (
           <SwiperSlide key={i}>
-            <div className="flex items-center justify-center h-full">
+            <div className="flex items-center justify-center h-full ">
               {/* <Image
               alt="Trusted Client"
               width={100}
@@ -91,6 +95,14 @@ function TrustedClients() {
               src={theme === "dark" ? item.src : item.lightSrc}
               className="sm:h-14 xl:h-[80px] sm:w-auto sm:mx-3 xl:mx-6 object-contain aspect-square max-sm:!w-[50%] max-sm:!h-[50%]"
             />  */}
+              {/* <img
+                src={theme === "dark" ? item.src : item.lightSrc}
+                className={`max-w-full ${
+                  i === 1 ? "max-h-[48px]" : "max-h-[60px]"
+                } sm:mx-3 xl:mx-6 object-contain max-h-[60px]`}
+                alt="slides images"
+              /> */}
+
               <img
                 src={theme === "dark" ? item.src : item.lightSrc}
                 className={`max-w-full ${
