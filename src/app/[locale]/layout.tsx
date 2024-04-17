@@ -45,7 +45,7 @@ export default function RootLayout({
           property="og:image"
           content="https://paradise-dev-weld.vercel.app/images/WALL-PARADISEDEV-DARK.png"
         />
-
+        <link rel="icon" href="/favicon.ico" />
         {/* Add other meta tags as needed */}
       </head>
       <body
