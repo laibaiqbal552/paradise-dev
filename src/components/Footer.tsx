@@ -41,7 +41,7 @@ function Footer() {
       <Container asChild className="max-w-[1209px]">
         <div>
           <header className="flex max-lg:flex-col items-center justify-between max-lg:space-y-7 lg:space-x-5 mb-8">
-            <Image src="/images/logo.svg" width={275} height={72} alt="logo" />
+            <Image src="/images/logo.png" width={275} height={72} alt="logo" />
 
             <div className="overflow-hidden">
               <ul className="flex items-center flex-wrap justify-center [&>*]:m-3 -m-3">
