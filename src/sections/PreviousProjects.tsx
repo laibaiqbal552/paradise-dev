@@ -78,7 +78,9 @@ const Card = ({
           href={link}
           target="_blank"
           aria-label="Open Site"
-          className="absolute top-0 left-0 w-full h-full z-40 transition-all duration-500 bg-black/25 hover:bg-black/75 cursor-pointer flex items-center justify-center group"
+          className={`${
+            link === "#" ? "cursor-default" : "cursor-pointer"
+          } absolute top-0 left-0 w-full h-full z-40 transition-all cursor-pointer duration-500 bg-black/25 hover:bg-black/75  flex items-center justify-center group`}
         >
           <span className="text-[2rem] font-medium transition-all duration-500 opacity-0 group-hover:opacity-100">
             {hoverText}
@@ -141,7 +143,7 @@ function PreviousProjects() {
                         ]
                       }
                       imgSrc={item.image}
-                      link={item.url}
+                      link={item.url ?? "/"}
                       hoverText={
                         item.hoverText[locale as keyof typeof item.hoverText]
                       }
@@ -173,7 +175,7 @@ const projects: Record<Tab, any> = {
         en: "Paradise Host Service Management App",
         es: "Paradise Host Service Management App",
       },
-      url: "/",
+      url: "#",
       image: "/images/projects/paradise-app.png",
     },
   ],
