@@ -104,7 +104,7 @@ function TrustedClients() {
               /> */}
 
               <img
-                src={theme === "dark" ? item.src : item.lightSrc}
+                src={theme === "light" ? item.lightSrc : item.src}
                 className={`max-w-full ${
                   i === 1 ? "max-h-[48px]" : "max-h-[60px]"
                 } sm:mx-3 xl:mx-6 object-contain max-h-[60px]`}
