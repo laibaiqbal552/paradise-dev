@@ -63,7 +63,7 @@ function Navbar() {
         <div className="flex items-center bg-white dark:bg-body-light justify-between lg:space-x-5 py-4 sm:py-1">
           <Link href="/" className="relative sm:top-1.5" aria-label="Home">
             <Logo
-              src="/images/logo.png"
+              src="/images/logo.svg"
               alt={"logo"}
               className="max-md:w-[192px]"
             />

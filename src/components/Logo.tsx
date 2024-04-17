@@ -10,7 +10,7 @@ function Logo({
   ...props
 }: ImageProps) {
   const [theme] = useThemeSwitcher();
-  const src = theme === "light" ? "/images/logo-black.svg" : "/images/logo.png";
+  const src = theme === "light" ? "/images/logo-black.svg" : "/images/logo.svg";
 
   return (
     <Image
