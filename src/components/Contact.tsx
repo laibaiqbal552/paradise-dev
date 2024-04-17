@@ -22,16 +22,23 @@ const FieldError = ({ children }: { children: ReactNode }) => {
 
 const contactFormSchema = yup
   .object({
-    name: yup.string().required("This field is Required"),
+    name: yup
+      .string()
+      .required("This field is Required")
+      .max(30, "Name must be at most 30 characters"),
     email: yup
       .string()
       .email("Invalid email address")
       .required("This field is Required"),
-    affair: yup.string().required("This field is Required"),
+    affair: yup
+      .string()
+      .required("This field is Required")
+      .max(50, "Affair must be at most 50 characters"),
     message: yup
       .string()
       .required("This field is Required")
-      .min(20, "Message should be of atleast 20 characters"),
+      .min(20, "Message should be of at least 20 characters")
+      .max(5000, "Message must be at most 5000 characters"),
   })
   .required();
 
