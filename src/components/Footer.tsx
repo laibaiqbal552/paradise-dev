@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Container from "./Container";
 import { Button } from "./Button";
@@ -13,8 +14,10 @@ import ThemeSwitcher from "./ThemeSwitcher";
 import { socialLinks } from "./../lib/constants";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 function Footer() {
+  const { resolvedTheme: theme } = useTheme();
   const t = useTranslations("Home.Footer");
   const pages1 = [
     { key: "Pages1.AboutUs", href: "#" },
@@ -35,13 +38,24 @@ function Footer() {
     { key: "Pages3.UIUXDesign", href: "#" },
     { key: "Pages3.Applications", href: "#" },
   ];
+  const logo = [
+    {
+      src: "/images/ParadiseDev Negativo.svg",
+      lightSrc: "/images/ParadiseDev Positivo.svg",
+    },
+  ];
 
   return (
     <footer className="bg-primary dark:bg-body-light pb-16 sm:pb-28 pt-12 sm:pt-28 w-full">
       <Container asChild className="max-w-[1209px]">
         <div>
           <header className="flex max-lg:flex-col items-center justify-between max-lg:space-y-7 lg:space-x-5 mb-8">
-            <Image src="/images/logo.png" width={275} height={72} alt="logo" />
+            <Image
+              src="/images/ParadiseDev Negativo.svg"
+              width={275}
+              height={72}
+              alt="logo"
+            />
 
             <div className="overflow-hidden">
               <ul className="flex items-center flex-wrap justify-center [&>*]:m-3 -m-3">

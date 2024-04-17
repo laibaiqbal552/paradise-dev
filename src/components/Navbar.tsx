@@ -15,6 +15,7 @@ import { locales } from "../i18n";
 import { redirect, useParams, usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -53,7 +54,13 @@ function Navbar() {
     { key: "menu.Portfolio", href: "/" },
     { key: "menu.Begin", href: "/" },
   ];
-
+  const logo = [
+    {
+      src: "/images/ParadiseDev Negativo.svg",
+      lightSrc: "/images/ParadiseDev Positivo.svg",
+    },
+  ];
+  const { resolvedTheme: theme } = useTheme();
   return (
     <nav
       ref={containerRef}
@@ -63,7 +70,7 @@ function Navbar() {
         <div className="flex items-center bg-white dark:bg-body-light justify-between lg:space-x-5 py-4 sm:py-1">
           <Link href="/" className="relative sm:top-1.5" aria-label="Home">
             <Logo
-              src="/images/logo.png"
+              src={theme === "light" ? logo[0].lightSrc : logo[0].src}
               alt={"logo"}
               className="max-md:w-[192px]"
             />

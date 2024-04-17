@@ -10,7 +10,13 @@ function Logo({
   ...props
 }: ImageProps) {
   const [theme] = useThemeSwitcher();
-  const src = theme === "light" ? "/images/logo-black.svg" : "/images/logo.png";
+  const logo = [
+    {
+      src: "/images/ParadiseDev Negativo.svg",
+      lightSrc: "/images/ParadiseDev Positivo.svg",
+    },
+  ];
+  const src = theme === "light" ? logo[0].lightSrc : logo[0].src;
 
   return (
     <Image

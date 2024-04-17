@@ -173,7 +173,7 @@ const projects: Record<Tab, any> = {
         en: "Paradise Host Service Management App",
         es: "Paradise Host Service Management App",
       },
-      url: "",
+      url: "/",
       image: "/images/projects/paradise-app.png",
     },
   ],
