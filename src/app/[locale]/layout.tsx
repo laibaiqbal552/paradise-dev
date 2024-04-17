@@ -20,10 +20,14 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <head>
-        <title>Paradise website</title>
-        <meta name="description" content="WE PROPOSE YOU TO DEVELOP YOUR" />
+        <title>Paradise Dev</title>
+        <meta
+          name="description"
+          content="IT solutions, development, cybersecurity and support"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
+        <link rel="icon" href="./../favicon.ico" />
         {/* Add other meta tags as needed */}
       </head>
       <body
