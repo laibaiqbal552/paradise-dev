@@ -27,10 +27,10 @@ export default function RootLayout({
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
-        <meta
+        {/* <meta
           property="og:image"
           content="https://paradise-dev-weld.vercel.app/images/WALL-PARADISEDEV-DARK.png"
-        />
+        /> */}
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
@@ -41,6 +41,7 @@ export default function RootLayout({
           property="og:description"
           content="IT solutions, development, cybersecurity and support"
         />
+
         <meta
           property="og:image"
           content="https://paradise-dev-weld.vercel.app/images/WALL-PARADISEDEV-DARK.png"
