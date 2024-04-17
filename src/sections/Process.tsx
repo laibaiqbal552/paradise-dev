@@ -127,10 +127,10 @@ function LocalProcess() {
             </StrokedText>
           </Heading>
 
-          <h4 className="text-center text-5xl text-primary font-bold mb-7">
-            {/* Our work process */}
+          {/* <h4 className="text-center text-5xl text-primary font-bold mb-7">
+      
             {t("SubTitle")}
-          </h4>
+          </h4> */}
           <p className="text-center text-lg max-w-[50ch] mx-auto">
             {t("Description")}
           </p>
