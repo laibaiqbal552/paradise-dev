@@ -47,11 +47,13 @@ const Card = ({
   subtitle,
   imgSrc,
   link,
+  hoverText,
 }: {
   title: string;
   subtitle: string;
   imgSrc: string;
   link: string;
+  hoverText: string;
 }) => {
   return (
     <div>
@@ -79,7 +81,7 @@ const Card = ({
           className="absolute top-0 left-0 w-full h-full z-40 transition-all duration-500 bg-black/25 hover:bg-black/75 cursor-pointer flex items-center justify-center group"
         >
           <span className="text-[2rem] font-medium transition-all duration-500 opacity-0 group-hover:opacity-100">
-            Open Site
+            {hoverText}
           </span>
         </Link>
       </div>
@@ -140,6 +142,9 @@ function PreviousProjects() {
                       }
                       imgSrc={item.image}
                       link={item.url}
+                      hoverText={
+                        item.hoverText[locale as keyof typeof item.hoverText]
+                      }
                     />
                   ))}
                 </div>
@@ -160,11 +165,15 @@ const projects: Record<Tab, any> = {
         en: "Paradise App",
         es: "Paradise App",
       },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
+      },
       description: {
         en: "Paradise Host Service Management App",
         es: "Paradise Host Service Management App",
       },
-      url: "https://registratumarca.com.ar/",
+      url: "",
       image: "/images/projects/paradise-app.png",
     },
   ],
@@ -174,6 +183,10 @@ const projects: Record<Tab, any> = {
       name: {
         en: "Paradise Dev",
         es: "Paradise Dev",
+      },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
       },
       description: {
         en: "Here you are now!",
@@ -187,6 +200,10 @@ const projects: Record<Tab, any> = {
         en: "Paradise Host",
         es: "Paradise Host",
       },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
+      },
       description: {
         en: "Hosting Services",
         es: "Hosting Services",
@@ -198,6 +215,10 @@ const projects: Record<Tab, any> = {
       name: {
         en: "Paradise Gaming",
         es: "Paradise Gaming",
+      },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
       },
       description: {
         en: "Online gaming community and influencer management",
@@ -211,6 +232,10 @@ const projects: Record<Tab, any> = {
         en: "Paradise Store",
         es: "Paradise Store",
       },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
+      },
       description: {
         en: "E-commerce of digital assets",
         es: "E-commerce of digital assets",
@@ -222,6 +247,10 @@ const projects: Record<Tab, any> = {
       name: {
         en: "Ika Developments",
         es: "Ika Developments",
+      },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
       },
       description: {
         en: "Architects studio",
@@ -235,6 +264,10 @@ const projects: Record<Tab, any> = {
         en: "Lauritsen",
         es: "Lauritsen",
       },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
+      },
       description: {
         en: "Study #1 in intellectual property, trademarks and patents",
         es: "Study #1 in intellectual property, trademarks and patents",
@@ -246,6 +279,10 @@ const projects: Record<Tab, any> = {
       name: {
         en: "Registra tu Marca",
         es: "Registra Tu Marca",
+      },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
       },
       description: {
         en: "Brands and patents",
@@ -259,6 +296,10 @@ const projects: Record<Tab, any> = {
         en: "Paradise App",
         es: "Paradise App",
       },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
+      },
       description: {
         en: "Paradise Host Service Management App",
         es: "Paradise Host Service Management App",
@@ -270,6 +311,10 @@ const projects: Record<Tab, any> = {
       name: {
         en: "Austral Refrigeration",
         es: "Austral Refrigeration",
+      },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
       },
       description: {
         en: "Cooling solutions",
@@ -284,6 +329,10 @@ const projects: Record<Tab, any> = {
         en: "trainingwhead",
         es: "trainingwhead",
       },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
+      },
       description: {
         en: "Train with science by Tomas Mazza",
         es: "Train with science by Tomas Mazza",
@@ -295,6 +344,10 @@ const projects: Record<Tab, any> = {
       name: {
         en: "Paradise Dev V1",
         es: "Paradise Dev V1",
+      },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
       },
       description: {
         en: "This is old version",
@@ -311,6 +364,10 @@ const projects: Record<Tab, any> = {
         en: "Paradise Dev",
         es: "Paradise Dev",
       },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
+      },
       description: {
         en: "Here you are now!",
         es: "Here you are now!",
@@ -322,6 +379,10 @@ const projects: Record<Tab, any> = {
       name: {
         en: "Paradise Host",
         es: "Paradise Host",
+      },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
       },
       description: {
         en: "Hosting Services",
@@ -335,6 +396,10 @@ const projects: Record<Tab, any> = {
         en: "Paradise Gaming",
         es: "Paradise Gaming",
       },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
+      },
       description: {
         en: "Online gaming community and influencer management",
         es: "Online gaming community and influencer management",
@@ -346,6 +411,10 @@ const projects: Record<Tab, any> = {
       name: {
         en: "Ika Developments",
         es: "Ika Developments",
+      },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
       },
       description: {
         en: "Architects studio",
@@ -359,6 +428,10 @@ const projects: Record<Tab, any> = {
         en: "Austral Refrigeration",
         es: "Austral Refrigeration",
       },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
+      },
       description: {
         en: "Refrigeración Austral",
         es: "Refrigeración Austral",
@@ -370,6 +443,10 @@ const projects: Record<Tab, any> = {
       name: {
         en: "Lauritsen",
         es: "Lauritsen",
+      },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
       },
       description: {
         en: "Study #1 in intellectual property, trademarks and patents",
@@ -383,6 +460,10 @@ const projects: Record<Tab, any> = {
         en: "Registra tu Marca",
         es: "Registra tu Marca",
       },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
+      },
       description: {
         en: "Brands and patents",
         es: "Brands and patents",
@@ -395,6 +476,10 @@ const projects: Record<Tab, any> = {
         en: "trainingwhead",
         es: "trainingwhead",
       },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
+      },
       description: {
         en: "Train with science by Tomas Mazza",
         es: "Train with science by Tomas Mazza",
@@ -402,10 +487,15 @@ const projects: Record<Tab, any> = {
       url: "https://trainingwhead.paradisedev.net/",
       image: "/images/projects/trainingwhead.png",
     },
+
     {
       name: {
         en: "Paradise Dev V1",
         es: "Paradise Dev V1",
+      },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
       },
       description: {
         en: "This is old version",
