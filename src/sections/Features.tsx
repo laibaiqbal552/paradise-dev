@@ -307,8 +307,8 @@ const cardData = [
   },
   {
     title: {
-      en: "Support 14/7",
-      es: "Soporte 14/7",
+      en: "Support 24/7",
+      es: "Soporte 24/7",
     },
     desc: {
       en: "Our dedicated support team is available 24/7 to address your needs promptly and efficiently, ensuring uninterrupted assistance whenever you require it. You can rely on us to provide round-the-clock support, delivering solutions whenever you reach out, day or night.",

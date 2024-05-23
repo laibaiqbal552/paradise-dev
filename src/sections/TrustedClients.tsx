@@ -12,29 +12,29 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 
 const clients = [
-  { src: "/images/trusted/hil.png", lightSrc: "/images/trusted-light/hil.png" },
+  { src: "/images/trusted-light/hil.png", lightSrc: "/images/trusted/hil.png" },
   {
-    src: "/images/trusted/suda.png",
-    lightSrc: "/images/trusted-light/suda.jpg",
+    src: "/images/trusted-light/suda.jpg",
+    lightSrc: "/images/trusted/suda.png",
   },
   {
-    src: "/images/trusted/pura.png",
-    lightSrc: "/images/trusted-light/pura.jpg",
+    src: "/images/trusted-light/pura.jpg",
+    lightSrc: "/images/trusted/pura.png",
   },
-  { src: "/images/trusted/las.png", lightSrc: "/images/trusted-light/las.svg" },
+  { src: "/images/trusted-light/las.svg", lightSrc: "/images/trusted/las.png" },
   {
-    src: "/images/trusted/chai.png",
-    lightSrc: "/images/trusted-light/chai.jpg",
-  },
-  {
-    src: "/images/trusted/vita.png",
-    lightSrc: "/images/trusted-light/vita.png",
+    src: "/images/trusted-light/chai.jpg",
+    lightSrc: "/images/trusted/chai.png",
   },
   {
-    src: "/images/trusted/laur.png",
-    lightSrc: "/images/trusted-light/laur.png",
+    src: "/images/trusted-light/vita.png",
+    lightSrc: "/images/trusted/vita.png",
   },
-  { src: "/images/trusted/ika.svg", lightSrc: "/images/trusted-light/ika.png" },
+  {
+    src: "/images/trusted-light/laur.png",
+    lightSrc: "/images/trusted/laur.png",
+  },
+  { src: "/images/trusted-light/ika.png", lightSrc: "/images/trusted/ika.svg" },
 ];
 
 function TrustedClients() {

@@ -46,13 +46,11 @@ const Card = ({
   title,
   subtitle,
   imgSrc,
-  link,
   hoverText,
 }: {
   title: string;
   subtitle: string;
   imgSrc: string;
-  link: string;
   hoverText: string;
 }) => {
   return (
@@ -74,7 +72,7 @@ const Card = ({
           />
         </div>
 
-        <Link
+        {/* <Link
           href={link}
           target="_blank"
           aria-label="Open Site"
@@ -85,7 +83,7 @@ const Card = ({
           <span className="text-[2rem] font-medium transition-all duration-500 opacity-0 group-hover:opacity-100">
             {hoverText}
           </span>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
@@ -143,7 +141,6 @@ function PreviousProjects() {
                         ]
                       }
                       imgSrc={item.image}
-                      link={item.url ?? "/"}
                       hoverText={
                         item.hoverText[locale as keyof typeof item.hoverText]
                       }
