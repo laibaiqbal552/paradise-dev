@@ -13,34 +13,12 @@ import * as yup from "yup";
 import { ReactNode } from "react";
 import Loader from "./Loader";
 import { useTranslations } from "next-intl";
- import ReCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 const FieldError = ({ children }: { children: ReactNode }) => {
   return children ? (
     <p className="text-xs text-red-400 mt-1.5">{children}</p>
   ) : null;
 };
-
-const contactFormSchema = yup
-  .object({
-    name: yup
-      .string()
-      .required("This field is Required")
-      .max(30, "Name must be at most 30 characters"),
-    email: yup
-      .string()
-      .email("Invalid email address")
-      .required("This field is Required"),
-    affair: yup
-      .string()
-      .required("This field is Required")
-      .max(50, "Affair must be at most 50 characters"),
-    message: yup
-      .string()
-      .required("This field is Required")
-      .min(20, "Message should be of at least 20 characters")
-      .max(5000, "Message must be at most 5000 characters"),
-  })
-  .required();
 
 const Card = ({
   title,
@@ -72,6 +50,29 @@ const Card = ({
 };
 
 function Contact() {
+  const t = useTranslations("Home.Contact");
+  const t2 = useTranslations("Home.contactForm");
+  const contactFormSchema = yup
+    .object({
+      name: yup
+        .string()
+        .required(t2("fieldRequired"))
+        .max(30, t2("nameMaxLength")),
+      email: yup
+        .string()
+        .email(t2("invalidEmail"))
+        .required(t2("fieldRequired")),
+      affair: yup
+        .string()
+        .required(t2("fieldRequired"))
+        .max(50, t2("affairMaxLength")),
+      message: yup
+        .string()
+        .required(t2("fieldRequired"))
+        .min(20, t2("messageMinLength"))
+        .max(5000, t2("messageMaxLength")),
+    })
+    .required();
   const {
     register,
     handleSubmit,
@@ -89,8 +90,6 @@ function Contact() {
       }, 4000);
     });
   };
-
-  const t = useTranslations("Home.Contact");
 
   return (
     <Container className="max-w-[1209px] border-t border-black/30 dark:border-white/60 pt-12">
@@ -146,7 +145,7 @@ function Contact() {
             </div>
           </div>
         </fieldset>
-        <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!} /> 
+        <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!} />
         <Button
           disabled={isSubmitting}
           type="submit"
