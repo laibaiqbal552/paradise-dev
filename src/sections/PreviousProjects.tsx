@@ -42,17 +42,25 @@ const TabButton = ({
   );
 };
 
+interface CardProps {
+  title: string;
+  subtitle: string;
+  imgSrc: string;
+  link: string;
+  hoverText: string;
+  index: number;
+  showLink: boolean; // New prop to control link visibility
+}
+
 const Card = ({
   title,
   subtitle,
   imgSrc,
+  link,
   hoverText,
-}: {
-  title: string;
-  subtitle: string;
-  imgSrc: string;
-  hoverText: string;
-}) => {
+  index,
+  showLink, // Use this prop
+}: CardProps) => {
   return (
     <div>
       <h2 className="text-base sm:text-[2rem] mb-3 sm:mb-5 font-bold">
@@ -60,7 +68,7 @@ const Card = ({
       </h2>
       <p className="text-sm sm:text-xl sm:h-[60px] max-sm:mb-6">{subtitle}</p>
 
-      <div className="relative ">
+      <div className="relative">
         <div className="flex">
           <ResponsiveImage
             src={imgSrc}
@@ -71,19 +79,26 @@ const Card = ({
             loading="lazy"
           />
         </div>
+        {showLink && (
+          <>
+            <div className="absolute top-0 left-0 w-full h-full z-40 transition-all duration-500 bg-black/25 hover:bg-black/75 cursor-pointer flex items-center justify-center group">
+              <span className="text-[2rem] font-medium transition-all duration-500 opacity-0 group-hover:opacity-100">
+                {hoverText}
+              </span>
+            </div>
 
-        {/* <Link
-          href={link}
-          target="_blank"
-          aria-label="Open Site"
-          className={`${
-            link === "#" ? "cursor-default" : "cursor-pointer"
-          } absolute top-0 left-0 w-full h-full z-40 transition-all cursor-pointer duration-500 bg-black/25 hover:bg-black/75  flex items-center justify-center group`}
-        >
-          <span className="text-[2rem] font-medium transition-all duration-500 opacity-0 group-hover:opacity-100">
-            {hoverText}
-          </span>
-        </Link> */}
+            <Link
+              href={link}
+              target="_blank"
+              aria-label="Open Site"
+              className="absolute top-0 left-0 w-full h-full z-40 transition-all duration-500 bg-black/25 hover:bg-black/75 cursor-pointer flex items-center justify-center group"
+            >
+              <span className="text-[2rem] font-medium transition-all duration-500 opacity-0 group-hover:opacity-100">
+                {hoverText}
+              </span>
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );
@@ -91,10 +106,11 @@ const Card = ({
 
 function PreviousProjects() {
   const [tab, setTab] = useState<Tab>("Desarollo Web");
-
   const t = useTranslations("Home.Projects");
-
   const locale = useParams().locale;
+
+  // Determine if the link should be shown based on the tab
+  const showLink = tab !== "UI/UX Design";
 
   return (
     <div>
@@ -141,9 +157,12 @@ function PreviousProjects() {
                         ]
                       }
                       imgSrc={item.image}
+                      link={item.url}
                       hoverText={
                         item.hoverText[locale as keyof typeof item.hoverText]
                       }
+                      index={a}
+                      showLink={showLink} // Pass showLink to the Card
                     />
                   ))}
                 </div>
@@ -172,7 +191,7 @@ const projects: Record<Tab, any> = {
         en: "Paradise Host Service Management App",
         es: "Paradise Host Service Management App",
       },
-      url: "#",
+      url: "/",
       image: "/images/projects/paradise-app.png",
     },
   ],
