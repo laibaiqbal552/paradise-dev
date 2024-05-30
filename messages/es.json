@@ -43,11 +43,19 @@
                 "ButtonText":"Ponerse en contacto"
             },   
             "Projects":{
-                "Title": "Trabajos anteriores"  
+                "Title": "Trabajos anteriores" ,
+                "TabTitles": {
+                "WebDevelopment": "Desarrollo Web",
+                "UIUXDesign": "Diseño UI/UX",
+                "Applications": "Aplicaciones"
+              }
+
             },
             "TrustedClients":{
+
                 "Title": "Nuestros clientes"
             },
+    
             "Contact":{
                 "Title": "Contacto",
                 "Description": "¿Alguna pregunta, comentario o consulta general? Realmente apreciamos tus sugerencias, ¡contáctanos!",

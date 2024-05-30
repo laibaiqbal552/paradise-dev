@@ -46,12 +46,20 @@
             },
 
             "Projects":{
-                "Title": "Previous Projects"  
+                "Title": "Previous Projects" ,"TabTitles": {
+                "WebDevelopment": "Web Development",
+
+                "UIUXDesign": "UI/UX Design",
+                "Applications": "Applications"
+              }
             },
 
             "TrustedClients":{
                 "Title": "Our Trusted Clients" 
             },
+            
+
+
 
             "Contact":{
                 "Title": "Contact",
