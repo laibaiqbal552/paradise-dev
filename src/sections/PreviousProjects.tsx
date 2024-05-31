@@ -148,7 +148,7 @@ function PreviousProjects() {
                   key={_i}
                   className="grid lg:grid-cols-3 gap-16 lg:gap-5 lg:border lg:rounded-lg lg:p-4 dark:border-white/30"
                 >
-                  {items.map((item, a) => (
+                  {items?.map((item, a) => (
                     <Card
                       key={a}
                       title={item.name[currentLocale]}
