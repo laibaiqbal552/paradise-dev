@@ -13,12 +13,14 @@ import PreviousProjects from "sections/PreviousProjects";
 import RevealTextEffect from "components/RevealTextEffect";
 import SetupPlugin from "components/SetupPlugin";
 import { unstable_setRequestLocale } from "next-intl/server";
+import { Toaster } from "react-hot-toast";
 
 export default function Home({ params }: { params: { locale: string } }) {
   unstable_setRequestLocale(params.locale);
 
   return (
     <div>
+      <Toaster position="top-center" reverseOrder={false} />
       <SetupPlugin />
 
       <Navbar />

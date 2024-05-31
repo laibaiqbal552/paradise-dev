@@ -14,6 +14,7 @@ import { ReactNode } from "react";
 import Loader from "./Loader";
 import { useTranslations } from "next-intl";
 import ReCAPTCHA from "react-google-recaptcha";
+import toast from "react-hot-toast";
 const FieldError = ({ children }: { children: ReactNode }) => {
   return children ? (
     <p className="text-xs text-red-400 mt-1.5">{children}</p>
@@ -82,13 +83,27 @@ function Contact() {
     resolver: yupResolver(contactFormSchema),
   });
 
-  const onSubmit = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve("form submitted");
+  const onSubmit = async (data: Record<string, any>) => {
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        toast.success("Email sent successfully");
         reset();
-      }, 4000);
-    });
+      } else {
+        toast.error("Failed to send email");
+      }
+    } catch (error) {
+      console.error("Error sending email", error);
+      toast.error("Failed to send email");
+    }
   };
 
   return (
