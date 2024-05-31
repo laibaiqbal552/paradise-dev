@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
     const { name, email, affair, message } = data;
 
     const msg = {
-      to: "laiba.iqbal825@gmail.com",
+      to: "contacto@paradisedev.net",
       from: "no-reply@paradisegaming.net",
       subject: `New message from ${email}`,
 
