@@ -9,9 +9,10 @@ export async function POST(req: NextRequest) {
     const { name, email, affair, message } = data;
 
     const msg = {
-      to: email,
+      to: "laiba.iqbal825@gmail.com",
       from: "no-reply@paradisegaming.net",
       subject: `New message from ${email}`,
+
       text: `
         Name: ${name}
         Email: ${email}
