@@ -26,7 +26,7 @@ export const socialLinks = [
   {
     title: "instagram",
     Icon: FaInstagram,
-    link: "https://www.instagram.com/paradisehosting/",
+    link: "https://www.instagram.com/paradisehost/",
   },
   {
     title: "twitter",
