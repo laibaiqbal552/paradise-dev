@@ -106,7 +106,8 @@ function PreviousProjects() {
   const initialTab = tabs[0][currentLocale]; // Set initial tab based on locale
   const [tab, setTab] = useState<Tab>(initialTab);
 
-  const showLink = tab !== tabs[1][currentLocale]; // Adjust logic as needed
+  const showLink =
+    tab !== tabs[1][currentLocale] && tab !== tabs[2][currentLocale];
 
   if (!projects[tab]) {
     console.error("No projects found for tab:", tab);
