@@ -18,7 +18,7 @@ const clients = [
   },
   {
     img: "/images/trusted/suda.png",
-    imgLight: "/images/trusted-light/suda.png",
+    imgLight: "/images/trusted-light/suda.svg",
   },
   {
     img: "/images/trusted/pura.png",
@@ -27,7 +27,7 @@ const clients = [
   { img: "/images/trusted/las.png", imgLight: "/images/trusted-light/las.png" },
   {
     img: "/images/trusted/chai.png",
-    imgLight: "/images/trusted-light/chai.jpg",
+    imgLight: "/images/trusted-light/chai.png",
   },
   {
     img: "/images/trusted/vita.png",
