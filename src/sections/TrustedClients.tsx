@@ -51,7 +51,7 @@ function TrustedClients() {
 
   return (
     <section>
-      <Container className="max-w-[80rem] w-full">
+      <Container className="max-w-[80rem] w-full mx-auto">
         <p className="text-3xl sm:text-4xl lg:text-[3.5rem] font-semibold text-center mb-10 sm:mb-20">
           {t("Title")}
         </p>
@@ -107,41 +107,43 @@ function TrustedClients() {
           </SwiperSlide>
         ))}
       </Swiper> */}
-      <Swiper
-        slidesPerView={"auto"}
-        modules={[Autoplay]}
-        className="sm:[&_.swiper-slide]:!w-fit sm:[&_.swiper-slide]:h-auto"
-        loop={true}
-        autoplay={{
-          disableOnInteraction: false,
-          delay: 1000,
-        }}
-        breakpoints={{
-          0: {
-            slidesPerView: 2,
-          },
+      <div className="swiper-wrapper-div ">
+        <Swiper
+          slidesPerView={"auto"}
+          modules={[Autoplay]}
+          className="sm:[&_.swiper-slide]:!w-fit sm:[&_.swiper-slide]:h-auto"
+          loop={true}
+          autoplay={{
+            disableOnInteraction: false,
+            delay: 1000,
+          }}
+          breakpoints={{
+            0: {
+              slidesPerView: 2,
+            },
 
-          640: {
-            slidesPerView: "auto",
-          },
-        }}
-      >
-        {clients.map((item, i) =>
-          item.imgLight ? (
-            <SwiperSlide key={i}>
-              <div className="flex items-center justify-center h-full">
-                <img
-                  src={theme === "dark" ? item.img : item.imgLight}
-                  className={`max-w-full ${
-                    i === 1 ? "max-h-[48px]" : "max-h-[60px]"
-                  } sm:mx-3 xl:mx-6 object-contain max-h-[60px]`}
-                  alt="slides images"
-                />
-              </div>
-            </SwiperSlide>
-          ) : null
-        )}
-      </Swiper>
+            640: {
+              slidesPerView: "auto",
+            },
+          }}
+        >
+          {clients.map((item, i) =>
+            item.imgLight ? (
+              <SwiperSlide key={i}>
+                <div className="flex items-center justify-center h-full w-full">
+                  <img
+                    src={theme === "dark" ? item.img : item.imgLight}
+                    className={`max-w-full ${
+                      i === 1 ? "max-h-[48px]" : "max-h-[60px]"
+                    } sm:mx-3 xl:mx-6 object-contain max-h-[60px]`}
+                    alt="slides images"
+                  />
+                </div>
+              </SwiperSlide>
+            ) : null
+          )}
+        </Swiper>
+      </div>
     </section>
   );
 }
