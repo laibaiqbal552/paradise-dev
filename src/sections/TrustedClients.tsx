@@ -10,7 +10,7 @@ import { Autoplay } from "swiper/modules";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-
+import useThemeSwitcher from "hooks/useThemeSwitcher";
 const clients = [
   {
     img: "/images/trusted/hil.png",
@@ -43,9 +43,10 @@ const clients = [
   },
 ];
 function TrustedClients() {
-  // const [theme] = useThemeSwitcher();
+  const [theme] = useThemeSwitcher();
 
-  const { resolvedTheme: theme } = useTheme();
+  // const { resolvedTheme: theme } = useTheme();
+  // console.log(theme, "@theme");
   const t = useTranslations("Home.TrustedClients");
 
   return (
