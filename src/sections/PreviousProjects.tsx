@@ -191,6 +191,23 @@ const projects: Record<Tab, any[]> = {
     },
     {
       name: {
+        en: "Trainingwhead V2",
+        es: "Trainingwhead V2",
+      },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
+      },
+      description: {
+        en: "Training with science by Tomas Mazza",
+        es: "Entrena con ciencia por Tomas Mazza",
+      },
+      url: "https://trainingwhead.com/",
+      image: "/images/projects/1.1 Home _ caracteristicas _ asesoramiento.png",
+    },
+
+    {
+      name: {
         en: "Paradise Dev",
         es: "Paradise Dev",
       },
@@ -351,6 +368,22 @@ const projects: Record<Tab, any[]> = {
       },
       url: "https://nextjs-tailwindcss-localization-stars.vercel.app/",
       image: "/images/projects/star.png",
+    },
+    {
+      name: {
+        en: "Trainingwhead V2",
+        es: "Trainingwhead V2",
+      },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
+      },
+      description: {
+        en: "Training with science by Tomas Mazza",
+        es: "Entrena con ciencia por Tomas Mazza",
+      },
+      url: "https://trainingwhead.com/",
+      image: "/images/projects/1.1 Home _ caracteristicas _ asesoramiento.png",
     },
     {
       name: {
