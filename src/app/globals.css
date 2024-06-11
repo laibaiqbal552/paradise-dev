@@ -1,7 +1,11 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
 .lh-1 {
   line-height: 1 !important;
 }
@@ -69,6 +73,8 @@
   border-color: rgba(255, 0, 0, 0.5);
 }
 
-/* .swiper-wrapper-div {
-  @apply w-full mx-auto;
-} */
+.swiper-wrapper-div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
