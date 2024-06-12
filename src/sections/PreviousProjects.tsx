@@ -547,6 +547,22 @@ const projects: Record<Tab, any[]> = {
       url: "https://paradisedev.webflow.io/",
       image: "/images/projects/paradise-dev.png",
     },
+      {
+      name: {
+        en: "Stars",
+        es: "Stars",
+      },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
+      },
+      description: {
+        en: "Production of live sporting events",
+        es: "Producción de eventos deportivos en directo",
+      },
+      url: "https://nextjs-tailwindcss-localization-stars.vercel.app/",
+      image: "/images/projects/star.png",
+    },
     {
       name: {
         en: "Paradise Host",
@@ -724,6 +740,22 @@ const projects: Record<Tab, any[]> = {
       },
       url: "https://paradisedev.webflow.io/",
       image: "/images/projects/paradise-dev.png",
+    },
+      {
+      name: {
+        en: "Stars",
+        es: "Stars",
+      },
+      hoverText: {
+        en: "Open site",
+        es: "Abrir sitio",
+      },
+      description: {
+        en: "Production of live sporting events",
+        es: "Producción de eventos deportivos en directo",
+      },
+      url: "https://nextjs-tailwindcss-localization-stars.vercel.app/",
+      image: "/images/projects/star.png",
     },
     {
       name: {
