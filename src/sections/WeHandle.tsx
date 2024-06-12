@@ -6,6 +6,61 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import useThemeSwitcher from "hooks/useThemeSwitcher";
 import { useTranslations } from "next-intl";
+import "swiper/css";
+import "swiper/css/autoplay"; // Ensure Autoplay CSS is imported
+
+function WeHandle() {
+  const [theme] = useThemeSwitcher();
+  const t = useTranslations("Home.Platforms");
+
+  return (
+    <section>
+      <Container className="mb-10 sm:mb-20">
+        <h1 className="text-3xl md:text-[56px] text-center font-semibold">
+          {t("Title")}
+        </h1>
+      </Container>
+
+      <div className="flex items-center justify-center w-full">
+        <Swiper
+          slidesPerView={"auto"}
+          modules={[Autoplay]}
+          loop={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            0: {
+              slidesPerView: 2,
+            },
+            640: {
+              slidesPerView: "auto",
+            },
+          }}
+        >
+          {skills.map((item, i) =>
+            item.imgLight ? (
+              <SwiperSlide key={i}>
+                <div className="flex items-center justify-center h-full">
+                  <Image
+                    src={theme === "dark" ? item.img : item.imgLight}
+                    alt="skill"
+                    width={100}
+                    height={100}
+                    className="mx-5 max-xl:w-16 max-xl:h-16 object-contain aspect-square max-sm:!w-[50%] max-sm:!h-[50%]"
+                  />
+                </div>
+              </SwiperSlide>
+            ) : null
+          )}
+        </Swiper>
+      </div>
+    </section>
+  );
+}
+
+export default WeHandle;
 
 const skills = [
   {
@@ -49,76 +104,3 @@ const skills = [
   { img: "/images/skills/node.png", imgLight: "/images/skills-light/node.png" },
   { img: "/images/skills/python.png", imgLight: null },
 ];
-
-function WeHandle() {
-  const [theme] = useThemeSwitcher();
-  const t = useTranslations("Home.Platforms");
-
-  return (
-    <section>
-      <Container className="mb-10 sm:mb-20">
-        <h1 className="text-3xl md:text-[56px] text-center font-semibold">
-          {t("Title")}
-        </h1>
-      </Container>
-
-      {/* <Marquee
-        speed={100}
-        className="flex items-center justify-between"
-        autoFill
-      >
-        {skills.map((item, i) =>
-          item.imgLight ? (
-            <Image
-              src={theme === "dark" ? item.img : item.imgLight}
-              key={i}
-              alt="skill"
-              width={100}
-              height={100}
-              className="mx-5 max-sm:size-12 max-xl:size-16"
-            />
-          ) : null
-        )}
-      </Marquee> */}
-      <div className="flex items-center justify-center w-full">
-        <Swiper
-          slidesPerView={"auto"}
-          modules={[Autoplay]}
-          className="sm:[&_.swiper-slide]:!w-fit sm:[&_.swiper-slide]:h-auto"
-          loop={true}
-          autoplay={{
-            disableOnInteraction: false,
-            delay: 1000,
-          }}
-          breakpoints={{
-            0: {
-              slidesPerView: 2,
-            },
-
-            640: {
-              slidesPerView: "auto",
-            },
-          }}
-        >
-          {skills.map((item, i) =>
-            item.imgLight ? (
-              <SwiperSlide key={i}>
-                <div className="flex items-center justify-center h-full">
-                  <Image
-                    src={theme === "dark" ? item.img : item.imgLight}
-                    alt="skill"
-                    width={100}
-                    height={100}
-                    className="mx-5 max-xl:w-16 max-xl:h-16 object-contain aspect-square max-sm:!w-[50%] max-sm:!h-[50%]"
-                  />
-                </div>
-              </SwiperSlide>
-            ) : null
-          )}
-        </Swiper>
-      </div>
-    </section>
-  );
-}
-
-export default WeHandle;
