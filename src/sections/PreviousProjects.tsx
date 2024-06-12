@@ -183,8 +183,8 @@ const projects: Record<Tab, any[]> = {
         es: "Abrir sitio",
       },
       description: {
-        en: "Here you are now!",
-        es: "Here you are now!",
+        en: "Production of live sporting events",
+        es: "Producción de eventos deportivos en directo",
       },
       url: "https://nextjs-tailwindcss-localization-stars.vercel.app/",
       image: "/images/projects/star.png",
@@ -363,8 +363,8 @@ const projects: Record<Tab, any[]> = {
         es: "Abrir sitio",
       },
       description: {
-        en: "Here you are now!",
-        es: "Here you are now!",
+        en: "Production of live sporting events",
+        es: "Producción de eventos deportivos en directo",
       },
       url: "https://nextjs-tailwindcss-localization-stars.vercel.app/",
       image: "/images/projects/star.png",
