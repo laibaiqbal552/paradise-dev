@@ -10,7 +10,7 @@ import { Autoplay } from "swiper/modules";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import useThemeSwitcher from "hooks/useThemeSwitcher";
+
 const clients = [
   {
     img: "/images/trusted/hil.png",
@@ -43,71 +43,19 @@ const clients = [
   },
 ];
 function TrustedClients() {
-  const [theme] = useThemeSwitcher();
+  // const [theme] = useThemeSwitcher();
 
-  // const { resolvedTheme: theme } = useTheme();
-  // console.log(theme, "@theme");
+  const { resolvedTheme: theme } = useTheme();
   const t = useTranslations("Home.TrustedClients");
 
   return (
     <section>
-      <Container className="max-w-[80rem] w-full mx-auto">
+      <Container className="max-w-[80rem] w-full">
         <p className="text-3xl sm:text-4xl lg:text-[3.5rem] font-semibold text-center mb-10 sm:mb-20">
           {t("Title")}
         </p>
       </Container>
-
-      {/* <Marquee
-        speed={100}
-        autoFill
-        className="flex items-center justify-between"
-      >
-        {clients.map((item, i) => (
-          <img
-            src={theme === "dark" ? item.src : item.lightSrc}
-            key={i}
-            className="h-9 sm:h-14 xl:h-[80px] w-auto mx-1.5 sm:mx-3 xl:mx-6"
-          />
-        ))}
-      </Marquee> */}
-
-      {/* <Swiper
-        slidesPerView={"auto"}
-        modules={[Autoplay]}
-        className="sm:[&_.swiper-slide]:!w-fit [&_.swiper-slide]:h-auto"
-        loop={true}
-        spaceBetween={32}
-        autoplay={{
-          disableOnInteraction: false,
-          delay: 1000,
-        }}
-        breakpoints={{
-          0: {
-            slidesPerView: 2,
-          },
-
-          640: {
-            slidesPerView: "auto",
-          },
-        }}
-      >
-        {clients.map((item, i) => (
-          <SwiperSlide key={i}>
-            <div className="flex items-center justify-center h-full ">
-            
-
-              <img
-                src={theme === "light" ? item.imgLight : item.img}
-                className={`max-w-full ${
-                  i === 1 ? "max-h-[48px]" : "max-h-[60px]"
-                } sm:mx-3 xl:mx-6 object-contain max-h-[60px]`}
-                alt="slides images"
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper> */}
-      <div className="swiper-wrapper-div ">
+      <div className="flex items-center justify-center w-full">
         <Swiper
           slidesPerView={"auto"}
           modules={[Autoplay]}
@@ -130,7 +78,7 @@ function TrustedClients() {
           {clients.map((item, i) =>
             item.imgLight ? (
               <SwiperSlide key={i}>
-                <div className="flex items-center justify-center h-full w-full">
+                <div className="flex items-center justify-center h-full">
                   <img
                     src={theme === "dark" ? item.img : item.imgLight}
                     className={`max-w-full ${
