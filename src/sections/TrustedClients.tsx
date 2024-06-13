@@ -10,7 +10,7 @@ import { Autoplay } from "swiper/modules";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-
+import useThemeSwitcher from "hooks/useThemeSwitcher";
 const clients = [
   {
     img: "/images/trusted/hil.png",
@@ -45,7 +45,7 @@ const clients = [
 function TrustedClients() {
   // const [theme] = useThemeSwitcher();
 
-  const { resolvedTheme: theme } = useTheme();
+  const [theme] = useThemeSwitcher();
   const t = useTranslations("Home.TrustedClients");
 
   return (
@@ -80,7 +80,9 @@ function TrustedClients() {
               <SwiperSlide key={i}>
                 <div className="flex items-center justify-center h-full">
                   <img
-                    src={theme === "dark" ? item.img : item.imgLight}
+                    src={
+                      theme === "dark" ? item.img : item.imgLight || item.img
+                    }
                     className={`max-w-full ${
                       i === 1 ? "max-h-[48px]" : "max-h-[60px]"
                     } sm:mx-3 xl:mx-6 object-contain max-h-[60px]`}
