@@ -9,7 +9,7 @@ import RevealTextEffect from "./RevealTextEffect";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import Loader from "./Loader";
 import { useTranslations } from "next-intl";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -48,35 +48,12 @@ const Card = ({
     </div>
   );
 };
-
 function Contact() {
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const t = useTranslations("Home.Contact");
   const t2 = useTranslations("Home.contactForm");
   const contactFormSchema = yup
     .object({
-      //   name: yup
-      //     .string()
-      //     .required(t2("fieldRequired"))
-      //     .min(2, t2("nameMinLength")) // Assuming you have a translation for minimum length
-      //     .max(100, t2("nameMaxLength")),
-      //   email: yup
-      //     .string()
-      //     .email(t2("invalidEmail"))
-      //     .required(t2("fieldRequired"))
-      //     .min(5, t2("emailMinLength")) // Assuming you have a translation for minimum length
-      //     .max(254, t2("emailMaxLength")),
-      //   affair: yup
-      //     .string()
-      //     .required(t2("fieldRequired"))
-      //     .min(5, t2("affairMinLength")) // Assuming you have a translation for minimum length
-      //     .max(200, t2("affairMaxLength")),
-      //   message: yup
-      //     .string()
-      //     .required(t2("fieldRequired"))
-      //     .min(20, t2("messageMinLength"))
-      //     .max(2000, t2("messageMaxLength")),
-      // })
-      // .required();
       name: yup
         .string()
         .required(t2("fieldRequired"))
@@ -104,7 +81,7 @@ function Contact() {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isSubmitting, isSubmitted },
+    formState: { errors, isSubmitting },
   } = useForm({
     resolver: yupResolver(contactFormSchema),
   });
@@ -119,16 +96,23 @@ function Contact() {
         body: JSON.stringify(data),
       });
 
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
       const result = await response.json();
       if (result.success) {
         toast.success("Email sent successfully");
-        reset();
+        reset(); // Reset form fields after successful submission
+        setIsFormSubmitted(true); // Set form submission status to true
       } else {
-        toast.error("Failed to send email");
+        toast.error(
+          "Failed to send email: " + (result.message || "Unknown error")
+        );
       }
     } catch (error) {
       console.error("Error sending email", error);
-      toast.error("Failed to send email");
+      toast.error("Failed to send email: " + (error as Error).message);
     }
   };
 
@@ -199,7 +183,7 @@ function Contact() {
           )}
         </Button>
       </form>
-      {isSubmitted ? (
+      {isFormSubmitted ? (
         <div className="py-3 px-6 bg-green-300 rounded-md text-black font-medium mb-5">
           <p>{t("FormSubmitted")}</p>
         </div>
