@@ -25,7 +25,7 @@ export default function Home({ params }: { params: { locale: string } }) {
 
       <Navbar />
 
-      <div className="mt-10 sm:mt-[96px] mb-14 lg:mb-40">
+      <div id="home" className="mt-10 sm:mt-[96px] mb-14 lg:mb-40">
         <Hero />
       </div>
 
@@ -37,7 +37,7 @@ export default function Home({ params }: { params: { locale: string } }) {
         <About />
       </div>
 
-      <div className="mb-20" id="service">
+      <div id="service" className="mb-20">
         <ServicesWeProvide />
       </div>
 
@@ -45,7 +45,7 @@ export default function Home({ params }: { params: { locale: string } }) {
         <WeHandle />
       </div>
 
-      <div className="mb-20">
+      <div id="process" className="mb-20">
         <Process />
       </div>
 

@@ -15,7 +15,7 @@ import { socialLinks } from "./../lib/constants";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-
+import { Link as ScrollLink } from "react-scroll";
 function Footer() {
   const { resolvedTheme: theme } = useTheme();
   const t = useTranslations("Home.Footer");
@@ -99,13 +99,31 @@ function Footer() {
             <div className="space-y-4">
               <p>{t("Pages2.heading")}</p>
               <ul className="space-y-3">
-                {pages2.map((page) => (
-                  <li key={page.key}>
-                    <Link href={page.href} aria-label="link title">
-                      {t(page.key)}
-                    </Link>
-                  </li>
-                ))}
+                <li className="cursor-pointer">
+                  <ScrollLink to="home" spy={true} smooth={true}>
+                    {t(pages2[0].key)}
+                  </ScrollLink>
+                </li>
+                <li className="cursor-pointer">
+                  <ScrollLink to="service" spy={true} smooth={true}>
+                    {t(pages2[1].key)}
+                  </ScrollLink>
+                </li>
+                <li className="cursor-pointer">
+                  <ScrollLink to="portfolio" spy={true} smooth={true}>
+                    {t(pages2[2].key)}
+                  </ScrollLink>
+                </li>
+                <li className="cursor-pointer">
+                  <ScrollLink to="process" spy={true} smooth={true}>
+                    {t(pages2[3].key)}
+                  </ScrollLink>
+                </li>
+                <li className="cursor-pointer">
+                  <ScrollLink to="contact" spy={true} smooth={true}>
+                    {t(pages2[4].key)}
+                  </ScrollLink>
+                </li>
               </ul>
             </div>
             <div className="space-y-4">
