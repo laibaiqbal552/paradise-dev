@@ -321,6 +321,22 @@ const cardData = [
     imgSrc: "/images/Support.png",
     link: "contact",
   },
+  {
+    title: {
+      en: "In-House Datacenter",
+      es: "Datacenter propio",
+    },
+    desc: {
+      en: `Discover our excellence in hosting services with ParadiseHost®. Our cutting-edge infrastructure includes an in-house Datacenter, equipped with advanced hardware, UPS systems, air conditioning, refrigeration and electric generators to ensure an uninterrupted power supply. We feature state-of-the-art DDoS protection with self-learning filters. With our own ASN and LACNIC affiliation, we are compliant as an ISP and positioned as industry leaders. By being our own providers, we can offer a wide range of solutions tailored for business.`,
+      es: `Descubrí nuestra excelencia en servicios de alojamiento con ParadiseHost®. Nuestra infraestructura de vanguardia incluye un Datacenter propio, equipado con hardware avanzado, sistemas UPS, climatización adecuada y generadores eléctricos que garantizan un suministro ininterrumpido de energía. Contamos con protección anti DDoS de vanguarda con filtros de aprendizaje propio. Contamos con nuestro propio ASN y afiliación a LACNIC por lo que estamos en cumplimiento como proveedor de servicios ISP y nos posicionamos como líderes en el sector. Al ser nuestros propios proveedores, podemos ofrecerte una amplia gama de soluciones para tu negocio o empresa.`,
+    },
+    button: {
+      en: "ParadiseHost®",
+      es: "ParadiseHost®",
+    },
+    imgSrc: "/images/servidores.png",
+    link: "https://paradisehost.net",
+  },
 ];
 
 // Since the variable 'cardData' is already declared, we will modify the existing structure to include translations for the 'button' attribute directly.
