@@ -19,8 +19,8 @@ function ProvideQuality() {
       />
       <Image
         src="/images/ring.svg"
-        height={90}
-        width={90}
+        height={120}
+        width={120}
         alt="ring"
         className="absolute bottom-[10%] right-[5%] z-10 max-sm:hidden"
       />

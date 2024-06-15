@@ -20,8 +20,8 @@ function Hero() {
       <Container className="relative z-10">
         <Image
           src="/images/ring.svg"
-          height={90}
-          width={90}
+          height={120}
+          width={120}
           alt="ring"
           className="absolute top-1/2 left-0 -z-10 max-sm:hidden"
         />
