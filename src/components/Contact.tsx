@@ -16,7 +16,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import toast from "react-hot-toast";
 const FieldError = ({ children }: { children: ReactNode }) => {
   return children ? (
-    <p className="text-xs text-red-400 mt-1.5">{children}</p> 
+    <p className="text-xs text-red-400 mt-1.5">{children}</p>
   ) : null;
 };
 
@@ -58,7 +58,7 @@ function Contact() {
         .string()
         .required(t2("fieldRequired"))
         .min(2, t2("nameMinLength"))
-        .max(100, t2("nameMaxLength")),
+        .max(50, t2("nameMaxLength")),
       email: yup
         .string()
         .email(t2("invalidEmail"))
