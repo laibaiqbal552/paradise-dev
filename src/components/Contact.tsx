@@ -16,7 +16,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import toast from "react-hot-toast";
 const FieldError = ({ children }: { children: ReactNode }) => {
   return children ? (
-    <p className="text-xs text-red-400 mt-1.5">{children}</p>
+    <p className="text-xs text-red-400 mt-1.5">{children}</p> 
   ) : null;
 };
 

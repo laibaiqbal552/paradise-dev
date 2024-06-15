@@ -97,7 +97,7 @@
                     "FAQ": "FAQ"
                 },
                 "Pages2": {
-                "heading": "Browse",
+                "heading": "Explorar",
                 "Home": "Inicio",
                 "Services": "Servicios",
                 "Portfolio": "Portfolio",
@@ -106,7 +106,7 @@
             },
                "Pages3": {
                
-                "heading": "Nuestros Servicios",
+                "heading": "Servicios",
                 "WebDevelopment": "Desarrollo Web",
                 "UIUXDesign": "Diseño UI/UX",
                 "Applications": "Aplicaciones"

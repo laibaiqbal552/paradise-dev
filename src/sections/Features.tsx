@@ -13,6 +13,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 const FeatureCard = ({
   imgSrc,
@@ -183,9 +184,12 @@ function Features() {
               imgSrc={item.imgSrc}
             >
               <Button asChild className="cursor-pointer">
-                <ScrollLink to={item.link}>
+                <Link
+                  href={item.link}
+                  target={index === cardData.length - 1 ? "_blank" : undefined}
+                >
                   {item.button[locale as keyof typeof item.button]}
-                </ScrollLink>
+                </Link>
               </Button>
             </Card>
           ))}
@@ -335,7 +339,7 @@ const cardData = [
       es: "ParadiseHost®",
     },
     imgSrc: "/images/servidores.png",
-    link: "https://paradisehost.net",
+    link: "https://paradisehost.net/",
   },
 ];
 
