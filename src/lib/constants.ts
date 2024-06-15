@@ -33,5 +33,9 @@ export const socialLinks = [
     Icon: FaXTwitter,
     link: "https://twitter.com/i/flow/login?redirect_after_login=%2Fparadisehostar",
   },
-  { title: "linkedIn", Icon: FaLinkedinIn, link: "http://www.linkeding.com/" },
+  {
+    title: "linkedIn",
+    Icon: FaLinkedinIn,
+    link: "https://www.linkedin.com/company/paradisehost",
+  },
 ];
