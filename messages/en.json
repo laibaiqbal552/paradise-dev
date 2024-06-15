@@ -78,12 +78,16 @@
                 "placeholderMessage":"Message"
             },
                 "contactForm":{
-                "fieldRequired": "This field is Required",
-                "invalidEmail": "Invalid email address",
-                "nameMaxLength": "Name must be at most 30 characters",
-                "affairMaxLength": "Affair must be at most 50 characters",
-                "messageMinLength": "Message should be of at least 20 characters",
-                "messageMaxLength": "Message must be at most 5000 characters"
+                      "fieldRequired": "This field is required.",
+      "nameMinLength": "Name must be at least 2 characters.",
+      "affairMinLength": "Subject must be at least 5 characters.",
+      "invalidEmail": "Email is invalid.",
+      "emailMinLength": "Email must be at least 5 characters.",
+      "nameMaxLength": "Name must be less than or equal to 100 characters.",
+      "emailMaxLength": "Email must be less than or equal to 254 characters.",
+      "affairMaxLength": "Subject must be less than or equal to 200 characters.",
+      "messageMinLength": "Message must be at least 20 characters.",
+      "messageMaxLength": "Message must be less than or equal to 2000 characters."
                 },
             "Footer":{
                 "Description": "ParadiseDev® is a subdivision of Paradise Host S.A. and a registered trademark",

@@ -54,21 +54,44 @@ function Contact() {
   const t2 = useTranslations("Home.contactForm");
   const contactFormSchema = yup
     .object({
+      //   name: yup
+      //     .string()
+      //     .required(t2("fieldRequired"))
+      //     .min(2, t2("nameMinLength")) // Assuming you have a translation for minimum length
+      //     .max(100, t2("nameMaxLength")),
+      //   email: yup
+      //     .string()
+      //     .email(t2("invalidEmail"))
+      //     .required(t2("fieldRequired"))
+      //     .min(5, t2("emailMinLength")) // Assuming you have a translation for minimum length
+      //     .max(254, t2("emailMaxLength")),
+      //   affair: yup
+      //     .string()
+      //     .required(t2("fieldRequired"))
+      //     .min(5, t2("affairMinLength")) // Assuming you have a translation for minimum length
+      //     .max(200, t2("affairMaxLength")),
+      //   message: yup
+      //     .string()
+      //     .required(t2("fieldRequired"))
+      //     .min(20, t2("messageMinLength"))
+      //     .max(2000, t2("messageMaxLength")),
+      // })
+      // .required();
       name: yup
         .string()
         .required(t2("fieldRequired"))
-        .min(2, t2("nameMinLength")) // Assuming you have a translation for minimum length
+        .min(2, t2("nameMinLength"))
         .max(100, t2("nameMaxLength")),
       email: yup
         .string()
         .email(t2("invalidEmail"))
         .required(t2("fieldRequired"))
-        .min(5, t2("emailMinLength")) // Assuming you have a translation for minimum length
+        .min(5, t2("emailMinLength"))
         .max(254, t2("emailMaxLength")),
       affair: yup
         .string()
         .required(t2("fieldRequired"))
-        .min(5, t2("affairMinLength")) // Assuming you have a translation for minimum length
+        .min(5, t2("affairMinLength"))
         .max(200, t2("affairMaxLength")),
       message: yup
         .string()
