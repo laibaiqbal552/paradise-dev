@@ -74,7 +74,7 @@
                 "send": "Send",
                 "placeholderName":"Name",
                 "placeholderEmail":"Email",
-                "placeholderAffair":"Affair",
+                "placeholderAffair":"Subject",
                 "placeholderMessage":"Message"
             },
                 "contactForm":{
